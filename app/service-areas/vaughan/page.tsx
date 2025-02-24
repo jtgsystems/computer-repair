@@ -1,0 +1,104 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import ServiceLayout from "@/components/ServiceLayout"
+
+export const metadata: Metadata = {
+  title: "Vaughan Computer Repair Services | PC Mechanix",
+  description:
+    "Expert computer repair and IT services in Vaughan. Fast, reliable, and professional tech support for residents and businesses in the City Above Toronto.",
+}
+
+const vaughanAreas = [
+  { name: "Woodbridge", slug: "woodbridge" },
+  { name: "Maple", slug: "maple" },
+  { name: "Concord", slug: "concord" },
+  { name: "Kleinburg", slug: "kleinburg" },
+  { name: "Thornhill", slug: "thornhill" },
+  { name: "Vaughan Metropolitan Centre", slug: "vaughan-metropolitan-centre" },
+]
+
+export default function VaughanServiceAreaPage() {
+  return (
+    <ServiceLayout>
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8 text-center text-primary">Computer Repair Services in Vaughan</h1>
+        <p className="text-lg mb-12 text-center">
+          PC Mechanix delivers exceptional computer repair and IT services throughout Vaughan, the City Above Toronto.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {vaughanAreas.map((area) => (
+            <Card key={area.slug} className="hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle>
+                  <Link href={`/service-areas/vaughan/${area.slug}`} className="text-primary hover:underline">
+                    {area.name}
+                  </Link>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Expert computer repair services in {area.name}, Vaughan.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Our Services in Vaughan</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Comprehensive Laptop and Desktop Repairs</li>
+              <li>Advanced Virus and Malware Removal</li>
+              <li>Data Recovery and Secure Backup Solutions</li>
+              <li>Home and Business Network Setup</li>
+              <li>Customized IT Support for Local Businesses</li>
+              <li>Mac and Apple Device Repairs</li>
+              <li>Custom PC Builds for Gamers and Professionals</li>
+              <li>Smart Home and Office Technology Integration</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Why Choose PC Mechanix in Vaughan?</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Local Expertise with a Personal Touch</li>
+              <li>Highly Skilled, Certified Technicians</li>
+              <li>Competitive and Transparent Pricing</li>
+              <li>Convenient In-Shop and On-Site Services</li>
+              <li>Quick Turnaround Times</li>
+              <li>90-Day Warranty on All Repairs</li>
+              <li>Tailored Solutions for Vaughan's Diverse Community</li>
+              <li>Support for Both Residential and Commercial Clients</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gray-100 p-8 rounded-lg mb-12">
+          <h2 className="text-2xl font-bold mb-4">Meeting Vaughan's Unique Tech Needs</h2>
+          <p className="mb-4">
+            Vaughan, known for its rapid growth and diverse economy, presents a unique blend of residential and business
+            technology needs. From the bustling Vaughan Metropolitan Centre to the historic villages of Kleinburg and
+            Woodbridge, PC Mechanix understands the varied tech requirements of this dynamic city.
+          </p>
+          <p>
+            We cater to Vaughan's thriving business community, from retail shops in Vaughan Mills to corporate offices
+            in Concord. Our residential services support the tech needs of families in Maple and professionals working
+            from home in Thornhill. Whether you're a student at Vaughan Secondary School, an entrepreneur at the Vaughan
+            Business Enterprise Centre, or a resident enjoying the green spaces of Boyd Conservation Area, PC Mechanix
+            is here to keep your technology running smoothly.
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Need Reliable Tech Support in Vaughan?</h2>
+          <p className="mb-6">Don't let tech issues slow you down. Our Vaughan team is ready to assist you!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact">Book Your Vaughan Tech Service Now</Link>
+          </Button>
+        </div>
+      </div>
+    </ServiceLayout>
+  )
+}
+

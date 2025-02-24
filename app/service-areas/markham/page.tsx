@@ -1,0 +1,108 @@
+import type { Metadata } from "next"
+import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import ServiceLayout from "@/components/ServiceLayout"
+
+export const metadata: Metadata = {
+  title: "Markham Computer Repair Services | PC Mechanix",
+  description:
+    "Expert computer repair and IT services in Markham. Fast, reliable, and professional tech support for residents and businesses in Canada's High-Tech Capital.",
+}
+
+const markhamAreas = [
+  { name: "Unionville", slug: "unionville" },
+  { name: "Thornhill", slug: "thornhill" },
+  { name: "Milliken", slug: "milliken" },
+  { name: "Markham Village", slug: "markham-village" },
+  { name: "Cornell", slug: "cornell" },
+  { name: "Greensborough", slug: "greensborough" },
+]
+
+export default function MarkhamServiceAreaPage() {
+  return (
+    <ServiceLayout>
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-8 text-center text-primary">Computer Repair Services in Markham</h1>
+        <p className="text-lg mb-12 text-center">
+          PC Mechanix provides cutting-edge computer repair and IT services throughout Markham, Canada's High-Tech
+          Capital.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {markhamAreas.map((area) => (
+            <Card key={area.slug} className="hover:shadow-lg transition-shadow duration-300">
+              <CardHeader>
+                <CardTitle>
+                  <Link href={`/service-areas/markham/${area.slug}`} className="text-primary hover:underline">
+                    {area.name}
+                  </Link>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Expert computer repair services in {area.name}, Markham.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Our Services in Markham</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Advanced Laptop and Desktop Repairs</li>
+              <li>Enterprise-Grade Virus and Malware Removal</li>
+              <li>Comprehensive Data Recovery and Backup Solutions</li>
+              <li>High-Performance Network Setup and Troubleshooting</li>
+              <li>Specialized Business IT Support and Consulting</li>
+              <li>Mac and Apple Device Repairs</li>
+              <li>Custom High-End PC Builds and Upgrades</li>
+              <li>IoT and Smart Office Setup</li>
+            </ul>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-4">Why Choose PC Mechanix in Markham?</h2>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Expertise in Cutting-Edge Technology</li>
+              <li>Highly Skilled, Certified IT Professionals</li>
+              <li>Competitive Pricing for High-Quality Services</li>
+              <li>Flexible On-Site and Remote Support Options</li>
+              <li>Rapid Response Times for Tech Emergencies</li>
+              <li>Comprehensive 90-Day Warranty on All Repairs</li>
+              <li>Tailored Solutions for Tech Startups and Enterprises</li>
+              <li>Multilingual Support for Markham's Diverse Tech Community</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-gray-100 p-8 rounded-lg mb-12">
+          <h2 className="text-2xl font-bold mb-4">Serving Markham's High-Tech Ecosystem</h2>
+          <p className="mb-4">
+            Markham, known as Canada's High-Tech Capital, is home to a thriving ecosystem of tech companies, startups,
+            and innovation hubs. PC Mechanix is uniquely positioned to meet the advanced technological needs of this
+            dynamic community. Our team of experts understands the critical role that IT plays in driving innovation and
+            business success in Markham.
+          </p>
+          <p>
+            Whether you're a tech professional working from home in Unionville, a startup in the Markham Convergence
+            Centre, or an established corporation in the Markham Business Park, PC Mechanix offers the specialized
+            expertise and rapid support you need to stay at the forefront of technology. We're committed to keeping
+            Markham's diverse and tech-savvy population connected, productive, and secure in an increasingly digital
+            world.
+          </p>
+        </div>
+
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Need Advanced Tech Support in Markham?</h2>
+          <p className="mb-6">
+            Stay ahead in Canada's High-Tech Capital with our expert IT services. Contact us today!
+          </p>
+          <Button size="lg" asChild>
+            <Link href="/contact">Schedule Your High-Tech Service Now</Link>
+          </Button>
+        </div>
+      </div>
+    </ServiceLayout>
+  )
+}
+
