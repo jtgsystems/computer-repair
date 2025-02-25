@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import ServiceLayout from "@/components/ServiceLayout"
+import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
   title: "Toronto Computer Repair Services | PC Mechanix",
@@ -20,12 +22,19 @@ const torontoNeighborhoods = [
 export default function TorontoServiceAreaPage() {
   return (
     <ServiceLayout>
+      <ServiceHero
+        title="COMPUTER REPAIR SERVICES IN TORONTO"
+        description="Professional computer repair and IT support services for Toronto residents and businesses. Fast, reliable, and expert solutions for all your technology needs."
+        primaryCTA={{
+          text: "Schedule a Repair",
+          href: "/contact"
+        }}
+        secondaryCTA={{
+          text: "View All Services",
+          href: "/services"
+        }}
+      />
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-primary">Computer Repair Services in Toronto</h1>
-        <p className="text-lg mb-12 text-center">
-          PC Mechanix offers comprehensive computer repair and IT services throughout Toronto and its neighborhoods.
-        </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {torontoNeighborhoods.map((neighborhood) => (
             <Card key={neighborhood.slug} className="hover:shadow-lg transition-shadow duration-300">

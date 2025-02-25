@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import ServiceLayout from "@/components/ServiceLayout"
+import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
   title: "Oakville Computer Repair Services | PC Mechanix",
@@ -22,13 +23,19 @@ const oakvilleAreas = [
 export default function OakvilleServiceAreaPage() {
   return (
     <ServiceLayout>
+      <ServiceHero
+        title="COMPUTER REPAIR SERVICES IN OAKVILLE"
+        description="Premium computer repair and IT support services for Oakville residents and businesses. Expert solutions tailored to this sophisticated lakeside community."
+        primaryCTA={{
+          text: "Schedule a Repair",
+          href: "/contact"
+        }}
+        secondaryCTA={{
+          text: "View All Services",
+          href: "/services"
+        }}
+      />
       <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-primary">Computer Repair Services in Oakville</h1>
-        <p className="text-lg mb-12 text-center">
-          PC Mechanix delivers premium computer repair and IT services throughout Oakville, catering to the tech needs
-          of this charming lakeside community.
-        </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {oakvilleAreas.map((area) => (
             <Card key={area.slug} className="hover:shadow-lg transition-shadow duration-300">
