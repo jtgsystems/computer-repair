@@ -30,7 +30,7 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/20 z-[2]" />
       
       <div className="container mx-auto px-4 text-center relative z-10 text-white">
-        <div className="relative">
+        <div className="relative pt-6 md:pt-8">
           <h1 className={`
             font-extrabold uppercase tracking-tight drop-shadow-lg
             ${isMobile ? 'text-3xl mb-4' : 'text-3xl sm:text-4xl lg:text-6xl mb-4 sm:mb-6'}

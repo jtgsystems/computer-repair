@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, Tool, User, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
@@ -96,6 +96,7 @@ const ListItem = ({ className, title, href, icon }: any) => {
 const MobileNavigation = () => {
   const renderStartTime = useRef(performance.now());
   const [isOpen, setIsOpen] = useState(false);
+  const prefersReducedMotion = useReducedMotion();
   
   // Log performance when sheet content is shown
   const handleOpenChange = (open: boolean) => {
@@ -133,9 +134,9 @@ const MobileNavigation = () => {
               {serviceItems.map((category, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 10 }}
+                  animate={prefersReducedMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
+                  transition={{ duration: 0.2, delay: index * 0.05 }}
                   className="space-y-3"
                 >
                   <h3 className="flex items-center gap-2 text-lg font-medium">
@@ -182,6 +183,7 @@ const MobileNavigation = () => {
 export default function ModernMenu() {
   const [isScrolled, setIsScrolled] = useState(false)
 
+  const resizeThrottleTimeout = useRef<NodeJS.Timeout | null>(null);
   const lastScrollTime = useRef(0);
   const [debugInfo, setDebugInfo] = useState({
     viewportWidth: 0,
@@ -203,6 +205,15 @@ export default function ModernMenu() {
   // Debug function to check for horizontal scrolling issues
   const checkForOverflow = useCallback(() => {
     if (typeof window !== 'undefined') {
+      // Throttle resize events
+      if (resizeThrottleTimeout.current) {
+        return;
+      }
+      
+      resizeThrottleTimeout.current = setTimeout(() => {
+        resizeThrottleTimeout.current = null;
+      }, 100);
+      
       const viewportWidth = window.innerWidth;
       const startTime = performance.now();
       const headerEl = document.querySelector('header');
@@ -240,6 +251,9 @@ export default function ModernMenu() {
     return () => {
       window.removeEventListener("scroll", handleScroll)
 ;
+      if (resizeThrottleTimeout.current) {
+        clearTimeout(resizeThrottleTimeout.current);
+      }
       window.removeEventListener("resize", checkForOverflow);
     }
   }, [handleScroll, checkForOverflow])
@@ -258,12 +272,12 @@ export default function ModernMenu() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 z-10">
             <Image
+              priority={true}
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
               alt="PC Mechanix"
               width={180}
               height={45}
               className="h-10 w-auto object-contain filter brightness-0 invert"
-              priority
             />
           </Link>
 
@@ -280,15 +294,15 @@ export default function ModernMenu() {
 
               {serviceItems.map((category, index) => (
                 <NavigationMenuItem key={index}>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-gray-800 focus:bg-gray-800">
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-gray-800 focus:bg-gray-800 will-change-transform">
                     {category.icon && iconMap[category.icon] && React.createElement(iconMap[category.icon], { className: "h-4 w-4 mr-1" })}
                     {category.label}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="grid w-[95vw] max-w-[400px] gap-1 p-3 md:max-w-[500px] md:grid-cols-2 bg-gray-900/95 backdrop-blur-md border border-gray-800 rounded-lg shadow-lg animate-in fade-in-50 duration-200 overflow-hidden">
+                    <ul className="grid w-[95vw] max-w-[400px] gap-1 p-3 md:max-w-[500px] md:grid-cols-2 bg-gray-900/95 backdrop-blur-md border border-gray-800 rounded-lg shadow-lg animate-in fade-in-50 duration-100 overflow-hidden will-change-transform">
                       {category.items.map((item, itemIndex) => (
                         <ListItem
-                          key={itemIndex}
+                          key={`${category.label}-${itemIndex}
                           title={item.label}
                           href={item.href}
                           icon={item.icon}
@@ -319,7 +333,7 @@ export default function ModernMenu() {
 
           {/* Call Button (Desktop) */}
           <div className="hidden md:flex items-center">
-            <Button variant="default" size="lg" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
+            <Button variant="default" size="lg" className="rounded-full bg-blue-600 hover:bg-blue-700 text-white transition-colors" asChild>
               <a href="tel:416-300-1006" className="flex items-center gap-2">
                 <Phone className="h-5 w-5" />
                 <span>416-300-1006</span>

@@ -1,9 +1,9 @@
 "use client"
 
-import { useState, useCallback, useEffect, useRef } from "react"
+import { useState, useCallback, useEffect, useRef, useMemo, memo } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion"
 import { ChevronDown, Menu as MenuIcon, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -39,10 +39,26 @@ const serviceItems = [
   },
 ]
 
-const DropdownMenu = ({ category, isOpen, onToggle }: { category: any; isOpen: boolean; onToggle: () => void }) => {
+// Memoize the dropdown menu to prevent unnecessary re-renders
+const DropdownMenu = memo(({ category, isOpen, onToggle }: { category: any; isOpen: boolean; onToggle: () => void }) => {
   // Performance measurement
   const renderStartTime = useRef(performance.now());
   
+const prefersReducedMotion = useReducedMotion();
+
+  // Memoize dropdown items to prevent re-renders
+  const dropdownItems = useMemo(() => {
+    return category.items.map((item: any, index: number) => (
+      <Link
+        key={index}
+        href={item.href}
+        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+      >
+        {item.label}
+      </Link>
+    ));
+  }, [category.items]);
+
   return (
     <div className="relative group">
       <button
@@ -59,37 +75,34 @@ const DropdownMenu = ({ category, isOpen, onToggle }: { category: any; isOpen: b
         {isOpen && (
           <motion.div
  
-            initial={{ opacity: 0, y: -10, scale: 0.95 }}
-            animate={{ 
-              opacity: 1, 
-              y: 0, 
-              scale: 1,
-              transition: { duration: 0.15 } // Reduced from default 0.2
+            // Use simpler animations if user prefers reduced motion
+            initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+            animate={prefersReducedMotion ? { opacity: 1 } : { 
+              opacity: 1, y: 0, scale: 1,
+              transition: { duration: 0.1, type: "tween" } // Further reduced duration
             }}
-            transition={{ duration: 0.2 }}
+            exit={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.1 }}
             className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden z-50"
           >
             <div className="py-2">
-              {category.items.map((item: any, index: number) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {dropdownItems}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
   )
-}
+});
 
-const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+DropdownMenu.displayName = 'DropdownMenu';
+
+// Memoize the mobile menu to prevent unnecessary re-renders
+
+const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   // Performance measurement
   const renderStartTime = useRef(performance.now());
+  const prefersReducedMotion = useReducedMotion();
   
   useEffect(() => {
     if (isOpen) {
@@ -97,6 +110,22 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
       console.log(`Mobile menu render time: ${renderTime.toFixed(2)}ms`);
     }
   }, [isOpen]);
+
+  // Precompute category items to avoid recalculation on each render
+  const categoryItems = useMemo(() => {
+    return serviceItems.map((category, index) => (
+      <div key={index} className="space-y-2">
+        <h3 className="text-lg font-medium text-gray-900">{category.label}</h3>
+        <div className="space-y-2 pl-4">
+          {category.items.map((item, itemIndex) => (
+            <Link key={itemIndex} href={item.href} className="block text-gray-600 hover:text-primary transition-colors duration-200" onClick={onClose}>
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    ));
+  }, [onClose]);
   
   return (
     <AnimatePresence>
@@ -106,8 +135,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
  
-          transition={{ type: "tween", duration: 0.2 }}
- // Reduced from 0.3
+          transition={{ type: "tween", duration: prefersReducedMotion ? 0.1 : 0.15 }}
           className="fixed inset-0 bg-white z-50 overflow-y-auto"
         >
           <div className="container mx-auto px-4 py-6">
@@ -129,23 +157,7 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
                 Home
               </Link>
 
-              {serviceItems.map((category, index) => (
-                <div key={index} className="space-y-2">
-                  <h3 className="text-lg font-medium text-gray-900">{category.label}</h3>
-                  <div className="space-y-2 pl-4">
-                    {category.items.map((item, itemIndex) => (
-                      <Link
-                        key={itemIndex}
-                        href={item.href}
-                        className="block text-gray-600 hover:text-primary transition-colors duration-200"
-                        onClick={onClose}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              ))}
+              {categoryItems}
 
               <Link
                 href="/about"
@@ -178,6 +190,9 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
     </AnimatePresence>
   )
 }
+);
+
+MobileMenu.displayName = 'MobileMenu';
 
 export default function NewMenu() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
@@ -185,19 +200,32 @@ export default function NewMenu() {
   const lastToggleTime = useRef(0);
   const [isScrolled, setIsScrolled] = useState(false)
 
+  const scrollThrottleTimeout = useRef<NodeJS.Timeout | null>(null);
+  const prefersReducedMotion = useReducedMotion();
+
   const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    const now = performance.now();
-    if (now - lastToggleTime.current < 50) { // Only process every 50ms
+    // Improved throttling with requestAnimationFrame for better performance
+    if (scrollThrottleTimeout.current) {
       return;
     }
-    lastToggleTime.current = now;
-    setIsScrolled(window.scrollY > 20)
+    
+    scrollThrottleTimeout.current = setTimeout(() => {
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        scrollThrottleTimeout.current = null;
+      });
+    }, 100); // Increased throttle time for better performance
   }, [])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+;
+      if (scrollThrottleTimeout.current) {
+        clearTimeout(scrollThrottleTimeout.current);
+      }
+    }
   }, [handleScroll])
 
   const toggleDropdown = (label: string) => {
@@ -210,8 +238,20 @@ export default function NewMenu() {
     setTimeout(() => {
       const endTime = performance.now();
       console.log(`Dropdown toggle time for ${label}: ${(endTime - startTime).toFixed(2)}ms`);
-    }, 0);
+    }, 10);
   }
+  
+  // Memoize the navigation items to prevent re-renders
+  const navigationItems = useMemo(() => {
+    return serviceItems.map((category, index) => (
+      <DropdownMenu
+        key={index}
+        category={category}
+        isOpen={openDropdown === category.label}
+        onToggle={() => toggleDropdown(category.label)}
+      />
+    ));
+  }, [openDropdown]);
 
   return (
     <header
@@ -223,12 +263,12 @@ export default function NewMenu() {
         <div className="flex items-center justify-between">
           <Link href="/" className="flex-shrink-0">
             <Image
+              priority={true}
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
               alt="PC Mechanix"
               width={180}
               height={45}
               className="h-12 w-auto object-contain"
-              priority
             />
           </Link>
 
@@ -240,14 +280,7 @@ export default function NewMenu() {
               Home
             </Link>
 
-            {serviceItems.map((category, index) => (
-              <DropdownMenu
-                key={index}
-                category={category}
-                isOpen={openDropdown === category.label}
-                onToggle={() => toggleDropdown(category.label)}
-              />
-            ))}
+            {navigationItems}
 
             <Link
               href="/about"
