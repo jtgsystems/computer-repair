@@ -1,147 +1,156 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Monitor, Cpu, HardDrive, Zap, Clock, CheckCircle, ArrowRight } from "lucide-react"
-import ServiceLayout from "@/components/ServiceLayout"
+import { Monitor, Wrench, Clock, Zap, HardDrive, Cpu } from "lucide-react"
+import type { Metadata } from "next"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
-  title: "Business Desktop Repair Services | PC Mechanix",
+  title: "Business Desktop Repair Toronto | PC Mechanix",
   description:
-    "Professional desktop computer repair services for businesses in Toronto. Fast, reliable fixes for all desktop issues to minimize downtime and maximize productivity.",
+    "Professional desktop repair services for Toronto businesses. Fast, reliable computer repair and maintenance to minimize downtime and maximize productivity.",
 }
+
+const features = [
+  {
+    icon: Monitor,
+    title: "Hardware Diagnostics",
+    description: "Comprehensive hardware testing and diagnostics to identify issues quickly",
+  },
+  {
+    icon: Wrench,
+    title: "Professional Repairs",
+    description: "Expert repair services for all types of desktop computers and workstations",
+  },
+  {
+    icon: Clock,
+    title: "Fast Turnaround",
+    description: "Quick repair services to minimize business disruption and downtime",
+  },
+  {
+    icon: Zap,
+    title: "Performance Optimization",
+    description: "System optimization services to improve speed and reliability",
+  },
+  {
+    icon: HardDrive,
+    title: "Data Recovery",
+    description: "Professional data recovery services for failed or damaged hard drives",
+  },
+  {
+    icon: Cpu,
+    title: "Hardware Upgrades",
+    description: "Strategic hardware upgrades to enhance system performance and capabilities",
+  },
+]
 
 export default function BusinessDesktopRepairPage() {
   return (
-    <ServiceLayout>
-      <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white py-24">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Expert Business Desktop Repair Services</h1>
-            <p className="text-xl mb-8">Fast, reliable fixes to keep your business running smoothly</p>
-            <Button size="lg" className="bg-white text-[#1D4D84] hover:bg-[#E4EDEF]" asChild>
-              <Link href="#contact">Schedule a Repair Today</Link>
-            </Button>
+    <>
+      <ServiceHero
+        title="BUSINESS DESKTOP REPAIR SERVICES"
+        description="Professional computer repair solutions for Toronto businesses"
+        primaryCTA={{ text: "Schedule a Consultation", href: "/contact" }}
+        secondaryCTA={{ text: "Explore Services", href: "#features" }}
+      />
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Expert Business Computer Repair</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            Keep your business running smoothly with our professional desktop repair services. We understand that
+            computer issues can severely impact your operations, which is why we provide fast, reliable repair
+            solutions for businesses across Toronto. Our certified technicians handle everything from hardware repairs
+            to system optimization.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Repair Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4 text-[#1D4D84]">Our Business Desktop Repair Process</h2>
-            <ol className="list-decimal list-inside space-y-2 text-gray-700">
-              <li>Initial assessment and diagnostics</li>
-              <li>Detailed problem identification</li>
-              <li>Provide repair quote and timeline</li>
-              <li>Perform necessary repairs or replacements</li>
-              <li>Thorough system testing and quality assurance</li>
-              <li>Data backup and software updates</li>
-              <li>Final performance optimization</li>
-            </ol>
-          </div>
-          <div>
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Business Desktop Repair Process"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Common Questions</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How quickly can you repair business computers?</AccordionTrigger>
+              <AccordionContent>
+                Our response time depends on the issue and your service level agreement. For emergency repairs, we
+                offer same-day service in the Toronto area. Many common issues can be resolved within 24-48 hours.
+                We'll provide a detailed timeline after initial diagnosis.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Do you offer on-site repairs for businesses?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we provide on-site repair services for Toronto businesses. Our mobile technicians are equipped to
+                handle most repairs at your location, minimizing disruption to your operations. For more complex
+                issues, we may need to take the system to our repair center.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>What types of computers do you repair?</AccordionTrigger>
+              <AccordionContent>
+                We repair all major brands and models of desktop computers and workstations, including Dell, HP,
+                Lenovo, Apple, and custom-built systems. Our technicians are certified and experienced with both
+                Windows and Mac operating systems.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>Do you offer maintenance plans?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we offer preventive maintenance plans for businesses. These include regular system checks,
+                updates, optimization, and priority support. Our maintenance plans help prevent issues before they
+                impact your business operations.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
+      </section>
 
-        <h2 className="text-3xl font-bold mb-8 text-center text-[#1D4D84]">Our Business Desktop Repair Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {services.map((service, index) => (
-            <Card key={index} className="transition-all duration-300 hover:shadow-lg border-t-4 border-[#1D4D84]">
-              <CardHeader>
-                <service.icon className="h-12 w-12 text-[#1D4D84] mb-4" />
-                <CardTitle className="text-xl text-[#1D4D84]">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="bg-[#E4EDEF] rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-[#1D4D84]">
-            Why Choose PC Mechanix for Business Desktop Repair?
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
           </h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="h-6 w-6 text-[#1D4D84] mr-2" />
-                <span className="text-gray-700">{benefit}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="text-center" id="contact">
-          <h2 className="text-3xl font-bold mb-4 text-[#1D4D84]">Ready to Get Your Business Desktops Fixed?</h2>
-          <p className="text-lg mb-6 text-gray-700">
-            Don't let desktop issues slow down your business. Contact us today for fast, professional repair services.
+          <p className="text-xl mb-8">
+            Discover how PC Mechanix can transform your business's IT infrastructure into a powerful driver of growth
+            and success.
           </p>
-          <Button size="lg" className="text-lg px-8 bg-[#1D4D84] hover:bg-[#4B6E97]" asChild>
-            <Link href="/contact">
-              Schedule Business Desktop Repair <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+            >
+              Schedule a Consultation
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+            >
+              Explore Our Services
+            </Button>
+          </div>
         </div>
-      </div>
-    </ServiceLayout>
+      </section>
+    </>
   )
 }
-
-const services = [
-  {
-    icon: Monitor,
-    title: "Hardware Diagnostics & Repair",
-    description:
-      "We diagnose and fix issues with monitors, power supplies, motherboards, and other hardware components.",
-  },
-  {
-    icon: Cpu,
-    title: "Performance Optimization",
-    description:
-      "Boost your business desktops' speed with CPU, RAM, and storage upgrades tailored for professional use.",
-  },
-  {
-    icon: HardDrive,
-    title: "Data Recovery & Backup",
-    description:
-      "We recover critical business data from failing or damaged hard drives and implement robust backup solutions.",
-  },
-  {
-    icon: Zap,
-    title: "Virus & Malware Removal",
-    description:
-      "We'll clean your systems of viruses, malware, and other security threats to protect your business data.",
-  },
-  {
-    icon: Clock,
-    title: "Rapid Turnaround",
-    description: "We prioritize business clients to minimize downtime, often completing repairs within 24-48 hours.",
-  },
-  {
-    icon: CheckCircle,
-    title: "Quality Assurance",
-    description: "All our business desktop repairs come with a 90-day warranty for your peace of mind.",
-  },
-]
-
-const benefits = [
-  "Experienced technicians specializing in business-grade desktop repairs",
-  "Fast and reliable service to minimize business downtime",
-  "Transparent pricing with no hidden fees",
-  "Use of high-quality, business-grade replacement parts",
-  "Comprehensive diagnostic and repair services",
-  "Flexible on-site and in-shop repair options",
-  "Data security and confidentiality guaranteed",
-  "Business continuity planning and IT consulting",
-]
-

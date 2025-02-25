@@ -1,186 +1,157 @@
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { HardDrive, CloudLightning, Clock, Shield, RefreshCw, FileCheck, ArrowRight } from "lucide-react"
+import { HardDrive, Shield, Clock, Database, Cloud, History } from "lucide-react"
 import type { Metadata } from "next"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import ServiceLayout from "@/components/ServiceLayout"
+import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
-  title: "Backup & Recovery Solutions for Toronto Businesses | PC Mechanix",
+  title: "Data Backup & Recovery Services Toronto | PC Mechanix",
   description:
-    "Robust backup and recovery solutions to protect your critical business data in Toronto. Ensure business continuity with our comprehensive disaster recovery planning tailored for the GTA.",
+    "Professional data backup and recovery solutions in Toronto. Protect your business data with secure, reliable backup systems and rapid recovery services.",
 }
 
-const services = [
+const features = [
   {
     icon: HardDrive,
-    title: "On-site Backup for Toronto Businesses",
-    description:
-      "Secure local backups for quick access and recovery, ensuring your data is always within reach in your Toronto office.",
-  },
-  {
-    icon: CloudLightning,
-    title: "GTA-Optimized Cloud Backup",
-    description:
-      "Off-site cloud backups leveraging Toronto's robust infrastructure for added security and accessibility, protecting your data from local disasters.",
-  },
-  {
-    icon: Clock,
-    title: "Rapid Recovery for Toronto's Fast-Paced Business Environment",
-    description:
-      "Quick data restoration to minimize downtime and get your Toronto business back up and running fast in the competitive GTA market.",
+    title: "Automated Backups",
+    description: "Scheduled automatic backups to ensure your data is always protected without manual intervention",
   },
   {
     icon: Shield,
-    title: "Toronto-Focused Data Encryption",
-    description:
-      "Advanced encryption techniques to keep your backed-up data secure from unauthorized access, compliant with Toronto and Ontario regulations.",
+    title: "Secure Storage",
+    description: "Enterprise-grade encryption and secure storage facilities for your sensitive business data",
   },
   {
-    icon: RefreshCw,
-    title: "Automated Backups Tailored for GTA Businesses",
-    description:
-      "Scheduled, automatic backups optimized for Toronto business hours to ensure your data is always up-to-date without manual intervention.",
+    icon: Clock,
+    title: "Rapid Recovery",
+    description: "Quick data recovery solutions to minimize downtime and keep your business running",
   },
   {
-    icon: FileCheck,
-    title: "Toronto-Specific Data Integrity Checks",
-    description:
-      "Regular verification of backup integrity, considering Toronto's unique business landscape to ensure your data is recoverable when needed.",
+    icon: Database,
+    title: "Multiple Backup Points",
+    description: "Multiple recovery points to restore data from different time periods as needed",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Backup",
+    description: "Secure cloud backup solutions for accessibility and protection against physical disasters",
+  },
+  {
+    icon: History,
+    title: "Version Control",
+    description: "Advanced version control to track changes and restore specific file versions",
   },
 ]
 
 export default function BackupRecoveryPage() {
   return (
-    <ServiceLayout>
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8 text-center text-primary">
-          Backup & Recovery Solutions for Toronto Businesses
-        </h1>
-        <p className="text-lg mb-12 text-center max-w-3xl mx-auto">
-          Data loss can cripple a business in Toronto's fast-paced environment. We make sure it doesn't. Our backup and
-          recovery solutions protect your critical files with secure, automated backups and fast restoration when
-          disaster strikes. Whether it's a server crash, ransomware, or human error, our Toronto-based experts recover
-          your data quickly and reliably. We've helped countless GTA businesses bounce back—let us safeguard your
-          operations in Canada's largest business hub.
-        </p>
+    <>
+      <ServiceHero
+        title="DATA BACKUP & RECOVERY SOLUTIONS"
+        description="Protect your business data with comprehensive backup and recovery services"
+        primaryCTA={{ text: "Schedule a Consultation", href: "/contact" }}
+        secondaryCTA={{ text: "Explore Solutions", href: "#features" }}
+      />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {services.map((service, index) => (
-            <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-              <CardHeader className="flex flex-col items-center">
-                <service.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
-                <CardTitle className="text-xl text-center">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center text-gray-600">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Secure Data Protection for Toronto Businesses</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            In today's digital world, data loss can be catastrophic for your business. Our comprehensive backup and
+            recovery solutions ensure your critical business data is always protected and quickly recoverable. We
+            implement robust systems that safeguard your information against hardware failure, cyber threats, natural
+            disasters, and human error.
+          </p>
         </div>
+      </section>
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-6 text-center">
-                Why Choose Our Toronto-Focused Backup & Recovery Solutions?
-              </h2>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <ArrowRight className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>
-                    Comprehensive protection with both on-site and off-site backups, leveraging Toronto's advanced data
-                    center infrastructure
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRight className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>
-                    Tailored solutions to meet your specific Toronto business needs and comply with Ontario's data
-                    protection regulations
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRight className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>Rapid recovery options to minimize downtime in Toronto's competitive business landscape</span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRight className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>
-                    Advanced encryption and security measures to protect your sensitive data from Toronto-specific cyber
-                    threats
-                  </span>
-                </li>
-                <li className="flex items-start">
-                  <ArrowRight className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>
-                    24/7 monitoring and support from our Toronto-based team to ensure your backups are always running
-                    smoothly, even during Toronto's unpredictable weather events
-                  </span>
-                </li>
-              </ul>
-            </div>
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Backup & Recovery Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions for Toronto Businesses</h2>
-            <Accordion type="single" collapsible className="max-w-2xl mx-auto">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>How often should Toronto businesses back up their data?</AccordionTrigger>
-                <AccordionContent>
-                  The frequency of backups depends on how often your data changes and how much data loss your Toronto
-                  business can tolerate. For many GTA businesses, we recommend daily backups of critical data. However,
-                  for systems with frequent changes, such as those in Toronto's financial district, we might implement
-                  continuous data protection for real-time backups. We'll work with you to determine the optimal backup
-                  schedule for your specific needs in Toronto's dynamic business environment.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>How long does data recovery typically take for a Toronto business?</AccordionTrigger>
-                <AccordionContent>
-                  Recovery time can vary depending on the amount of data and the nature of the disaster. For small
-                  amounts of data or single-file recoveries, we can often restore data within minutes. For larger
-                  recoveries, it might take several hours. In cases of complete system failure, recovery could take a
-                  day or more. We prioritize critical systems and data to minimize business disruption in Toronto's
-                  fast-paced market. Our goal is always to get you operational as quickly as possible to maintain your
-                  competitive edge in the GTA.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  Is our backed-up data secure in the cloud, considering Toronto's cybersecurity landscape?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, we take extensive measures to ensure the security of your cloud-based backups, especially
-                  considering the unique cybersecurity challenges in Toronto. All data is encrypted both in transit and
-                  at rest using industry-standard encryption protocols. We use reputable cloud providers with data
-                  centers in and around Toronto, ensuring multiple layers of physical and digital security.
-                  Additionally, we implement strict access controls to ensure only authorized personnel can access your
-                  backups. Regular security audits are conducted to maintain the highest level of protection for your
-                  data, in compliance with Toronto and Ontario data protection regulations.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </section>
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>How often should we back up our business data?</AccordionTrigger>
+              <AccordionContent>
+                The frequency of backups depends on how often your data changes and its criticality. We typically
+                recommend daily backups for most businesses, with real-time or near-real-time backup solutions for
+                critical systems. We'll help you determine the optimal backup schedule based on your specific needs.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How quickly can you recover our data in case of an emergency?</AccordionTrigger>
+              <AccordionContent>
+                Our recovery time varies depending on the amount of data and type of backup solution implemented. With
+                our cloud-based solutions, we can often begin recovery immediately. For most scenarios, we can restore
+                critical data within hours. We'll work with you to establish recovery time objectives (RTO) that meet
+                your business needs.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Where is our backup data stored?</AccordionTrigger>
+              <AccordionContent>
+                We utilize a multi-location approach to data storage. Your data is typically stored both on-site for
+                quick recovery and in secure Canadian data centers for added protection. All storage locations meet
+                strict security standards and comply with Canadian data privacy regulations.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>How secure are your backup solutions?</AccordionTrigger>
+              <AccordionContent>
+                We implement enterprise-grade encryption for all backup data, both in transit and at rest. Our
+                solutions include advanced access controls, audit trails, and regular security updates. We also
+                perform regular testing to ensure both the security and integrity of your backup data.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
 
-        <section className="py-16 bg-primary text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Secure Your Toronto Business Data?</h2>
-            <p className="text-xl mb-8">
-              Don't wait for a disaster to strike in the bustling GTA. Protect your valuable Toronto business
-              information today.
-            </p>
-            <Button asChild size="lg" className="bg-white text-primary hover:bg-gray-100">
-              <Link href="#contact">Get Your Free Toronto-Focused Consultation</Link>
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
+          </h2>
+          <p className="text-xl mb-8">
+            Discover how PC Mechanix can transform your business's IT infrastructure into a powerful driver of growth
+            and success.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+            >
+              Schedule a Consultation
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+            >
+              Explore Our Services
             </Button>
           </div>
-        </section>
-      </div>
-    </ServiceLayout>
+        </div>
+      </section>
+    </>
   )
 }
-

@@ -1,146 +1,151 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Network, Shield, Zap, Users, Cloud, Cog } from "lucide-react"
-import type { Metadata } from "next"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import ServiceHero from "@/components/ServiceHero"
+"use client"
 
-export const metadata: Metadata = {
-  title: "Network Solutions for Toronto Businesses | PC Mechanix",
-  description:
-    "Comprehensive network solutions designed to keep your Toronto business connected, secure, and efficient. Expert network design, installation, and management services.",
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Network, Shield, Zap, Users, Cloud, Cog } from "lucide-react"
+import ServiceHero from "@/components/ServiceHero"
+import { useMobile } from "@/hooks/useMobile"
+import type { LucideIcon } from "lucide-react"
+
+interface Feature {
+  icon: LucideIcon
+  title: string
+  description: string
 }
 
-const features = [
+const features: Feature[] = [
   {
     icon: Network,
-    title: "Toronto-Optimized Network Design",
-    description: "Custom network architecture tailored to your Toronto business needs and local infrastructure",
+    title: "Custom Network Design",
+    description: "Tailored network architecture designed specifically for your business needs",
   },
   {
     icon: Shield,
-    title: "GTA-Focused Security",
-    description: "Robust security measures to protect your network from threats specific to the Greater Toronto Area",
+    title: "Advanced Security",
+    description: "Robust security measures to protect your network infrastructure",
   },
   {
     icon: Zap,
-    title: "High-Speed Performance",
-    description: "Optimized network performance for maximum productivity in Toronto's fast-paced business environment",
+    title: "Performance Optimization",
+    description: "Network optimization for maximum speed and reliability",
   },
   {
     icon: Users,
-    title: "Scalability for Growing Toronto Businesses",
-    description: "Flexible solutions that grow with your business in the dynamic Toronto market",
+    title: "Scalable Solutions",
+    description: "Flexible network configurations that grow with your business",
   },
   {
     icon: Cloud,
-    title: "Toronto-Based Cloud Integration",
-    description: "Seamless integration with cloud services, leveraging Toronto's advanced connectivity",
+    title: "Cloud Integration",
+    description: "Seamless integration with cloud services and applications",
   },
   {
     icon: Cog,
-    title: "Local Maintenance & Support",
-    description: "Proactive monitoring and maintenance by our Toronto-based team to ensure network reliability",
+    title: "Proactive Maintenance",
+    description: "Continuous monitoring and maintenance to prevent issues",
   },
 ]
 
 export default function NetworkSolutionsPage() {
+  const isMobile = useMobile()
+
   return (
     <>
       <ServiceHero
-        title="Network Solutions for Toronto Businesses"
-        description="Empower your Toronto business with robust, secure, and scalable network infrastructure."
-        primaryCTA={{ text: "Explore Toronto-Tailored Solutions", href: "#features" }}
-        secondaryCTA={{ text: "Get a Toronto-Specific Quote", href: "#contact" }}
+        title="NETWORK SOLUTIONS"
+        description="Professional network design and management for your business"
+        primaryCTA={{ text: "Get Started", href: "/contact" }}
+        secondaryCTA={{ text: "Learn More", href: "#features" }}
       />
 
-      <section className="py-16 bg-white">
+      <section className={`
+        bg-white
+        ${isMobile ? 'py-8' : 'py-16'}
+      `}>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">Network Solutions for Toronto's Business Landscape</h2>
-          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
-            A strong network is the backbone of any Toronto business. We design, install, and optimize wireless and
-            wired networks that keep your Toronto office connected—no dead zones, no slowdowns. Our technicians
-            troubleshoot issues, boost performance, and ensure your network scales with your growth in the GTA. Whether
-            it's Wi-Fi for a small shop in Kensington Market or a complex system for a multi-floor office in the
-            Financial District, we've got the expertise to keep you online and efficient.
-          </p>
-        </div>
-      </section>
-
-      <section id="features" className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Our Toronto-Focused Network Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                <CardHeader className="flex flex-col items-center">
-                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
-                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-center text-gray-600">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="prose prose-lg max-w-4xl mx-auto">
+            <p className={`
+              ${isMobile ? 'text-base mb-4' : 'text-lg mb-6'}
+            `}>
+              A strong network is the backbone of any successful business, and at PC Mechanix, we specialize in designing and maintaining systems that keep you connected. From setting up fast, reliable Wi-Fi to optimizing complex wired networks, we ensure your data flows seamlessly and securely across your organization.
+            </p>
+            <p className={`
+              ${isMobile ? 'text-base mb-6' : 'text-lg mb-8'}
+            `}>
+              We don't just stop at installation—our team monitors and fine-tunes your network to prevent downtime and boost performance. Whether you're scaling up or troubleshooting a glitch, our Toronto-based experts are ready to deliver solutions that fit your unique needs.
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section id="features" className={`
+        bg-gray-50
+        ${isMobile ? 'py-8' : 'py-16'}
+      `}>
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-center">FAQs for Toronto Businesses</h2>
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>
-                How do you ensure network reliability in Toronto's diverse business districts?
-              </AccordionTrigger>
-              <AccordionContent>
-                We conduct thorough site surveys and consider factors like building materials, local interference, and
-                neighborhood-specific challenges to design networks that perform optimally in any Toronto location, from
-                the dense downtown core to suburban business parks.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Can you support our multi-location business across the GTA?</AccordionTrigger>
-              <AccordionContent>
-                Absolutely. We specialize in creating unified network solutions for businesses with multiple locations
-                across Toronto and the GTA. Our team ensures seamless connectivity and consistent performance whether
-                you're in Toronto, Mississauga, Markham, or anywhere in between.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger>
-                How do you address cybersecurity concerns specific to Toronto businesses?
-              </AccordionTrigger>
-              <AccordionContent>
-                We stay informed about Toronto-specific cyber threats and implement robust security measures tailored to
-                local risks. This includes advanced firewalls, intrusion detection systems, and regular security audits
-                designed to protect against threats targeting Toronto businesses.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-4">
-              <AccordionTrigger>
-                Can you help with network solutions for Toronto's events and conferences?
-              </AccordionTrigger>
-              <AccordionContent>
-                Yes, we offer temporary network solutions perfect for Toronto's vibrant event scene. Whether you're
-                hosting at the Metro Toronto Convention Centre or a pop-up venue, we can set up robust, high-capacity
-                networks to support your event's connectivity needs.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <h2 className={`
+            font-bold text-center
+            ${isMobile ? 'text-2xl mb-8' : 'text-3xl mb-12'}
+          `}>
+            Our Network Solutions
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon
+              return (
+                <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                  <CardContent className={`
+                    ${isMobile ? 'p-4' : 'p-6'}
+                  `}>
+                    <Icon className={`
+                      text-primary
+                      ${isMobile ? 'h-8 w-8 mb-3' : 'h-12 w-12 mb-4'}
+                    `} />
+                    <h3 className={`
+                      font-semibold
+                      ${isMobile ? 'text-lg mb-2' : 'text-xl mb-3'}
+                    `}>
+                      {feature.title}
+                    </h3>
+                    <p className={`
+                      text-gray-600
+                      ${isMobile ? 'text-sm' : 'text-base'}
+                    `}>
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              )
+            })}
+          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className={`
+        bg-[#1D4D84] text-white
+        ${isMobile ? 'py-8' : 'py-16'}
+      `}>
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Ready to Optimize Your Toronto Business Network?</h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Contact us today to discuss your network needs and discover how our Toronto-tailored solutions can transform
-            your business connectivity.
+          <h2 className={`
+            font-bold
+            ${isMobile ? 'text-2xl mb-4' : 'text-3xl mb-6'}
+          `}>
+            Ready to Optimize Your Network?
+          </h2>
+          <p className={`
+            ${isMobile ? 'text-lg mb-6' : 'text-xl mb-8'}
+          `}>
+            Let's discuss how we can enhance your business connectivity.
           </p>
-          <Button size="lg" variant="secondary">
-            Get a Free Toronto Network Consultation
+          <Button 
+            size={isMobile ? "default" : "lg"}
+            className={`
+              bg-white text-[#1D4D84] hover:bg-[#E4EDEF]
+              ${isMobile ? 'min-h-[40px] text-base' : 'min-h-[44px] text-lg'}
+            `}
+            asChild
+          >
+            <a href="/contact">Schedule a Network Assessment</a>
           </Button>
         </div>
       </section>

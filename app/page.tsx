@@ -47,12 +47,44 @@ const ScrollToTopButton = () => {
   )
 }
 
+const CollapsibleAreas = () => {
+  const [isExpanded, setIsExpanded] = useState(false)
+
+  return (
+    <>
+      <h2 className="text-4xl font-bold text-center mb-4 text-primary uppercase tracking-wide">AREAS WE SERVE</h2>
+      <Button onClick={() => setIsExpanded(!isExpanded)} variant="outline" className="mx-auto mb-4 flex items-center">
+        {isExpanded ? "Hide Areas" : "Show Areas"}
+        {isExpanded ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+      </Button>
+      {isExpanded && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {canadianCities.map((region, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4"
+            >
+              <h3 className="text-lg font-semibold mb-2 text-primary">{region.name}</h3>
+              <ul className="text-sm text-gray-600 space-y-1">
+                {region.cities.map((city, cityIndex) => (
+                  <li key={cityIndex}>{city}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
+    </>
+  )
+}
+
 export default function Home() {
   const [benefitDetails, setBenefitDetails] = useState(benefits.map(() => false))
 
   const toggleBenefitDetails = (index: number) => {
     setBenefitDetails((prev) => prev.map((detail, i) => (i === index ? !detail : detail)))
   }
+
   return (
     <ServiceLayout renderHeaderAndFooter={true}>
       <main className="flex-grow">
@@ -141,13 +173,14 @@ export default function Home() {
                 {Array.from({ length: 10 }).map((_, index) => (
                   <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
                     <div className="p-1">
-                      <Image
-                        src={`/placeholder.svg?text=Logo${index + 1}&width=200&height=100`}
-                        alt={`Customer Logo ${index + 1}`}
-                        width={200}
-                        height={100}
-                        className="mx-auto"
-                      />
+                      <div className="relative w-[200px] h-[100px]">
+                        <Image
+                          src={`/placeholder.svg?text=Logo${index + 1}&width=200&height=100`}
+                          alt={`Customer Logo ${index + 1}`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
                     </div>
                   </CarouselItem>
                 ))}
@@ -158,28 +191,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97]">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">OUR SERVICES</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-white uppercase tracking-wide">OUR SERVICES</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="flex flex-col transition-all duration-300 hover:shadow-lg bg-gradient-to-br from-blue-100 to-indigo-100 border-none"
+                  className="group bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl border-none"
                 >
-                  <CardContent className="flex-grow p-6">
+                  <CardContent className="flex flex-col h-full p-6">
                     <div className="flex items-center mb-4">
-                      <service.icon className="h-8 w-8 text-blue-600 mr-3" />
-                      <h3 className="text-xl font-semibold text-blue-800">{service.title}</h3>
+                      <div className="p-3 rounded-full bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
+                        <service.icon className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 ml-4 group-hover:text-blue-700 transition-colors duration-300">
+                        {service.title}
+                      </h3>
                     </div>
-                    <p className="text-gray-700 mb-4">{service.description}</p>
+                    <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
                     <Button
-                      variant="link"
-                      className="p-0 group text-blue-600 hover:text-blue-800 transition-colors duration-300 mt-auto"
+                      variant="default"
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 group-hover:shadow-md"
                       asChild
                     >
-                      <Link href={`/business/${service.slug}`}>
-                        Learn More{" "}
+                      <Link href={`/business/${service.slug}`} className="flex items-center justify-center">
+                        Learn More
                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </Button>
@@ -348,15 +385,17 @@ export default function Home() {
               <Button
                 size="lg"
                 className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+                asChild
               >
-                Schedule a Consultation
+                <Link href="/contact">Schedule a Consultation</Link>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+                asChild
               >
-                Explore Our Services
+                <Link href="#services">Explore Our Services</Link>
               </Button>
             </div>
           </div>
@@ -395,100 +434,6 @@ export default function Home() {
   )
 }
 
-function CollapsibleAreas() {
-  const [isExpanded, setIsExpanded] = useState(false)
-
-  return (
-    <>
-      <h2 className="text-4xl font-bold text-center mb-4 text-primary uppercase tracking-wide">AREAS WE SERVE</h2>
-      <Button onClick={() => setIsExpanded(!isExpanded)} variant="outline" className="mx-auto mb-4 flex items-center">
-        {isExpanded ? "Hide Areas" : "Show Areas"}
-        {isExpanded ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
-      </Button>
-      {isExpanded && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {canadianCities.map((region, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4"
-            >
-              <h3 className="text-lg font-semibold mb-2 text-primary">{region.name}</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                {region.cities.map((city, cityIndex) => (
-                  <li key={cityIndex}>{city}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
-    </>
-  )
-}
-
-const canadianCities = [
-  {
-    name: "Ontario",
-    cities: [
-      "Toronto",
-      "Ottawa",
-      "Mississauga",
-      "Brampton",
-      "Hamilton",
-      "London",
-      "Windsor",
-      "Kitchener",
-      "Markham",
-      "Vaughan",
-    ],
-  },
-  {
-    name: "British Columbia",
-    cities: ["Vancouver", "Surrey", "Burnaby", "Richmond", "Abbotsford", "Coquitlam", "Kelowna", "Victoria", "Nanaimo"],
-  },
-  {
-    name: "Alberta",
-    cities: [
-      "Calgary",
-      "Edmonton",
-      "Red Deer",
-      "Lethbridge",
-      "St. Albert",
-      "Medicine Hat",
-      "Grande Prairie",
-      "Airdrie",
-    ],
-  },
-  {
-    name: "Manitoba",
-    cities: ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Selkirk", "Winkler", "Dauphin"],
-  },
-  {
-    name: "Saskatchewan",
-    cities: ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford"],
-  },
-  {
-    name: "Nova Scotia",
-    cities: ["Halifax", "Dartmouth", "Sydney", "Truro", "New Glasgow", "Glace Bay", "Kentville", "Bridgewater"],
-  },
-  {
-    name: "New Brunswick",
-    cities: ["Moncton", "Saint John", "Fredericton", "Dieppe", "Miramichi", "Edmundston", "Bathurst", "Campbellton"],
-  },
-  {
-    name: "Newfoundland and Labrador",
-    cities: ["St. John's", "Mount Pearl", "Corner Brook", "Conception Bay South", "Grand Falls-Windsor", "Paradise"],
-  },
-  {
-    name: "Prince Edward Island",
-    cities: ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Kensington", "Souris"],
-  },
-  {
-    name: "Territories",
-    cities: ["Whitehorse (Yukon)", "Yellowknife (Northwest Territories)", "Iqaluit (Nunavut)"],
-  },
-]
-
 const services = [
   {
     title: "Managed IT Services",
@@ -497,10 +442,10 @@ const services = [
     slug: "managed-it",
   },
   {
-    title: "Cyber Security",
+    title: "Cybersecurity",
     description: "Protect your business from digital threats and vulnerabilities.",
     icon: Shield,
-    slug: "cyber-security",
+    slug: "cybersecurity",
   },
   {
     title: "Cloud Services",
@@ -509,23 +454,22 @@ const services = [
     slug: "cloud-services",
   },
   {
-    title: "Software Solutions",
-    description:
-      "Expert implementation and support for various software platforms to enhance your business productivity.",
-    icon: LayoutGrid,
-    slug: "software-solutions",
-  },
-  {
-    title: "Networking",
+    title: "Network Solutions",
     description: "Design, implementation, and maintenance of robust network solutions.",
     icon: Network,
-    slug: "networking",
+    slug: "network-solutions",
   },
   {
-    title: "Integrated CCTV with Loss Prevention Monitoring",
-    description: "Advanced surveillance systems with real-time monitoring and loss prevention.",
+    title: "IT Consulting",
+    description: "Expert guidance and strategic planning for your IT infrastructure.",
+    icon: LayoutGrid,
+    slug: "it-consulting",
+  },
+  {
+    title: "Security Systems",
+    description: "Advanced surveillance and security solutions for your business.",
     icon: Video,
-    slug: "cctv-monitoring",
+    slug: "security-systems",
   },
 ]
 
@@ -594,5 +538,68 @@ const industries = [
   {
     name: "Logistics",
     icon: Truck,
+  },
+]
+
+const canadianCities = [
+  {
+    name: "Ontario",
+    cities: [
+      "Toronto",
+      "Ottawa",
+      "Mississauga",
+      "Brampton",
+      "Hamilton",
+      "London",
+      "Windsor",
+      "Kitchener",
+      "Markham",
+      "Vaughan",
+    ],
+  },
+  {
+    name: "British Columbia",
+    cities: ["Vancouver", "Surrey", "Burnaby", "Richmond", "Abbotsford", "Coquitlam", "Kelowna", "Victoria", "Nanaimo"],
+  },
+  {
+    name: "Alberta",
+    cities: [
+      "Calgary",
+      "Edmonton",
+      "Red Deer",
+      "Lethbridge",
+      "St. Albert",
+      "Medicine Hat",
+      "Grande Prairie",
+      "Airdrie",
+    ],
+  },
+  {
+    name: "Manitoba",
+    cities: ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Selkirk", "Winkler", "Dauphin"],
+  },
+  {
+    name: "Saskatchewan",
+    cities: ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford"],
+  },
+  {
+    name: "Nova Scotia",
+    cities: ["Halifax", "Dartmouth", "Sydney", "Truro", "New Glasgow", "Glace Bay", "Kentville", "Bridgewater"],
+  },
+  {
+    name: "New Brunswick",
+    cities: ["Moncton", "Saint John", "Fredericton", "Dieppe", "Miramichi", "Edmundston", "Bathurst", "Campbellton"],
+  },
+  {
+    name: "Newfoundland and Labrador",
+    cities: ["St. John's", "Mount Pearl", "Corner Brook", "Conception Bay South", "Grand Falls-Windsor", "Paradise"],
+  },
+  {
+    name: "Prince Edward Island",
+    cities: ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Kensington", "Souris"],
+  },
+  {
+    name: "Territories",
+    cities: ["Whitehorse (Yukon)", "Yellowknife (Northwest Territories)", "Iqaluit (Nunavut)"],
   },
 ]

@@ -1,85 +1,83 @@
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Shield, Camera, Lock, Bell, Fingerprint, Wifi, ArrowRight } from "lucide-react"
-import ServiceLayout from "@/components/ServiceLayout"
+import { Camera, Shield, Bell, Eye, Lock, Smartphone } from "lucide-react"
+import type { Metadata } from "next"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ServiceHero from "@/components/ServiceHero"
 
-export const metadata = {
-  title: "Business Security Systems | PC Mechanix",
+export const metadata: Metadata = {
+  title: "Security Systems Toronto | PC Mechanix",
   description:
-    "Comprehensive security solutions for businesses. CCTV, access control, alarm systems, and more to protect your assets and ensure peace of mind.",
+    "Professional CCTV and alarm system solutions in Toronto. Protect your business with advanced security technology and monitoring services.",
 }
 
-const securitySystems = [
+const features = [
   {
     icon: Camera,
     title: "CCTV Systems",
-    description: "High-definition surveillance cameras with advanced analytics for comprehensive monitoring.",
+    description: "High-definition surveillance cameras with advanced monitoring capabilities",
+  },
+  {
+    icon: Shield,
+    title: "Alarm Systems",
+    description: "Professional alarm systems with 24/7 monitoring and quick response",
+  },
+  {
+    icon: Bell,
+    title: "Alert Systems",
+    description: "Customizable alert systems for different security scenarios",
+  },
+  {
+    icon: Eye,
+    title: "Remote Monitoring",
+    description: "Access your security feeds from anywhere with mobile monitoring",
   },
   {
     icon: Lock,
     title: "Access Control",
-    description: "Secure entry systems using keycards, biometrics, or mobile credentials for authorized access.",
+    description: "Advanced access control systems for secure entry management",
   },
   {
-    icon: Bell,
-    title: "Alarm Systems",
-    description: "24/7 monitored intrusion detection systems to safeguard your premises.",
-  },
-  {
-    icon: Fingerprint,
-    title: "Biometric Security",
-    description: "Cutting-edge biometric authentication for high-security areas.",
-  },
-  {
-    icon: Wifi,
-    title: "Network Security",
-    description: "Robust cybersecurity measures to protect your digital assets and data.",
-  },
-  {
-    icon: Shield,
-    title: "Integrated Security Solutions",
-    description: "Comprehensive security management systems that combine multiple security technologies.",
+    icon: Smartphone,
+    title: "Mobile Integration",
+    description: "Smartphone apps for remote system control and monitoring",
   },
 ]
 
 export default function SecuritySystemsPage() {
   return (
-    <ServiceLayout>
-      <section className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white py-24">
-        <Image
-          src="/placeholder.svg?height=400&width=1600"
-          alt="Business Security Systems"
-          fill
-          className="object-cover opacity-20"
-          priority
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-extrabold mb-6">Business Security Systems</h1>
-            <p className="text-xl mb-8">
-              Protect your business with state-of-the-art security solutions tailored to your needs.
-            </p>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="#contact">Get a Security Consultation</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+    <>
+      <ServiceHero
+        title="CCTV & ALARM SYSTEMS"
+        description="Protect your business with advanced security solutions"
+        primaryCTA={{ text: "Schedule a Consultation", href: "/contact" }}
+        secondaryCTA={{ text: "Explore Solutions", href: "#features" }}
+      />
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Security Solutions</h2>
+          <h2 className="text-3xl font-bold mb-6 text-center">Advanced Business Security</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            Protect your business with state-of-the-art security systems. We provide comprehensive security
+            solutions including CCTV cameras, alarm systems, and access control for Toronto businesses. Our systems
+            offer advanced features like HD video, night vision, motion detection, and remote monitoring to ensure
+            your property is protected 24/7.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Security Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {securitySystems.map((system, index) => (
+            {features.map((feature, index) => (
               <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
-                  <system.icon className="h-12 w-12 text-primary mb-4" />
-                  <CardTitle className="text-xl">{system.title}</CardTitle>
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{system.description}</p>
+                  <p className="text-center text-gray-600">{feature.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -87,107 +85,73 @@ export default function SecuritySystemsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Why Choose PC Mechanix for Your Security Needs?</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Expert Installation and Support</h3>
-              <p className="text-gray-700 mb-4">
-                Our team of certified security professionals ensures that your systems are installed correctly and
-                optimized for your specific business environment. We provide ongoing support and maintenance to keep
-                your security measures up-to-date and functioning at peak performance.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-4">Customized Solutions</h3>
-              <p className="text-gray-700 mb-4">
-                We understand that every business has unique security requirements. That's why we offer tailored
-                security solutions that address your specific needs, whether you're a small retail shop or a large
-                corporate office.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Our Security System Process</h2>
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <ol className="list-decimal list-inside space-y-4">
-                <li className="text-lg text-gray-700">
-                  <span className="font-semibold">Initial Consultation:</span> We assess your security needs and
-                  understand your business operations.
-                </li>
-                <li className="text-lg text-gray-700">
-                  <span className="font-semibold">Custom Design:</span> Our experts create a tailored security plan for
-                  your business.
-                </li>
-                <li className="text-lg text-gray-700">
-                  <span className="font-semibold">Professional Installation:</span> We install your security systems
-                  with minimal disruption to your business.
-                </li>
-                <li className="text-lg text-gray-700">
-                  <span className="font-semibold">Staff Training:</span> We provide comprehensive training on how to use
-                  and manage your new security systems.
-                </li>
-                <li className="text-lg text-gray-700">
-                  <span className="font-semibold">Ongoing Support:</span> Our team is always available for maintenance,
-                  upgrades, and support.
-                </li>
-              </ol>
-            </div>
-            <div>
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="Security System Installation"
-                width={600}
-                height={400}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold mb-6 text-center">Security FAQ</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What type of cameras do you install?</AccordionTrigger>
+              <AccordionContent>
+                We install high-definition IP cameras with features like night vision, motion detection, and wide
+                viewing angles. Our cameras provide clear footage in all lighting conditions and can be accessed
+                remotely through secure mobile apps. We offer both indoor and outdoor cameras suitable for various
+                business environments.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>Do you provide monitoring services?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we offer 24/7 professional monitoring services for both CCTV and alarm systems. Our monitoring
+                center responds quickly to alerts and can notify appropriate authorities when needed. You also have
+                the option to monitor your systems yourself through our mobile apps.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>How is footage stored and accessed?</AccordionTrigger>
+              <AccordionContent>
+                We offer both on-site and cloud storage solutions for security footage. Our systems can store
+                weeks or months of footage depending on your needs. Footage can be accessed securely through web
+                interfaces or mobile apps, with options for instant playback and easy export.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What about system maintenance?</AccordionTrigger>
+              <AccordionContent>
+                We provide regular maintenance services to ensure your security systems operate reliably. This
+                includes system checks, firmware updates, camera cleaning, and prompt repair services when needed.
+                We also offer preventive maintenance plans to prevent system issues.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              "Retail",
-              "Healthcare",
-              "Finance",
-              "Education",
-              "Manufacturing",
-              "Hospitality",
-              "Government",
-              "Technology",
-            ].map((industry, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow text-center">
-                <p className="font-semibold text-gray-800">{industry}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-16 bg-primary text-white">
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Secure Your Business?</h2>
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
+          </h2>
           <p className="text-xl mb-8">
-            Contact us today for a free consultation and take the first step towards comprehensive business security.
+            Discover how PC Mechanix can transform your business's IT infrastructure into a powerful driver of growth
+            and success.
           </p>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/contact">
-              Get Your Free Security Consultation <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+            >
+              Schedule a Consultation
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+            >
+              Explore Our Services
+            </Button>
+          </div>
         </div>
       </section>
-    </ServiceLayout>
+    </>
   )
 }
-

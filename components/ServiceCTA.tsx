@@ -6,7 +6,10 @@ interface ServiceCTAProps {
 
 export default function ServiceCTA({ text }: ServiceCTAProps) {
   return (
-    <Button size="lg" className="w-full md:w-auto">
+    <Button 
+      size="lg" 
+      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 sm:py-4 min-h-[44px] shadow-md hover:shadow-lg transition-all duration-300"
+    >
       {text}
     </Button>
   )

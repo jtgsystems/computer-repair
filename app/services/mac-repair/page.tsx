@@ -1,171 +1,216 @@
-import type { Metadata } from "next"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Laptop, HardDrive, Zap, Shield, PenToolIcon as Tool, ArrowRight } from "lucide-react"
+import { Laptop, HardDrive, Zap, Shield, Wrench, Monitor } from "lucide-react"
+import type { Metadata } from "next"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ServiceHero from "@/components/ServiceHero"
 import ServiceLayout from "@/components/ServiceLayout"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Mac Repair Services | PC Mechanix",
+  title: "Mac Repair Services Toronto | PC Mechanix",
   description:
     "Expert Mac repair services in Toronto. Fast, reliable fixes for all Apple devices including MacBooks, iMacs, and Mac Pros.",
 }
 
+const features = [
+  {
+    icon: Laptop,
+    title: "MacBook Repairs",
+    description: "Expert repairs for all MacBook models and issues",
+  },
+  {
+    icon: Monitor,
+    title: "iMac Services",
+    description: "Comprehensive repair solutions for iMac computers",
+  },
+  {
+    icon: Shield,
+    title: "Virus Protection",
+    description: "Remove malware and protect your Mac from threats",
+  },
+  {
+    icon: Zap,
+    title: "Performance Boost",
+    description: "Optimize your Mac's speed and performance",
+  },
+  {
+    icon: HardDrive,
+    title: "Data Services",
+    description: "Data recovery and transfer between systems",
+  },
+  {
+    icon: Wrench,
+    title: "Hardware Upgrades",
+    description: "Strategic upgrades to enhance your Mac's capabilities",
+  },
+]
+
 export default function MacRepairPage() {
   return (
     <ServiceLayout>
-      <section className="relative bg-gradient-to-r from-gray-800 to-gray-900 text-white py-24">
-        <Image
-          src="/placeholder.svg?height=400&width=1600"
-          alt="Mac Repair"
-          fill
-          className="object-cover opacity-20"
-          priority
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-extrabold mb-6">Expert Mac Repair Services</h1>
-            <p className="text-xl mb-8">
-              Professional repair services for all Apple devices. We specialize in diagnosing and fixing issues with
-              MacBooks, iMacs, Mac Pros, and more.
-            </p>
-            <Button size="lg" variant="secondary">
-              Get Your Mac Fixed
-            </Button>
+      <ServiceHero
+        title="EXPERT MAC REPAIR SERVICES"
+        description="Professional repair solutions for all Apple devices"
+        primaryCTA={{ text: "Get Started", href: "/contact" }}
+        secondaryCTA={{ text: "Learn More", href: "#features" }}
+      />
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Toronto's Mac Repair Specialists</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            Being Toronto's top computer technicians, we specialize in Mac/Apple Computer Repair. Our expert team
+            is adept at fixing all types of Mac issues, from virus removal to hardware repairs. Whether you need
+            MacBook Pro screen repairs, keyboard replacements, or system upgrades, we have the expertise to get
+            your Mac running at its best.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Mac Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16">
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-primary">Specialists in Toronto MacBook Pro Repair</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p className="text-gray-700 mb-4">
-                Being Toronto's top computer technicians, we specialize in Mac/Apple Computer Repair. We are adept at
-                fixing Mac Viruses, Malware and more. Our services extend to MacBook Pro screen, keyboards, jacks,
-                wireless, networks, DVD slots, and more.
-              </p>
-              <p className="text-gray-700 mb-4">
-                With years of service in the computer industry, some of the best techs on the planet work at PC
-                Mechanix. Experience the difference that hundreds of businesses and thousands of people in Toronto trust
-                us for computer repair and server maintenance.
-              </p>
-              <p className="text-gray-700">
-                We've serviced some of the largest companies in Toronto, but we're never too big to help the Small
-                Business or even the smallest customer with a simple question.
-              </p>
+              <h2 className="text-3xl font-bold mb-6">Our Mac Repair Process</h2>
+              <ol className="space-y-4">
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">1</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Diagnostic Assessment</h3>
+                    <p className="text-gray-600">Thorough evaluation of your Mac's issues</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">2</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Repair Quote</h3>
+                    <p className="text-gray-600">Transparent pricing with detailed explanation</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">3</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Expert Repair</h3>
+                    <p className="text-gray-600">Professional repairs by certified Mac technicians</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">4</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Quality Testing</h3>
+                    <p className="text-gray-600">Comprehensive testing of all repairs</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">5</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Final Verification</h3>
+                    <p className="text-gray-600">Complete system check before return</p>
+                  </div>
+                </li>
+              </ol>
             </div>
             <div>
               <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="MacBook Pro Repair"
-                width={600}
+                src="/placeholder.svg"
+                alt="Mac Repair Process"
+                width={500}
                 height={400}
                 className="rounded-lg shadow-lg"
               />
             </div>
           </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-primary">Our Regular Computer Repair Services Include:</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
-                  <service.icon className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-primary">
-            Expert Computer Solutions in Toronto: PC, Laptop, and Mac Repair Services
-          </h2>
-          <p className="text-gray-700 mb-4">
-            Leading the way in Toronto's computer repair industry, we specialize in providing exceptional service for
-            PCs, laptops, and Macs. Offering same-day assistance in Toronto and the surrounding GTA, our team of
-            dedicated computer repair technicians is ready to meet your every need – from setting up wireless networks
-            to server installation and repair.
-          </p>
-          <p className="text-gray-700 mb-4">
-            We've earned the trust of thousands of customers, thanks to our commitment to delivering quality results.
-            Whether you need on-site assistance or prefer to visit our computer store in Toronto, we're confident we can
-            exceed your expectations.
-          </p>
-        </section>
-
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">Ready to Get Your Mac Fixed?</h2>
-          <p className="mb-6">
-            Don't let Mac issues slow you down. Contact us today for fast, professional repair services.
-          </p>
-          <Button size="lg" className="text-lg px-8">
-            Schedule Mac Repair <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
-      </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Common Questions</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What Mac devices do you repair?</AccordionTrigger>
+              <AccordionContent>
+                We repair all Apple Mac devices including MacBooks (Pro, Air), iMacs, Mac Pros, and Mac Minis.
+                Our technicians are experienced with both current and older Mac models, and can handle a wide
+                range of hardware and software issues.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How long do Mac repairs usually take?</AccordionTrigger>
+              <AccordionContent>
+                Many common Mac repairs can be completed same-day or within 24-48 hours. For more complex repairs
+                or if parts need to be ordered, we'll provide you with a detailed timeline. We always strive to
+                complete repairs as quickly as possible without compromising quality.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Do you use genuine Apple parts?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we use high-quality parts that meet or exceed Apple's specifications. For certain repairs,
+                we can offer both genuine Apple parts and high-quality third-party alternatives, allowing you to
+                choose based on your preferences and budget.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What warranty do you offer on Mac repairs?</AccordionTrigger>
+              <AccordionContent>
+                All our Mac repairs come with a 90-day warranty covering both parts and labor. If any issue
+                related to our repair occurs within this period, we'll fix it at no additional cost. We
+                thoroughly test all repairs to ensure lasting reliability.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            Ready to Fix Your Mac?
+          </h2>
+          <p className="text-xl mb-8">
+            Don't let Mac issues slow you down. Contact us now for professional repair services.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact">Schedule Repair</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="#features">Learn More</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </ServiceLayout>
   )
 }
-
-const services = [
-  {
-    icon: Zap,
-    title: "Computer Software Repair and System Speed Ups",
-    description: "Optimize your Mac's performance and fix software issues.",
-  },
-  {
-    icon: Shield,
-    title: "Computer Malware Removal, Virus Removal",
-    description: "Protect your Mac from viruses and malware threats.",
-  },
-  {
-    icon: Laptop,
-    title: "Computer Screen Repair",
-    description: "Fix cracked or malfunctioning Mac screens.",
-  },
-  {
-    icon: Tool,
-    title: "Custom Computer Builds",
-    description: "Build custom Mac systems tailored to your needs.",
-  },
-  {
-    icon: HardDrive,
-    title: "Laptop and Desktop Fan Repair",
-    description: "Resolve overheating issues with fan repairs.",
-  },
-  {
-    icon: Zap,
-    title: "Computer/Laptop/Mac upgrades",
-    description: "Upgrade your Mac's hardware for better performance.",
-  },
-  {
-    icon: HardDrive,
-    title: "Computer Data Transfer from Mac to PC or PC to Mac",
-    description: "Seamlessly transfer your data between different systems.",
-  },
-  {
-    icon: Zap,
-    title: "Computer/MacBook pro-Overheating Repair",
-    description: "Fix overheating issues to protect your Mac's components.",
-  },
-  {
-    icon: Laptop,
-    title: "Computer Software Installation for MAC or PC",
-    description: "Install and configure software on your Mac or PC.",
-  },
-  {
-    icon: Tool,
-    title: "Computer Hardware Installation for MAC or PC",
-    description: "Install new hardware components in your Mac or PC.",
-  },
-]
-

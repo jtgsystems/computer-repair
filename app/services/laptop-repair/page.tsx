@@ -1,188 +1,217 @@
-import type { Metadata } from "next"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Laptop, HardDrive, Zap, Shield, CheckCircle, Wifi, WrenchIcon, Thermometer, ArrowRight } from "lucide-react"
+import { Laptop, HardDrive, Battery, Wifi, Camera, Shield, Wrench, Clock } from "lucide-react"
+import type { Metadata } from "next"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ServiceHero from "@/components/ServiceHero"
 import ServiceLayout from "@/components/ServiceLayout"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Expert Laptop Repair Services in Toronto | PC Mechanix",
+  title: "Expert Laptop Repair Services Toronto | PC Mechanix",
   description:
     "Fast, reliable laptop repairs in Toronto. Same-day service for all brands including Dell, HP, Lenovo, ASUS, and more. On-site and in-shop repairs across the GTA.",
 }
 
-export default function LaptopRepairPage() {
-  return (
-    <ServiceLayout>
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
-        <Image
-          src="/placeholder.svg?height=400&width=1600"
-          alt="Laptop Repair in Toronto"
-          fill
-          className="object-cover opacity-20"
-          priority
-        />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-extrabold mb-6">Expert Laptop Repair Services in Toronto</h1>
-            <p className="text-xl mb-8">
-              Fast, reliable fixes for all laptop brands. Get your device back up and running in no time.
-            </p>
-            <Button size="lg" variant="secondary">
-              Schedule a Repair in Toronto
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 py-16">
-        <h2 className="text-2xl font-bold mb-4">Toronto's Trusted Laptop Repair Experts</h2>
-        <p className="text-lg mb-6">
-          Your laptop is your lifeline—whether for work, school, or staying connected in Toronto's fast-paced
-          environment. When it breaks, you need a fix you can trust, and fast. At PC Mechanix, we're Toronto's laptop
-          repair experts, tackling everything from cracked screens to dead batteries across all brands: Dell, HP,
-          Lenovo, ASUS, and more. Our certified technicians have repaired thousands of laptops for GTA residents and
-          businesses, delivering same-day service whenever possible.
-        </p>
-        <p className="text-lg mb-6">
-          We understand that downtime isn't an option in Toronto's competitive landscape. That's why we offer on-site
-          repairs across the GTA or quick drop-off at our shop, diagnosing issues like slow performance, overheating, or
-          hardware failures with precision. Spilled coffee on your keyboard at a downtown café? Hard drive making weird
-          noises in your Scarborough home office? We've seen it all and fixed it all.
-        </p>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-primary">Our Toronto Laptop Repair Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                <CardHeader>
-                  <service.icon className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{service.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-primary">
-            Why Choose PC Mechanix for Your Toronto Laptop Repair?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <ul className="space-y-4">
-              {benefits.map((benefit, index) => (
-                <li key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
-            <div className="bg-gray-100 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-4">Brands We Service in Toronto</h3>
-              <div className="grid grid-cols-3 gap-4">
-                {brands.map((brand, index) => (
-                  <div key={index} className="text-center">
-                    <Image
-                      src={`/placeholder.svg?text=${brand}&width=100&height=100`}
-                      alt={`${brand} logo`}
-                      width={100}
-                      height={100}
-                      className="mx-auto mb-2"
-                    />
-                    <p className="text-sm">{brand}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-4">Ready to Get Your Laptop Fixed in Toronto?</h2>
-          <p className="mb-6">
-            Don't let laptop issues slow you down in the bustling GTA. Contact us today for fast, professional repair
-            services.
-          </p>
-          <Button size="lg" className="text-lg px-8">
-            Schedule Toronto Laptop Repair <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-        </div>
-      </div>
-    </ServiceLayout>
-  )
-}
-
-const services = [
-  {
-    icon: HardDrive,
-    title: "Data Recovery",
-    description:
-      "Recover lost or corrupted data from your laptop's hard drive or SSD, even in emergency situations across Toronto.",
-  },
-  {
-    icon: WrenchIcon,
-    title: "Hardware Repairs",
-    description:
-      "Fix broken or malfunctioning components, from keyboards damaged by Toronto's infamous coffee spills to worn-out batteries.",
-  },
-  {
-    icon: Thermometer,
-    title: "Overheating Solutions",
-    description:
-      "Resolve overheating issues to protect your laptop's components and improve performance, crucial in Toronto's varying climate.",
-  },
+const features = [
   {
     icon: Laptop,
     title: "Screen Repairs",
-    description:
-      "Replace cracked or malfunctioning laptop screens for all brands, with options for same-day service in the GTA.",
+    description: "Expert repairs for cracked or malfunctioning laptop screens",
   },
   {
-    icon: Zap,
-    title: "Performance Upgrades",
-    description:
-      "Boost your laptop's speed and capability with hardware upgrades, perfect for demanding Toronto professionals.",
+    icon: HardDrive,
+    title: "Data Recovery",
+    description: "Professional recovery of lost or corrupted data",
+  },
+  {
+    icon: Wrench,
+    title: "Hardware Repairs",
+    description: "Fixes for all laptop hardware issues and components",
   },
   {
     icon: Shield,
     title: "Virus Removal",
-    description:
-      "Eliminate viruses, malware, and other security threats to keep your data safe in Toronto's digital landscape.",
+    description: "Comprehensive protection against malware and viruses",
+  },
+  {
+    icon: Battery,
+    title: "Battery Service",
+    description: "Battery replacements to restore device performance",
   },
   {
     icon: Wifi,
-    title: "Connectivity Issues",
-    description:
-      "Solve Wi-Fi and Bluetooth problems to keep you connected in Toronto's fast-paced business environment.",
-  },
-  {
-    icon: WrenchIcon,
-    title: "Liquid Damage Repair",
-    description:
-      "Specialized treatment for laptops that have encountered spills or humidity, a common issue in Toronto's busy cafes and offices.",
-  },
-  {
-    icon: Thermometer,
-    title: "Diagnostic Services",
-    description:
-      "Thorough assessment of your laptop's health, with clear explanations and transparent quotes for Toronto customers.",
+    title: "Connectivity Fixes",
+    description: "Solutions for Wi-Fi and network connection issues",
   },
 ]
 
-const benefits = [
-  "Experienced technicians specializing in all laptop brands common in Toronto",
-  "Fast turnaround times, with same-day service available for many repairs",
-  "Convenient on-site repairs across the Greater Toronto Area",
-  "Use of high-quality replacement parts sourced from reliable Toronto suppliers",
-  "Comprehensive diagnostic and repair services tailored to Toronto's tech needs",
-  "Competitive pricing with no hidden fees, respecting Toronto's value-conscious consumers",
-  "90-day warranty on all repairs, giving Toronto customers peace of mind",
-  "Expert advice on maintaining your laptop in Toronto's diverse environment",
-]
+export default function LaptopRepairPage() {
+  return (
+    <ServiceLayout>
+      <ServiceHero
+        title="EXPERT LAPTOP REPAIR SERVICES"
+        description="Fast, reliable laptop repairs for all brands and models"
+        primaryCTA={{ text: "Schedule Repair", href: "/contact" }}
+        secondaryCTA={{ text: "Learn More", href: "#features" }}
+      />
 
-const brands = ["Dell", "HP", "Lenovo", "ASUS", "Acer", "Apple", "Microsoft", "Samsung", "Toshiba"]
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Toronto's Trusted Laptop Repair Experts</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            Your laptop is your lifeline—whether for work, school, or staying connected in Toronto's fast-paced
+            environment. When it breaks, you need a fix you can trust, and fast. At PC Mechanix, we're Toronto's laptop
+            repair experts, tackling everything from cracked screens to dead batteries across all brands. Our certified
+            technicians have repaired thousands of laptops for GTA residents and businesses, delivering same-day
+            service whenever possible.
+          </p>
+        </div>
+      </section>
 
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Our Repair Process</h2>
+              <ol className="space-y-4">
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">1</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Initial Assessment</h3>
+                    <p className="text-gray-600">Thorough diagnosis of your laptop's issues</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">2</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Repair Quote</h3>
+                    <p className="text-gray-600">Clear explanation of needed repairs and costs</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">3</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Expert Repair</h3>
+                    <p className="text-gray-600">Professional repairs by certified technicians</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">4</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Quality Testing</h3>
+                    <p className="text-gray-600">Comprehensive testing of all repaired components</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">5</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Final Check</h3>
+                    <p className="text-gray-600">Complete system verification before return</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div>
+              <Image
+                src="/placeholder.svg"
+                alt="Laptop Repair Process"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Common Questions</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What laptop brands do you repair?</AccordionTrigger>
+              <AccordionContent>
+                We repair all major laptop brands including Dell, HP, Lenovo, ASUS, Acer, Apple, Microsoft,
+                Samsung, and Toshiba. Our technicians are experienced with both Windows and Mac laptops, and can
+                handle a wide range of hardware and software issues.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How long do laptop repairs take?</AccordionTrigger>
+              <AccordionContent>
+                Many common repairs can be completed same-day or within 24-48 hours. For more complex repairs or
+                if parts need to be ordered, we'll provide you with a detailed timeline. We always strive to
+                complete repairs as quickly as possible without compromising quality.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Do you offer on-site laptop repairs?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we offer both in-shop and on-site repair services across the GTA. For businesses and
+                situations where bringing the laptop to us isn't convenient, our mobile technicians can come to
+                your location. We'll help determine the best option based on your specific situation.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What warranty do you provide?</AccordionTrigger>
+              <AccordionContent>
+                All our laptop repairs come with a 90-day warranty covering both parts and labor. If any issue
+                related to our repair occurs within this period, we'll fix it at no additional cost. We use only
+                high-quality parts and thoroughly test all repairs to ensure lasting reliability.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            Ready to Fix Your Laptop?
+          </h2>
+          <p className="text-xl mb-8">
+            Don't let laptop issues slow you down. Contact us now for fast, professional repair services.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact">Schedule Repair</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="#features">Learn More</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </ServiceLayout>
+  )
+}

@@ -1,274 +1,157 @@
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Monitor, Lock, Zap, Globe, LaptopIcon as DeviceLaptop, CloudCog, Shield, Users, Rocket } from "lucide-react"
+import { Layout, Cloud, Shield, Users, Zap, Laptop } from "lucide-react"
 import type { Metadata } from "next"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import ServiceLayout from "@/components/ServiceLayout"
+import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
-  title: "Virtual Desktop Infrastructure (VDI) for Toronto Businesses | PC Mechanix",
+  title: "Virtual Desktop Infrastructure Toronto | PC Mechanix",
   description:
-    "Secure and flexible Virtual Desktop Infrastructure solutions for enhanced productivity and simplified IT management in Toronto. Expert VDI implementation and support services for GTA businesses.",
+    "Professional VDI solutions in Toronto. Enable secure remote work with scalable virtual desktop infrastructure for your business.",
 }
 
-const services = [
+const features = [
   {
-    icon: Monitor,
-    title: "Toronto-Optimized Centralized Management",
-    description:
-      "Easily manage and deploy virtual desktops from a central location, perfect for Toronto's diverse business districts from downtown to the suburbs.",
+    icon: Layout,
+    title: "Virtual Desktops",
+    description: "Secure, customized virtual desktop environments for your team",
   },
   {
-    icon: Lock,
-    title: "GTA-Focused Enhanced Security",
-    description:
-      "Improve data protection with centralized storage and advanced access controls, tailored to Toronto's stringent cybersecurity needs.",
+    icon: Cloud,
+    title: "Cloud Integration",
+    description: "Seamless integration with cloud services and applications",
+  },
+  {
+    icon: Shield,
+    title: "Enhanced Security",
+    description: "Advanced security features to protect remote work environments",
+  },
+  {
+    icon: Users,
+    title: "User Management",
+    description: "Centralized user administration and access control",
   },
   {
     icon: Zap,
-    title: "Toronto-Speed Performance",
-    description:
-      "Deliver high-performance computing experiences to any device, leveraging Toronto's cutting-edge network infrastructure.",
+    title: "Performance",
+    description: "Optimized performance for smooth remote work experience",
   },
   {
-    icon: Globe,
-    title: "GTA-Wide Remote Accessibility",
-    description:
-      "Access your desktop environment from anywhere in the Greater Toronto Area, enabling flexibility for hybrid and remote teams.",
-  },
-  {
-    icon: DeviceLaptop,
-    title: "Toronto Business Device Flexibility",
-    description:
-      "Support a variety of devices—thin clients, laptops, or tablets—catering to Toronto's diverse and mobile workforce.",
-  },
-  {
-    icon: CloudCog,
-    title: "Toronto-Ready Scalability",
-    description:
-      "Scale your VDI environment seamlessly as your business grows in Toronto’s fast-paced and competitive market.",
+    icon: Laptop,
+    title: "Device Flexibility",
+    description: "Access from any device with internet connectivity",
   },
 ]
 
 export default function VDIPage() {
   return (
-    <ServiceLayout>
-      <div className="flex flex-col min-h-screen">
-        <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
-              <h1 className="text-5xl font-bold mb-6">Virtual Desktop Infrastructure (VDI) for Toronto Businesses</h1>
-              <p className="text-xl mb-8">
-                Boost productivity, enhance security, and simplify IT management with our tailored VDI solutions,
-                designed for Toronto's dynamic and innovative business landscape.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <Button asChild size="lg" className="bg-white text-blue-800 hover:bg-blue-100">
-                  <Link href="#services">Explore Toronto VDI Services</Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-blue-800"
-                >
-                  <Link href="#contact">Get a Toronto-Specific Quote</Link>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+    <>
+      <ServiceHero
+        title="VIRTUAL DESKTOP INFRASTRUCTURE"
+        description="Enable secure remote work with scalable VDI solutions"
+        primaryCTA={{ text: "Schedule a Consultation", href: "/contact" }}
+        secondaryCTA={{ text: "Explore Solutions", href: "#features" }}
+      />
 
-        <section id="services" className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center mb-12">Our VDI Services for Toronto Businesses</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-                  <CardHeader className="flex flex-col items-center">
-                    <service.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
-                    <CardTitle className="text-xl text-center">{service.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-center text-gray-600">{service.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-6 text-center">Why Choose VDI for Your Toronto Business?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card>
-                <CardHeader>
-                  <Shield className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Robust Security</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Protect sensitive data with centralized storage and encryption, critical for Toronto's regulated
-                    industries like finance and healthcare.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Users className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Employee Flexibility</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Empower your team to work from anywhere in the GTA, supporting Toronto's shift toward hybrid work
-                    environments.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardHeader>
-                  <Rocket className="h-10 w-10 text-primary mb-2" />
-                  <CardTitle>Business Agility</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p>
-                    Quickly adapt to market changes and scale operations efficiently in Toronto's fast-evolving
-                    business ecosystem.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        <div className="mb-16">
-          <Image
-            src="/placeholder.svg?height=400&width=800"
-            alt="Virtual Desktop Infrastructure in Action for Toronto Businesses"
-            width={800}
-            height={400}
-            className="rounded-lg shadow-lg mx-auto"
-          />
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Modern Virtual Desktop Solutions</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            Transform your workplace with our Virtual Desktop Infrastructure (VDI) solutions. We help Toronto
+            businesses implement secure, efficient virtual desktop environments that enable productive remote work.
+            Our VDI solutions provide the flexibility and security your team needs while maintaining control and
+            compliance.
+          </p>
         </div>
+      </section>
 
-        <div className="bg-gray-100 p-8 rounded-lg mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">VDI Implementation Process for Toronto Companies</h2>
-          <ol className="list-decimal list-inside space-y-4 max-w-2xl mx-auto text-gray-700">
-            <li className="font-semibold">
-              Toronto-Specific Assessment and Planning
-              <p className="font-normal ml-6 mt-2">
-                We analyze your current IT setup, workforce needs, and Toronto-specific compliance requirements to
-                craft a custom VDI strategy.
-              </p>
-            </li>
-            <li className="font-semibold">
-              GTA-Optimized Infrastructure Setup
-              <p className="font-normal ml-6 mt-2">
-                Our team deploys high-performance servers and software, leveraging Toronto’s robust connectivity for
-                seamless operation.
-              </p>
-            </li>
-            <li className="font-semibold">
-              Toronto-Tailored Virtual Desktop Creation
-              <p className="font-normal ml-6 mt-2">
-                We design virtual desktops optimized for your industry—whether tech, finance, or creative—meeting
-                Toronto's diverse business demands.
-              </p>
-            </li>
-            <li className="font-semibold">
-              Seamless Toronto User Onboarding
-              <p className="font-normal ml-6 mt-2">
-                We migrate data and apps with minimal downtime, ensuring your Toronto team stays productive during the
-                transition.
-              </p>
-            </li>
-            <li className="font-semibold">
-              Toronto Performance Testing and Optimization
-              <p className="font-normal ml-6 mt-2">
-                We test across GTA network conditions—from downtown towers to suburban offices—optimizing for speed and
-                reliability.
-              </p>
-            </li>
-            <li className="font-semibold">
-              GTA-Focused Training and Support
-              <p className="font-normal ml-6 mt-2">
-                Receive hands-on training for your Toronto staff and 24/7 local support from our GTA-based team.
-              </p>
-            </li>
-          </ol>
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our VDI Solutions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
+      </section>
 
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">Frequently Asked Questions from Toronto Businesses</h2>
-          <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">VDI FAQ</h2>
+          <Accordion type="single" collapsible>
             <AccordionItem value="item-1">
-              <AccordionTrigger>How does VDI improve security for Toronto businesses?</AccordionTrigger>
+              <AccordionTrigger>What are the benefits of VDI?</AccordionTrigger>
               <AccordionContent>
-                By centralizing data in secure Toronto-based data centers, VDI minimizes risks from device theft or
-                loss—a key concern in a bustling city. It also enables rapid deployment of security patches and
-                compliance with local regulations like PIPEDA, vital for Toronto's finance and healthcare sectors.
+                VDI offers numerous benefits including enhanced security, simplified IT management, reduced hardware
+                costs, and improved flexibility for remote work. It enables centralized control while allowing
+                users to access their work environment from any device, anywhere.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger>Can VDI support remote work for Toronto businesses?</AccordionTrigger>
+              <AccordionTrigger>How secure is VDI?</AccordionTrigger>
               <AccordionContent>
-                Absolutely. VDI provides secure, reliable access to desktops from anywhere in the GTA or beyond, making
-                it ideal for Toronto's hybrid workforce. Whether your team is in Mississauga, Scarborough, or downtown,
-                they get the same high-quality experience.
+                Our VDI solutions incorporate multiple security layers including encryption, multi-factor
+                authentication, and detailed access controls. Data remains secure in the data center rather than on
+                end-user devices, reducing the risk of data loss or theft.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger>What are the cost implications of implementing VDI in Toronto?</AccordionTrigger>
+              <AccordionTrigger>What about performance and reliability?</AccordionTrigger>
               <AccordionContent>
-                Initial setup costs are offset by long-term savings, such as reduced hardware expenses and lower IT
-                support needs. In Toronto’s pricey real estate market, VDI also supports space-saving strategies like
-                hot-desking. We’ll provide a tailored cost-benefit analysis for your business.
+                We optimize VDI environments for performance, ensuring smooth operation even with
+                resource-intensive applications. Our solutions include redundancy and failover capabilities to
+                maintain high availability. Users experience desktop-like performance from any location.
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-4">
-              <AccordionTrigger>Is VDI suitable for small Toronto businesses?</AccordionTrigger>
+              <AccordionTrigger>How do you handle VDI implementation?</AccordionTrigger>
               <AccordionContent>
-                Yes! VDI is scalable, making it perfect for small startups in Toronto’s tech hubs like Liberty Village
-                or MaRS. It offers enterprise-grade features without requiring a large upfront investment in hardware.
+                We follow a structured implementation process that includes assessment, planning, pilot testing,
+                and phased rollout. We provide comprehensive training and support to ensure a smooth transition
+                for your team. Our experts handle all technical aspects while minimizing disruption to your
+                operations.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
         </div>
+      </section>
 
-        <div className="bg-primary text-white rounded-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-center">Toronto Client Success Stories</h2>
-          <blockquote className="text-center italic">
-            "PC Mechanix’s VDI solution revolutionized our operations. As a Toronto financial firm, security and
-            compliance are non-negotiable. VDI gave us peace of mind while allowing our team to work securely from home
-            or the office. The implementation was flawless, and their local support is top-notch."
-          </blockquote>
-          <p className="text-center mt-4">- Michael Lee, CTO of FinSecure GTA</p>
-          <blockquote className="text-center italic mt-6">
-            "Our creative agency in Toronto needed flexibility without compromising performance. VDI from PC Mechanix
-            lets our designers access high-powered tools from anywhere in the city, boosting collaboration and
-            efficiency."
-          </blockquote>
-          <p className="text-center mt-4">- Priya Patel, Founder of StudioVibe Toronto</p>
-        </div>
-
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Toronto Business with VDI?</h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto">
-              Join leading GTA companies leveraging VDI for security, flexibility, and growth. Contact us today for a
-              free consultation tailored to your Toronto business needs.
-            </p>
-            <Button asChild size="lg" className="bg-primary text-white hover:bg-primary-dark">
-              <Link href="#contact">Schedule Your Free Toronto VDI Consultation</Link>
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
+          </h2>
+          <p className="text-xl mb-8">
+            Discover how PC Mechanix can transform your business's IT infrastructure into a powerful driver of growth
+            and success.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+            >
+              Schedule a Consultation
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+            >
+              Explore Our Services
             </Button>
           </div>
-        </section>
-      </div>
-    </ServiceLayout>
+        </div>
+      </section>
+    </>
   )
 }
-

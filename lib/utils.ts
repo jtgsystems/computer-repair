@@ -9,4 +9,3 @@ export function formatDate(dateString: string): string {
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
-

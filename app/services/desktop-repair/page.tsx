@@ -1,149 +1,215 @@
-import type { Metadata } from "next"
-import Image from "next/image"
-import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Monitor, Cpu, HardDrive, Zap, Clock, CheckCircle, ArrowRight } from "lucide-react"
+import { Monitor, Cpu, HardDrive, Zap, Clock, CheckCircle, Shield, Wrench } from "lucide-react"
+import type { Metadata } from "next"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import ServiceHero from "@/components/ServiceHero"
 import ServiceLayout from "@/components/ServiceLayout"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Desktop Repair Services | PC Mechanix",
+  title: "Desktop Repair Services Toronto | PC Mechanix",
   description: "Professional desktop computer repair services in Toronto. Fast, reliable fixes for all desktop issues.",
 }
 
-export default function DesktopRepairPage() {
-  return (
-    <ServiceLayout>
-      <div className="container mx-auto px-4 py-8">
-        <h2 className="text-2xl font-bold mb-4">How PC Mechanix Can Help</h2>
-        <p className="text-lg mb-6">
-          At PC Mechanix, we understand the critical role that desktop computers play in both personal and professional
-          settings. Our expert technicians are equipped with the knowledge and tools to diagnose and repair a wide range
-          of desktop issues, from hardware failures to software conflicts. We pride ourselves on providing efficient,
-          reliable, and cost-effective desktop repair services to keep your systems running smoothly. With service
-          coverage extending across Canada, PC Mechanix is your trusted partner for all your desktop repair needs, no
-          matter where you are located.
-        </p>
-      </div>
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-24">
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-6">Expert Desktop Repair Services</h1>
-            <p className="text-xl mb-8">Fast, reliable fixes for all your desktop computer issues</p>
-            <Button size="lg" className="bg-white text-blue-800 hover:bg-blue-100" asChild>
-              <Link href="#contact">Get Your Desktop Fixed Today</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 gap-8 mb-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4 text-primary">Our Desktop Repair Process</h2>
-            <ol className="list-decimal list-inside space-y-2 text-gray-700">
-              <li>Thorough diagnostic assessment</li>
-              <li>Identification of hardware or software issues</li>
-              <li>Provide detailed repair quote</li>
-              <li>Perform necessary repairs or replacements</li>
-              <li>Comprehensive system testing</li>
-              <li>Final quality assurance check</li>
-            </ol>
-          </div>
-          <div>
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Desktop Repair Process"
-              width={600}
-              height={400}
-              className="rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
-
-        <h2 className="text-3xl font-bold mb-8 text-center text-primary">Our Desktop Repair Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {services.map((service, index) => (
-            <Card key={index} className="transition-all duration-300 hover:shadow-lg">
-              <CardHeader>
-                <service.icon className="h-12 w-12 text-primary mb-4" />
-                <CardTitle className="text-xl">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">{service.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="bg-gray-100 rounded-lg p-8 mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-primary">Why Choose PC Mechanix for Desktop Repair?</h2>
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {benefits.map((benefit, index) => (
-              <li key={index} className="flex items-center">
-                <CheckCircle className="h-6 w-6 text-green-500 mr-2" />
-                <span>{benefit}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="text-center" id="contact">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Ready to Get Your Desktop Fixed?</h2>
-          <p className="text-lg mb-6 text-gray-700">
-            Don't let desktop issues slow you down. Contact us today for fast, professional repair services.
-          </p>
-          <Button size="lg" className="text-lg px-8" asChild>
-            <Link href="/contact">
-              Schedule Desktop Repair <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </div>
-      </div>
-    </ServiceLayout>
-  )
-}
-
-const services = [
+const features = [
   {
     icon: Monitor,
     title: "Hardware Repairs",
-    description: "We fix issues with monitors, power supplies, motherboards, and other hardware components.",
+    description: "Expert repairs for monitors, power supplies, motherboards, and components",
   },
   {
     icon: Cpu,
     title: "Performance Upgrades",
-    description: "Boost your desktop's speed with CPU, RAM, and storage upgrades.",
+    description: "Strategic upgrades to boost your desktop's speed and performance",
   },
   {
-    icon: HardDrive,
-    title: "Data Recovery",
-    description: "We can recover your important files from failing or damaged hard drives.",
+    icon: Wrench,
+    title: "Professional Service",
+    description: "Skilled technicians with extensive desktop repair experience",
   },
   {
-    icon: Zap,
-    title: "Virus Removal",
-    description: "We'll clean your system of viruses, malware, and other security threats.",
+    icon: Shield,
+    title: "Quality Parts",
+    description: "Only high-quality, genuine replacement parts used for repairs",
   },
   {
     icon: Clock,
     title: "Quick Turnaround",
-    description: "We strive to complete most repairs within 24-48 hours.",
+    description: "Fast repairs with most issues resolved within 24-48 hours",
   },
   {
     icon: CheckCircle,
-    title: "Quality Guarantee",
-    description: "All our repairs come with a 90-day warranty for your peace of mind.",
+    title: "Satisfaction Guaranteed",
+    description: "90-day warranty on all repairs for your peace of mind",
   },
 ]
 
-const benefits = [
-  "Experienced technicians specializing in desktop repairs",
-  "Fast and reliable service for both personal and business computers",
-  "Transparent pricing with no hidden fees",
-  "Use of high-quality replacement parts",
-  "Comprehensive diagnostic and repair services",
-  "Convenient in-shop and on-site repair options",
-]
+export default function DesktopRepairPage() {
+  return (
+    <ServiceLayout>
+      <ServiceHero
+        title="DESKTOP REPAIR SERVICES"
+        description="Professional computer repair solutions for all desktop issues"
+        primaryCTA={{ text: "Get Started", href: "/contact" }}
+        secondaryCTA={{ text: "Learn More", href: "#features" }}
+      />
 
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Expert Desktop Computer Repair</h2>
+          <p className="text-lg mb-8 text-center max-w-3xl mx-auto">
+            At PC Mechanix, we understand the critical role that desktop computers play in both personal and
+            professional settings. Our expert technicians are equipped with the knowledge and tools to diagnose and
+            repair a wide range of desktop issues. From hardware failures to software conflicts, we provide
+            efficient, reliable, and cost-effective solutions to keep your systems running smoothly.
+          </p>
+        </div>
+      </section>
+
+      <section id="features" className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12">Our Repair Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className="transition-all duration-300 hover:shadow-lg">
+                <CardHeader className="flex flex-col items-center">
+                  <feature.icon className="h-12 w-12 text-primary mb-4" aria-hidden="true" />
+                  <CardTitle className="text-xl text-center">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-center text-gray-600">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Our Repair Process</h2>
+              <ol className="space-y-4">
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">1</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Initial Diagnosis</h3>
+                    <p className="text-gray-600">Thorough assessment of hardware and software issues</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">2</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Detailed Quote</h3>
+                    <p className="text-gray-600">Clear explanation of required repairs and associated costs</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">3</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Expert Repair</h3>
+                    <p className="text-gray-600">Professional repairs using quality replacement parts</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">4</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Quality Testing</h3>
+                    <p className="text-gray-600">Comprehensive testing to ensure everything works perfectly</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center mr-3">5</span>
+                  <div>
+                    <h3 className="font-semibold mb-1">Final Check</h3>
+                    <p className="text-gray-600">Thorough quality assurance before return</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div>
+              <Image
+                src="/placeholder.svg"
+                alt="Desktop Repair Process"
+                width={500}
+                height={400}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-6 text-center">Common Questions</h2>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1">
+              <AccordionTrigger>What types of desktop computers do you repair?</AccordionTrigger>
+              <AccordionContent>
+                We repair all major brands and models of desktop computers including Dell, HP, Lenovo, Apple, and
+                custom-built systems. Our technicians are experienced with both Windows and Mac operating systems,
+                and can handle a wide range of hardware and software issues.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-2">
+              <AccordionTrigger>How long do repairs typically take?</AccordionTrigger>
+              <AccordionContent>
+                Most repairs are completed within 24-48 hours, depending on the issue and parts availability. For
+                complex repairs or if parts need to be ordered, we'll provide you with a detailed timeline. We
+                always strive to complete repairs as quickly as possible without compromising quality.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-3">
+              <AccordionTrigger>Do you offer on-site repairs?</AccordionTrigger>
+              <AccordionContent>
+                Yes, we offer both in-shop and on-site repair services. For businesses and situations where moving
+                the computer isn't practical, our mobile technicians can come to your location. We'll help you
+                determine the best option based on your specific situation.
+              </AccordionContent>
+            </AccordionItem>
+            <AccordionItem value="item-4">
+              <AccordionTrigger>What warranty do you offer on repairs?</AccordionTrigger>
+              <AccordionContent>
+                All our repairs come with a 90-day warranty covering both parts and labor. If any issue related to
+                our repair occurs within this period, we'll fix it at no additional cost. We use only high-quality
+                parts and thoroughly test all repairs to ensure lasting reliability.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
+            Ready to Fix Your Desktop?
+          </h2>
+          <p className="text-xl mb-8">
+            Don't let computer issues slow you down. Contact us now for fast, professional desktop repair services.
+          </p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact">Schedule Repair</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+              asChild
+            >
+              <Link href="#features">Learn More</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    </ServiceLayout>
+  )
+}
