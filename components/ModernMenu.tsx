@@ -16,7 +16,7 @@ import { motion } from "framer-motion"
 import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, Tool, User, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import React, { useCallback, useEffect, useState } from "react"
+import React, { useCallback, useEffect, useState, useRef } from "react"
 
 // Icon mapping for dynamic rendering
 const iconMap: Record<string, React.ComponentType<any>> = {
@@ -35,11 +35,6 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   Tool,
 }
 
-// Add global style to prevent horizontal scrolling
-if (typeof document !== 'undefined') {
-  document.documentElement.style.overflowX = 'hidden';
-  document.body.style.overflowX = 'hidden';
-}
 
 // Menu items data structure with icons
 const serviceItems = [
@@ -99,8 +94,20 @@ const ListItem = ({ className, title, href, icon }: any) => {
 
 // Mobile menu component
 const MobileNavigation = () => {
+  const renderStartTime = useRef(performance.now());
+  const [isOpen, setIsOpen] = useState(false);
+  
+  // Log performance when sheet content is shown
+  const handleOpenChange = (open: boolean) => {
+    setIsOpen(open);
+    if (open) {
+      const renderTime = performance.now() - renderStartTime.current;
+      console.log(`ModernMenu mobile navigation render time: ${renderTime.toFixed(2)}ms`);
+    }
+  };
+  
   return (
-    <Sheet>
+    <Sheet onOpenChange={handleOpenChange}>
       <SheetTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden text-white">
           <MenuIcon className="h-6 w-6" />
@@ -175,6 +182,7 @@ const MobileNavigation = () => {
 export default function ModernMenu() {
   const [isScrolled, setIsScrolled] = useState(false)
 
+  const lastScrollTime = useRef(0);
   const [debugInfo, setDebugInfo] = useState({
     viewportWidth: 0,
     headerWidth: 0,
@@ -183,6 +191,12 @@ export default function ModernMenu() {
   })
 
   const handleScroll = useCallback(() => {
+    // Throttle scroll events
+    const now = performance.now();
+    if (now - lastScrollTime.current < 50) { // Only process every 50ms
+      return;
+    }
+    lastScrollTime.current = now;
     setIsScrolled(window.scrollY > 10)
   }, [])
 
@@ -190,6 +204,7 @@ export default function ModernMenu() {
   const checkForOverflow = useCallback(() => {
     if (typeof window !== 'undefined') {
       const viewportWidth = window.innerWidth;
+      const startTime = performance.now();
       const headerEl = document.querySelector('header');
       const containerEl = document.querySelector('.container');
 
@@ -198,11 +213,8 @@ export default function ModernMenu() {
       const hasHorizontalScroll = document.body.scrollWidth > viewportWidth;
 
       console.log('Debug - Viewport width:', viewportWidth);
-      console.log('Debug - Header width:', headerWidth);
-      console.log('Debug - Container width:', containerWidth);
-      console.log('Debug - Has horizontal scroll:', hasHorizontalScroll);
-      console.log('Debug - Body scroll width:', document.body.scrollWidth);
-
+      console.log(`Debug - Layout check time: ${(performance.now() - startTime).toFixed(2)}ms`);
+      
       setDebugInfo({
         viewportWidth,
         headerWidth,
@@ -214,12 +226,22 @@ export default function ModernMenu() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
+    
+    // Add global style to prevent horizontal scrolling - moved from top level to useEffect
+    if (typeof document !== 'undefined') {
+      document.documentElement.style.overflowX = 'hidden';
+      document.body.style.overflowX = 'hidden';
+    }
 
     // Check for overflow issues on load and resize
     checkForOverflow();
     window.addEventListener("resize", checkForOverflow);
 
-    return () => window.removeEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+;
+      window.removeEventListener("resize", checkForOverflow);
+    }
   }, [handleScroll, checkForOverflow])
 
   return (

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useEffect } from "react"
+import { useState, useCallback, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
@@ -40,6 +40,9 @@ const serviceItems = [
 ]
 
 const DropdownMenu = ({ category, isOpen, onToggle }: { category: any; isOpen: boolean; onToggle: () => void }) => {
+  // Performance measurement
+  const renderStartTime = useRef(performance.now());
+  
   return (
     <div className="relative group">
       <button
@@ -55,9 +58,14 @@ const DropdownMenu = ({ category, isOpen, onToggle }: { category: any; isOpen: b
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+ 
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ 
+              opacity: 1, 
+              y: 0, 
+              scale: 1,
+              transition: { duration: 0.15 } // Reduced from default 0.2
+            }}
             transition={{ duration: 0.2 }}
             className="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden z-50"
           >
@@ -80,6 +88,16 @@ const DropdownMenu = ({ category, isOpen, onToggle }: { category: any; isOpen: b
 }
 
 const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+  // Performance measurement
+  const renderStartTime = useRef(performance.now());
+  
+  useEffect(() => {
+    if (isOpen) {
+      const renderTime = performance.now() - renderStartTime.current;
+      console.log(`Mobile menu render time: ${renderTime.toFixed(2)}ms`);
+    }
+  }, [isOpen]);
+  
   return (
     <AnimatePresence>
       {isOpen && (
@@ -87,7 +105,9 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
           initial={{ opacity: 0, x: "100%" }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
-          transition={{ type: "tween", duration: 0.3 }}
+ 
+          transition={{ type: "tween", duration: 0.2 }}
+ // Reduced from 0.3
           className="fixed inset-0 bg-white z-50 overflow-y-auto"
         >
           <div className="container mx-auto px-4 py-6">
@@ -162,9 +182,16 @@ const MobileMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
 export default function NewMenu() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const lastToggleTime = useRef(0);
   const [isScrolled, setIsScrolled] = useState(false)
 
   const handleScroll = useCallback(() => {
+    // Throttle scroll events
+    const now = performance.now();
+    if (now - lastToggleTime.current < 50) { // Only process every 50ms
+      return;
+    }
+    lastToggleTime.current = now;
     setIsScrolled(window.scrollY > 20)
   }, [])
 
@@ -174,7 +201,16 @@ export default function NewMenu() {
   }, [handleScroll])
 
   const toggleDropdown = (label: string) => {
+    // Performance logging
+    const startTime = performance.now();
+    
     setOpenDropdown(openDropdown === label ? null : label)
+    
+    // Log performance after state update
+    setTimeout(() => {
+      const endTime = performance.now();
+      console.log(`Dropdown toggle time for ${label}: ${(endTime - startTime).toFixed(2)}ms`);
+    }, 0);
   }
 
   return (
