@@ -7,7 +7,7 @@ import {
   Clock,
   CheckCircle,
   ChevronUp,
-  PenToolIcon as Tool,
+  PenTool,  // Changed from PenToolIcon as Tool
   DollarSign,
   Network,
   Monitor,
@@ -49,6 +49,29 @@ const ScrollToTopButton = () => {
 
 const CollapsibleAreas = () => {
   const [isExpanded, setIsExpanded] = useState(false)
+  const [expandedRegions, setExpandedRegions] = useState<{ [key: string]: boolean }>({})
+
+  // Function to check if a city has a dedicated page
+  const hasCityPage = (city: string) => {
+    // List of cities that have dedicated pages
+    const citiesWithPages = [
+      "Toronto", "Mississauga", "Brampton", "Markham", 
+      "Vaughan", "Richmond Hill", "Oakville", "Burlington"
+    ]
+    return citiesWithPages.includes(city)
+  }
+
+  // Function to convert city name to slug
+  const cityToSlug = (city: string) => {
+    return city.toLowerCase().replace(/\s+/g, '-')
+  }
+
+  // Function to toggle region expansion
+  const toggleRegion = (regionName: string) => {
+    setExpandedRegions(prev => ({
+      ...prev, [regionName]: !prev[regionName]
+    }))
+  }
 
   return (
     <>
@@ -64,12 +87,39 @@ const CollapsibleAreas = () => {
               key={index}
               className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 p-4"
             >
-              <h3 className="text-lg font-semibold mb-2 text-primary">{region.name}</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                {region.cities.map((city, cityIndex) => (
-                  <li key={cityIndex}>{city}</li>
-                ))}
-              </ul>
+              <div 
+                className="flex justify-between items-center cursor-pointer" 
+                onClick={() => toggleRegion(region.name)}
+              >
+                <h3 className="text-lg font-semibold text-primary">{region.name}</h3>
+                <div className="text-primary">
+                  {expandedRegions[region.name] ? (
+                    <ChevronUp className="h-4 w-4" />
+                  ) : (
+                    <ChevronDown className="h-4 w-4" />
+                  )}
+                </div>
+              </div>
+              
+              {expandedRegions[region.name] && (
+                <ul className="text-sm text-gray-600 space-y-1 mt-2">
+                  {region.cities.map((city, cityIndex) => (
+                    <li key={cityIndex}>
+                      {hasCityPage(city) ? (
+                        <Link 
+                          href={`/service-areas/${cityToSlug(city)}`}
+                          className="text-gray-600 hover:text-primary hover:underline transition-colors duration-200"
+                          aria-label={`Computer repair services in ${city}`}
+                        >
+                          {city}
+                        </Link>
+                      ) : (
+                        <span>{city}</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>
@@ -484,7 +534,7 @@ const benefits = [
   {
     title: "Customized Solutions",
     description: "Tailored IT strategies to meet your unique business needs.",
-    icon: Tool,
+    icon: PenTool,  // Changed from Tool to PenTool
     details:
       "We analyze your business processes and goals to create bespoke IT solutions that align perfectly with your objectives.",
   },
