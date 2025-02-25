@@ -13,7 +13,7 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { motion, useReducedMotion } from "framer-motion"
-import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, Tool, User, Users } from "lucide-react"
+import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, PenTool, User, Users } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useCallback, useEffect, useState, useRef } from "react"
@@ -32,7 +32,7 @@ const iconMap: Record<string, React.ComponentType<any>> = {
   Shield,
   Mail,
   Camera,
-  Tool,
+  PenTool,
 }
 
 
@@ -52,21 +52,21 @@ const serviceItems = [
       { label: "Cybersecurity Solutions", href: "/business/cybersecurity", icon: "Shield" },
       { label: "Email & Collaboration", href: "/business/email-collaboration", icon: "Mail" },
       { label: "CCTV & Alarm Systems", href: "/business/security-systems", icon: "Camera" },
-      { label: "Business Desktop Repair", href: "/services/desktop-repair", icon: "Tool" },
+      { label: "Business Desktop Repair", href: "/services/desktop-repair", icon: "PenTool" },
     ],
   },
   {
     label: "Personal",
     icon: "User",
     items: [
-      { label: "Laptop Repair", href: "/services/laptop-repair", icon: "Tool" },
-      { label: "Desktop Repair", href: "/services/desktop-repair", icon: "Tool" },
-      { label: "Mac Repair", href: "/services/mac-repair", icon: "Tool" },
-      { label: "Tablet and Smartphone Repair", href: "/services/mobile-repair", icon: "Tool" },
+      { label: "Laptop Repair", href: "/services/laptop-repair", icon: "PenTool" },
+      { label: "Desktop Repair", href: "/services/desktop-repair", icon: "PenTool" },
+      { label: "Mac Repair", href: "/services/mac-repair", icon: "PenTool" },
+      { label: "Tablet and Smartphone Repair", href: "/services/mobile-repair", icon: "PenTool" },
       { label: "Virus Removal", href: "/services/virus-removal", icon: "Shield" },
       { label: "Data Recovery", href: "/services/data-recovery", icon: "Archive" },
-      { label: "Hardware Upgrades", href: "/services/hardware-upgrades", icon: "Tool" },
-      { label: "Software Troubleshooting", href: "/services/software-troubleshooting", icon: "Tool" },
+      { label: "Hardware Upgrades", href: "/services/hardware-upgrades", icon: "PenTool" },
+      { label: "Software Troubleshooting", href: "/services/software-troubleshooting", icon: "PenTool" },
     ],
   },
 ]
@@ -80,10 +80,9 @@ const ListItem = ({ className, title, href, icon }: any) => {
         <Link
           href={href}
           className={cn(
-            "flex items-center gap-2 block select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-all duration-200 hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white",
+            "flex items-center gap-2 select-none rounded-md px-3 py-2 text-sm leading-none no-underline outline-none transition-all duration-200 hover:bg-gray-800 hover:text-white focus:bg-gray-800 focus:text-white cursor-pointer",
             className
-          )}
-        >
+          )}>
           {IconComponent && <IconComponent className="h-4 w-4" />}
           {title}
         </Link>
@@ -294,7 +293,7 @@ export default function ModernMenu() {
 
               {serviceItems.map((category, index) => (
                 <NavigationMenuItem key={index}>
-                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-gray-800 focus:bg-gray-800 will-change-transform">
+                  <NavigationMenuTrigger className="bg-transparent text-white hover:bg-gray-800 focus:bg-gray-800 will-change-transform cursor-pointer active:scale-95">
                     {category.icon && iconMap[category.icon] && React.createElement(iconMap[category.icon], { className: "h-4 w-4 mr-1" })}
                     {category.label}
                   </NavigationMenuTrigger>
@@ -302,7 +301,7 @@ export default function ModernMenu() {
                     <ul className="grid w-[95vw] max-w-[400px] gap-1 p-3 md:max-w-[500px] md:grid-cols-2 bg-gray-900/95 backdrop-blur-md border border-gray-800 rounded-lg shadow-lg animate-in fade-in-50 duration-100 overflow-hidden will-change-transform">
                       {category.items.map((item, itemIndex) => (
                         <ListItem
-                          key={`${category.label}-${itemIndex}
+                          key={`${category.label}-${itemIndex}`}
                           title={item.label}
                           href={item.href}
                           icon={item.icon}
