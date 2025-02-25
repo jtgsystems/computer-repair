@@ -1,0 +1,141 @@
+.navbar {
+  background: #2d334a;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #4cc9f0;
+}
+
+.logoIcon {
+  margin-right: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.menuIcon {
+  display: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.menuIcon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin-left: 1.5rem;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.navLink:hover {
+  color: #4cc9f0;
+  border-bottom: 2px solid #4cc9f0;
+}
+
+.navButton {
+  text-decoration: none;
+  color: #fff;
+  background-color: #4cc9f0;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.navButton:hover {
+  background-color: #f72585;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navContainer {
+    padding: 0 1rem;
+  }
+
+  .menuIcon {
+    display: block;
+  }
+
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #2d334a;
+    transition: left 0.3s ease;
+    z-index: 999;
+    opacity: 0;
+  }
+
+  .navMenu.active {
+    left: 0;
+    opacity: 1;
+  }
+
+  .navItem {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navLink {
+    padding: 1rem 0;
+    width: 100%;
+    display: block;
+  }
+
+  .navButton {
+    margin: 1rem auto;
+    width: 80%;
+    text-align: center;
+  }
+}

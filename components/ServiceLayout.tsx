@@ -1,12 +1,11 @@
 "use client"
 
-import type { ReactNode } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { MapPin, Phone, Mail, ChevronDown, Menu, ChevronUp, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { ChevronDown, ChevronUp, Mail, MapPin, Phone, X } from "lucide-react"
+import Link from "next/link"
+import type { ReactNode } from "react"
 import { useCallback, useState } from "react"
+import NewMenu from "./NewMenu"
 
 const serviceItems = [
   {
@@ -86,80 +85,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
       {renderHeaderAndFooter && (
         <>
           <header className="sticky top-0 z-[100] bg-white shadow-lg">
-            <div className="container mx-auto px-2 sm:px-4">
-              <nav className="flex items-center justify-between py-2 relative">
-                <Link href="/" className="flex items-center pl-0 sm:pl-4 lg:pl-16 transition-transform duration-300 hover:scale-105">
-                  <div className="relative w-[150px] sm:w-[200px] h-[40px] sm:h-[50px]">
-                    <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
-                      alt="PC Mechanix - Your Exclusive IT Service"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                </Link>
-                
-                <div className="hidden md:flex items-center space-x-2 lg:space-x-6 bg-[#E4EDEF] px-2 lg:px-4 py-2 rounded-lg max-w-[600px] overflow-x-auto">
-                  <Link
-                    href="/"
-                    className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded bg-[#1D4D84] text-white"
-                  >
-                    Home
-                  </Link>
-                  {serviceItems.map((category, index) => (
-                    <DropdownMenu key={index}>
-                      <DropdownMenuTrigger className="flex items-center text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-200">
-                        {category.label}{" "}
-                        <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
-                      </DropdownMenuTrigger>
-                      <DropdownMenuContent className="relative mt-2 bg-white rounded-md shadow-lg border border-gray-100">
-                        {category.items.map((item, itemIndex) => (
-                          <DropdownMenuItem
-                            className="hover:bg-[#E4EDEF] focus:bg-[#E4EDEF] rounded-sm transition-colors duration-150"
-                            key={itemIndex}
-                          >
-                            <Link
-                              href={item.href}
-                              className="w-full text-sm font-medium transition-colors duration-300 hover:text-[#1D4D84]"
-                            >
-                              {item.label}
-                            </Link>
-                          </DropdownMenuItem>
-                        ))}
-                      </DropdownMenuContent>
-                    </DropdownMenu>
-                  ))}
-                  <Link
-                    href="/about"
-                    className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded"
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded"
-                  >
-                    Contact
-                  </Link>
-                </div>
-                
-                <div className="hidden md:flex items-center flex-col">
-                  <div className="text-[#1D4D84] font-semibold text-sm lg:text-base">
-                    <div className="transition-all duration-300 hover:text-blue-500">Contact Sales & Support:</div>
-                    <div className="transition-all duration-300 hover:text-blue-500 hover:scale-105">416-300-1006</div>
-                  </div>
-                </div>
-                
-                <button
-                  className="md:hidden text-[#1D4D84] p-2 transition-transform duration-300 hover:scale-110"
-                  onClick={toggleMobileMenu}
-                  aria-label="Toggle mobile menu"
-                >
-                  {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
-              </nav>
-            </div>
+            <NewMenu />
           </header>
 
           {isMobileMenuOpen && (
@@ -265,7 +191,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">Quick Links</h3>
                 <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2">
@@ -300,7 +226,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
                   </li>
                 </ul>
               </div>
-              
+
               <div className="space-y-4">
                 <h3 className="font-semibold text-base sm:text-lg mb-2 sm:mb-4">Services</h3>
                 <ul className="grid grid-cols-2 sm:grid-cols-1 gap-2">
@@ -339,7 +265,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
                 </ul>
               </div>
             </div>
-            
+
             <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-xs sm:text-sm text-center sm:text-left">&copy; {new Date().getFullYear()} PC Mechanix. All rights reserved.</p>
               <div className="flex space-x-6">
