@@ -108,7 +108,6 @@ export default function BurlingtonServiceAreaPage() {
             <Link href="/contact">Schedule Your Burlington Tech Service Now</Link>
           </Button>
         </div>
-        </div>
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Testimonials from Burlington Customers</h2>
@@ -143,9 +142,7 @@ export default function BurlingtonServiceAreaPage() {
             <li>Offering discounted services to non-profit organizations</li>
           </ul>
         </div>
-
       </div>
     </ServiceLayout>
   )
 }
-

@@ -110,10 +110,7 @@ export default function TorontoServiceAreaPage() {
             <li>Environmentally responsible practices</li>
           </ul>
         </div>
-
-        </div>
       </div>
     </ServiceLayout>
   )
 }
-

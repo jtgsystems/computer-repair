@@ -108,7 +108,6 @@ export default function MarkhamServiceAreaPage() {
             <Link href="/contact">Schedule Your High-Tech Service Now</Link>
           </Button>
         </div>
-        </div>
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Testimonials from Markham Customers</h2>
@@ -143,9 +142,7 @@ export default function MarkhamServiceAreaPage() {
             <li>Partnerships with local educational institutions</li>
           </ul>
         </div>
-
       </div>
     </ServiceLayout>
   )
 }
-

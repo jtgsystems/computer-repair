@@ -101,7 +101,6 @@ export default function MississaugaServiceAreaPage() {
             <Link href="/contact">Schedule Your Repair Now</Link>
           </Button>
         </div>
-        </div>
 
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Testimonials from Mississauga Customers</h2>
@@ -135,9 +134,7 @@ export default function MississaugaServiceAreaPage() {
             <li>Mac and PC upgrades in Port Credit and Streetsville</li>
           </ul>
         </div>
-
       </div>
     </ServiceLayout>
   )
 }
-

@@ -138,10 +138,7 @@ export default function BramptonServiceAreaPage() {
             <li>In-store services at our convenient Brampton location</li>
           </ul>
         </div>
-
-        </div>
       </div>
     </ServiceLayout>
   )
 }
-
