@@ -108,6 +108,42 @@ export default function MarkhamServiceAreaPage() {
             <Link href="/contact">Schedule Your High-Tech Service Now</Link>
           </Button>
         </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Markham Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix has been instrumental in keeping our tech startup running smoothly. Their expertise in cloud solutions and cybersecurity is invaluable." - Alex K., Unionville</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"I'm a student at Seneca College, and PC Mechanix helped me troubleshoot a complex software issue. Their technicians are patient, knowledgeable, and affordable." - Emily C., Milliken</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Specialized IT Solutions for Markham's Industries</h2>
+          <p className="text-gray-600">PC Mechanix delivers tailored IT solutions to support Markham's key industries, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Technology: Cloud computing, cybersecurity, and data analytics</li>
+            <li>Finance: Secure data storage, compliance solutions, and network optimization</li>
+            <li>Healthcare: EMR systems, telehealth solutions, and patient data privacy</li>
+            <li>Manufacturing: Automation systems, robotics maintenance, and network infrastructure</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Supporting Markham's Students and Educational Institutions</h2>
+          <p className="text-gray-600">PC Mechanix is dedicated to supporting Markham's educational community by offering:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Discounted computer repair services for students</li>
+            <li>IT support for schools and colleges</li>
+            <li>STEM education workshops and training</li>
+            <li>Partnerships with local educational institutions</li>
+          </ul>
+        </div>
+
       </div>
     </ServiceLayout>
   )

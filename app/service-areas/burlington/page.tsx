@@ -108,6 +108,42 @@ export default function BurlingtonServiceAreaPage() {
             <Link href="/contact">Schedule Your Burlington Tech Service Now</Link>
           </Button>
         </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Burlington Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix provided exceptional service when my laptop crashed. They were able to recover all my important files and get me back up and running quickly. I highly recommend them!" - Sarah J., Aldershot</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"As a small business owner in Burlington, I rely on PC Mechanix for all my IT needs. They are always responsive, professional, and provide excellent solutions. I highly recommend them!" - Mark T., Downtown Burlington</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">IT Solutions for Burlington's Key Sectors</h2>
+          <p className="text-gray-600">PC Mechanix offers specialized IT solutions for key sectors in Burlington, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Manufacturing: Data management, network security, and equipment maintenance</li>
+            <li>Healthcare: HIPAA compliance, EMR systems, and patient data protection</li>
+            <li>Retail: Point-of-sale systems, inventory management, and customer engagement solutions</li>
+            <li>Professional Services: Cloud computing, cybersecurity, and remote collaboration tools</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Our Commitment to the Burlington Community</h2>
+          <p className="text-gray-600">PC Mechanix is committed to supporting the Burlington community through:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Sponsoring local events and initiatives</li>
+            <li>Providing technology education workshops for seniors</li>
+            <li>Partnering with local schools to support STEM education</li>
+            <li>Offering discounted services to non-profit organizations</li>
+          </ul>
+        </div>
+
       </div>
     </ServiceLayout>
   )

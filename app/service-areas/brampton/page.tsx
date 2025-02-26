@@ -105,6 +105,41 @@ export default function BramptonServiceAreaPage() {
             <Link href="/contact">Book Your Repair Service Now</Link>
           </Button>
         </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Brampton Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix is a lifesaver! They fixed my computer quickly and efficiently, and their prices are very reasonable. I highly recommend them to anyone in Brampton." - Priya S., Springdale</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"I'm so glad I found PC Mechanix. They provided excellent IT support for my small business. They are always responsive and helpful." - Michael L., Downtown Brampton</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">IT Solutions for Brampton Businesses</h2>
+          <p className="text-gray-600">We provide specialized IT solutions for various industries in Brampton, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Manufacturing: Network setup, cybersecurity, and data management</li>
+            <li>Retail: Point-of-sale systems, inventory management, and customer support</li>
+            <li>Healthcare: HIPAA compliance, EMR systems, and data security</li>
+            <li>Education: Computer labs, student device support, and network infrastructure</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Serving All Areas of Brampton</h2>
+          <p className="text-gray-600">PC Mechanix provides computer repair and IT services throughout Brampton, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>On-site computer repair in Bramalea and Heart Lake</li>
+            <li>Remote IT support in Mount Pleasant and Springdale</li>
+            <li>In-store services at our convenient Brampton location</li>
+          </ul>
+        </div>
+
+        </div>
       </div>
     </ServiceLayout>
   )

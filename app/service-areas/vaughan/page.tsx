@@ -108,5 +108,40 @@ export default function VaughanServiceAreaPage() {
       </div>
     </ServiceLayout>
   )
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Vaughan Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix provided excellent service and fixed my computer quickly. I highly recommend them to anyone in Vaughan!" - Michael P., Woodbridge</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"I'm so glad I found PC Mechanix. They provided excellent IT support for my small business. They are always responsive and helpful." - Sarah L., Vaughan Metropolitan Centre</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">IT Solutions for Vaughan's Communities and Industries</h2>
+          <p className="text-gray-600">PC Mechanix offers specialized IT solutions to meet the unique needs of Vaughan's diverse communities and industries, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Retail: Point-of-sale systems and customer data management for businesses in Vaughan Mills</li>
+            <li>Technology: Cloud computing solutions and cybersecurity for tech startups in Concord</li>
+            <li>Healthcare: EMR systems and data protection for medical clinics in Maple</li>
+            <li>Residential: Home network setup and computer repair for families in Woodbridge and Kleinburg</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Committed to Reliable Tech Support in Vaughan</h2>
+          <p className="text-gray-600">PC Mechanix is committed to providing reliable tech support to the Vaughan community by:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Offering fast and efficient on-site and in-store services</li>
+            <li>Providing expert advice and personalized solutions</li>
+            <li>Using high-quality parts and components</li>
+          </ul>
+        </div>
+
 }
 

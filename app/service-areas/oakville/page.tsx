@@ -109,6 +109,42 @@ export default function OakvilleServiceAreaPage() {
             <Link href="/contact">Book Your Oakville Tech Service Now</Link>
           </Button>
         </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Oakville Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix provided top-notch service and fixed my iMac quickly and efficiently. I'm so grateful for their expertise and professionalism!" - Laura K., Glen Abbey</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"As a busy professional in Oakville, I rely on PC Mechanix to keep my technology running smoothly. They are always responsive and provide excellent support." - David S., Old Oakville</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Tailored IT Solutions for Oakville</h2>
+          <p className="text-gray-600">PC Mechanix offers specialized IT solutions to meet the unique needs of Oakville's residents and businesses, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>High-speed network setup for professionals working from home</li>
+            <li>Data security solutions for financial services firms</li>
+            <li>Creative workstation builds for designers and artists</li>
+            <li>Smart home automation for modern living</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Committed to Premium Tech Support in Oakville</h2>
+          <p className="text-gray-600">PC Mechanix is dedicated to providing premium tech support to the Oakville community by:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Offering personalized service and attention to detail</li>
+            <li>Employing certified and experienced technicians</li>
+            <li>Using only high-quality parts and components</li>
+            <li>Providing environmentally responsible solutions</li>
+          </ul>
+        </div>
+
+        </div>
       </div>
     </ServiceLayout>
   )

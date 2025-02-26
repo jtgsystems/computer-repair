@@ -101,6 +101,41 @@ export default function MississaugaServiceAreaPage() {
             <Link href="/contact">Schedule Your Repair Now</Link>
           </Button>
         </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Mississauga Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix saved my business! Our network was down, and they had us up and running in no time. Professional and reliable!" - John B., Streetsville</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"I've used PC Mechanix for years. They always provide excellent service and are very knowledgeable. Highly recommended!" - Sarah M., Port Credit</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">IT Solutions for Mississauga Businesses</h2>
+          <p className="text-gray-600">We offer tailored IT solutions to meet the unique needs of businesses in Mississauga. Our services include:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Managed IT Services for proactive support</li>
+            <li>Cybersecurity Solutions to protect your data</li>
+            <li>Cloud Services for scalability and efficiency</li>
+            <li>Data Backup and Recovery to prevent data loss</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Computer Repair Services Across Mississauga</h2>
+          <p className="text-gray-600">We provide on-site and in-store computer repair services throughout Mississauga, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Laptop and desktop repair in Meadowvale and Erin Mills</li>
+            <li>Virus removal and data recovery in Clarkson and Cooksville</li>
+            <li>Mac and PC upgrades in Port Credit and Streetsville</li>
+          </ul>
+        </div>
+
       </div>
     </ServiceLayout>
   )

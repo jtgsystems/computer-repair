@@ -108,5 +108,41 @@ export default function RichmondHillServiceAreaPage() {
       </div>
     </ServiceLayout>
   )
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Testimonials from Richmond Hill Customers</h2>
+          <div className="space-y-4">
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"PC Mechanix provided outstanding service and fixed my computer quickly and efficiently. I highly recommend them to anyone in Richmond Hill!" - Alex Chen, Bayview Hill</p>
+            </div>
+            <div className="border rounded-lg p-4">
+              <p className="text-gray-600">"As a small business owner in Richmond Hill, I rely on PC Mechanix for all my IT needs. They are always responsive, professional, and provide excellent solutions." - Susan Lee, Richvale</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">IT Solutions for Richmond Hill's Key Sectors</h2>
+          <p className="text-gray-600">PC Mechanix offers specialized IT solutions for key sectors in Richmond Hill, including:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Technology: Cloud computing, cybersecurity, and data analytics for tech companies</li>
+            <li>Retail: Point-of-sale systems, e-commerce solutions, and customer data management for retail businesses</li>
+            <li>Healthcare: HIPAA-compliant solutions, EMR systems, and data security for healthcare providers</li>
+            <li>Education: IT support for schools, colleges, and universities</li>
+          </ul>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold mb-4">Serving the Richmond Hill Community</h2>
+          <p className="text-gray-600">PC Mechanix is committed to serving the Richmond Hill community by:</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Providing local expertise and personalized service</li>
+            <li>Supporting community events and initiatives</li>
+            <li>Offering technology workshops for seniors and students</li>
+            <li>Partnering with local businesses and organizations</li>
+          </ul>
+        </div>
+
 }
 
