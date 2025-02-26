@@ -138,7 +138,7 @@ export default function Home() {
   return (
     <ServiceLayout renderHeaderAndFooter={true}>
       <main className="flex-grow">
-        <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white py-24">
+        <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white pt-36 pb-24">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/d0d06509-ce8b-4261-af03-a0e78dd7fdee.jpg-mYzh9RG8XsnoK3kAVoJZoaR5ujGn7X.jpeg"
             alt="PC Mechanix - Enterprise IT Solutions"

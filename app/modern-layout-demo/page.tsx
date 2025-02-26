@@ -10,7 +10,7 @@ export default function ModernLayoutDemo() {
   return (
     <ServiceLayoutWithModernMenu renderHeaderAndFooter={true}>
       <main className="flex-grow">
-        <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white py-24">
+        <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white pt-36 pb-24">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
