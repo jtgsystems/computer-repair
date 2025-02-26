@@ -244,30 +244,60 @@ export default function Home() {
         <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97]">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-12 text-white uppercase tracking-wide">OUR SERVICES</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="group bg-white/95 backdrop-blur-sm hover:bg-white transition-all duration-300 hover:shadow-xl border-none"
+                  className="group relative overflow-hidden border-none rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500"
                 >
-                  <CardContent className="flex flex-col h-full p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="p-3 rounded-full bg-blue-50 group-hover:bg-blue-100 transition-colors duration-300">
-                        <service.icon className="h-8 w-8 text-blue-600 group-hover:text-blue-700 transition-colors duration-300" />
+                  {/* Background Image */}
+                  <div className="absolute inset-0 w-full h-full">
+                  
+  <Image
+                      src={service.backgroundImage || `/images/service-bg-${index + 1}.jpg`}
+                      alt={service.title}
+                      fill
+                      className="object-cover"
+                    />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/70 to-gray-900/50"></div>
+                  </div>
+                  
+                  <CardContent className="flex flex-col h-full p-8 relative z-10">
+                    {/* Service icon */}
+
+                    <div className="mb-6 flex items-center">
+                      <div className="p-3 rounded-full bg-blue-600/20 backdrop-blur-sm">
+                        <service.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-xl font-semibold text-gray-900 ml-4 group-hover:text-blue-700 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-white ml-4 drop-shadow-md">
                         {service.title}
                       </h3>
                     </div>
-                    <p className="text-gray-600 mb-6 flex-grow">{service.description}</p>
+                    
+                    {/* Description with frosted glass effect */}
+                    <div className="mb-8 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-lg">
+                      <p className="text-white text-shadow">{service.description}</p>
+                    </div>
+                    
+                    {/* Feature list - unique to each service */}
+                    <div className="mb-8 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-lg">
+                      {service.features && service.features.map((feature, i) => (
+                        <div key={i} className="flex items-start mb-2">
+                          <CheckCircle className="h-4 w-4 text-blue-300 mt-1 mr-2 flex-shrink-0" />
+                          <span className="text-sm text-white text-shadow">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    {/* Button with frosted glass effect */}
                     <Button
-                      variant="default"
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white transition-all duration-300 group-hover:shadow-md"
+                      className="w-full bg-white/20 backdrop-blur-md hover:bg-white/30 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-white/30"
                       asChild
                     >
                       <Link href={`/business/${service.slug}`} className="flex items-center justify-center">
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 text-white" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -487,39 +517,81 @@ export default function Home() {
 const services = [
   {
     title: "Managed IT Services",
-    description: "Comprehensive IT management and support for your business.",
+    description: "Enterprise-grade IT management and support tailored to your business operations.",
     icon: Monitor,
     slug: "managed-it",
+    backgroundImage: "/images/managed-it.jpg",
+    features: [
+      "24/7 monitoring and support",
+      "Proactive maintenance and updates",
+      "Help desk and technical support",
+      "IT infrastructure management"
+    ]
   },
   {
     title: "Cybersecurity",
-    description: "Protect your business from digital threats and vulnerabilities.",
+    description: "Advanced protection systems to safeguard your critical business assets and data.",
     icon: Shield,
     slug: "cybersecurity",
+    backgroundImage: "/images/cybersecurity.jpg",
+    features: [
+      "Threat detection and prevention",
+      "Security audits and compliance",
+      "Data encryption solutions",
+      "Employee security training"
+    ]
   },
   {
     title: "Cloud Services",
-    description: "Comprehensive cloud solutions to enhance your business operations and scalability.",
+    description: "Scalable cloud infrastructure designed for performance, security, and business growth.",
     icon: Cloud,
     slug: "cloud-services",
+    backgroundImage: "/images/cloud-services.jpg",
+    features: [
+      "Cloud migration strategies",
+      "Hybrid cloud environments",
+      "Cloud security and compliance",
+      "Performance optimization"
+    ]
   },
   {
     title: "Network Solutions",
-    description: "Design, implementation, and maintenance of robust network solutions.",
+    description: "Enterprise networking architecture that ensures reliability, security, and performance.",
     icon: Network,
-    slug: "network-solutions",
+    slug: "networ- solutions",
+    backgroundImage: "/images/network-solutions.jpg",
+    features: [
+      "Network design and implementation",
+      "Wireless infrastructure",
+      "VPN and remote access solutions",
+      "Network security and monitoring"
+    ]
   },
   {
     title: "IT Consulting",
-    description: "Expert guidance and strategic planning for your IT infrastructure.",
+    description: "Strategic technology planning aligned with your business objectives and growth targets.",
     icon: LayoutGrid,
     slug: "it-consulting",
+    backgroundImage: "/images/it-consulting.jpg",
+    features: [
+      "IT strategy development",
+      "Technology roadmapping",
+      "Digital transformation planning",
+      "IT budget optimization"
+    ]
   },
   {
     title: "Security Systems",
-    description: "Advanced surveillance and security solutions for your business.",
+    description: "Comprehensive physical security systems integrated with your IT infrastructure.",
     icon: Video,
     slug: "security-systems",
+    backgroundImage: "/images/security-systems.jpg",
+    features: [
+      "CCTV and surveillance systems",
+      "Access control solutions",
+      "Alarm and monitoring services",
+      "Integrated security management"
+    ]
   },
 ]
 
