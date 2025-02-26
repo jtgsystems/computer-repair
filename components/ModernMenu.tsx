@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { motion, useReducedMotion } from "framer-motion"
-import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, PenTool, User, Users } from "lucide-react"
+import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, PenTool, User, Users, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import React, { useCallback, useEffect, useState, useRef } from "react"
@@ -167,24 +167,32 @@ const MobileNavigation = () => {
       >
         <div className="flex flex-col h-full">
           <div className="p-4 border-b border-gray-800">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
-              alt="PC Mechanix"
-              width={120}
-              height={30}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
-              className="h-8 w-auto object-contain filter brightness-0 invert"
-            />
+            <div className="flex justify-between items-center">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
+                alt="PC Mechanix"
+                width={120}
+                height={30}
+                placeholder="blur"
+                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
+                className="h-8 w-auto object-contain filter brightness-0 invert"
+              />
+              <SheetClose className="p-2 rounded-full hover:bg-gray-800 transition-colors">
+                <X className="h-5 w-5 text-white" />
+                <span className="sr-only">Close menu</span>
+              </SheetClose>
+            </div>
           </div>
           <div className="flex-1 overflow-auto py-6 px-4">
             <nav className="grid gap-6">
-              <Link 
-                href="/" 
-                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-              >
-                Home
-              </Link>
+              <SheetClose asChild>
+                <Link 
+                  href="/"
+                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                >
+                  Home
+                </Link>
+              </SheetClose>
               {serviceItems.map((category, index) => (
                 <motion.div
                   key={index}
@@ -199,31 +207,36 @@ const MobileNavigation = () => {
                   </h3>
                   <div className="grid gap-2 pl-3">
                     {category.items.map((item, itemIndex) => (
-                      <Link
-                        key={itemIndex}
-                        href={item.href}
-                        className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-                        aria-current={false}
-                      >
-                        {item.icon && iconMap[item.icon] && React.createElement(iconMap[item.icon], { className: "h-4 w-4" })}
-                        {item.label}
-                      </Link>
+                      <SheetClose key={itemIndex} asChild>
+                        <Link
+                          href={item.href}
+                          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                          aria-current={false}
+                        >
+                          {item.icon && iconMap[item.icon] && React.createElement(iconMap[item.icon], { className: "h-4 w-4" })}
+                          {item.label}
+                        </Link>
+                      </SheetClose>
                     ))}
                   </div>
                 </motion.div>
               ))}
-              <Link 
-                href="/about" 
-                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-              >
-                About
-              </Link>
-              <Link 
-                href="/contact" 
-                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-              >
-                Contact
-              </Link>
+              <SheetClose asChild>
+                <Link 
+                  href="/about" 
+                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                >
+                  About
+                </Link>
+              </SheetClose>
+              <SheetClose asChild>
+                <Link 
+                  href="/contact" 
+                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                >
+                  Contact
+                </Link>
+              </SheetClose>
             </nav>
           </div>
           <div className="border-t border-gray-800 p-4">
@@ -233,7 +246,6 @@ const MobileNavigation = () => {
                 <span>416-300-1006</span>
               </a>
             </Button>
-            <SheetClose className="sr-only">Close menu</SheetClose>
           </div>
         </div>
       </SheetContent>

@@ -260,14 +260,14 @@ export default function Home() {
                       className="object-cover"
                     />
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/70 to-gray-900/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/95 via-slate-800/90 to-indigo-900/80"></div>
                   </div>
                   
                   <CardContent className="flex flex-col h-full p-8 relative z-10">
                     {/* Service icon */}
 
                     <div className="mb-6 flex items-center">
-                      <div className="p-3 rounded-full bg-blue-600/20 backdrop-blur-sm">
+                      <div className="p-3 rounded-full bg-indigo-600/20 backdrop-blur-sm">
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white ml-4 drop-shadow-md">
@@ -276,23 +276,23 @@ export default function Home() {
                     </div>
                     
                     {/* Description with frosted glass effect */}
-                    <div className="mb-8 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-slate-800/30 backdrop-blur-md rounded-lg shadow-lg">
                       <p className="text-white text-shadow">{service.description}</p>
                     </div>
                     
                     {/* Feature list - unique to each service */}
-                    <div className="mb-8 p-4 bg-white/10 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-slate-800/30 backdrop-blur-md rounded-lg shadow-lg">
                       {service.features && service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mb-2">
-                          <CheckCircle className="h-4 w-4 text-blue-300 mt-1 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-white text-shadow">{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-indigo-300 mt-1 mr-2 flex-shrink-0" />
+                          <span className="text-sm text-slate-100 text-shadow">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
                     {/* Button with frosted glass effect */}
                     <Button
-                      className="w-full bg-white/20 backdrop-blur-md hover:bg-white/30 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-white/30"
+                      className="w-full bg-indigo-900/40 backdrop-blur-md hover:bg-indigo-800/50 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-indigo-500/30"
                       asChild
                     >
                       <Link href={`/business/${service.slug}`} className="flex items-center justify-center">

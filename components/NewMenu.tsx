@@ -44,7 +44,7 @@ const DropdownMenu = memo(({ category, isOpen, onToggle }: { category: any; isOp
   // Performance measurement
   const renderStartTime = useRef(performance.now());
   
-const prefersReducedMotion = useReducedMotion();
+  const prefersReducedMotion = useReducedMotion();
 
   // Memoize dropdown items to prevent re-renders
   const dropdownItems = useMemo(() => {
@@ -74,7 +74,6 @@ const prefersReducedMotion = useReducedMotion();
       <AnimatePresence>
         {isOpen && (
           <motion.div
- 
             // Use simpler animations if user prefers reduced motion
             initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: -10, scale: 0.95 }}
             animate={prefersReducedMotion ? { opacity: 1 } : { 
@@ -98,7 +97,6 @@ const prefersReducedMotion = useReducedMotion();
 DropdownMenu.displayName = 'DropdownMenu';
 
 // Memoize the mobile menu to prevent unnecessary re-renders
-
 const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
   // Performance measurement
   const renderStartTime = useRef(performance.now());
@@ -111,6 +109,12 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
     }
   }, [isOpen]);
 
+  // Add logging to track menu closing
+  const handleLinkClick = useCallback((label: string) => {
+    console.log(`Mobile menu link clicked: ${label}`);
+    onClose();
+  }, [onClose]);
+
   // Precompute category items to avoid recalculation on each render
   const categoryItems = useMemo(() => {
     return serviceItems.map((category, index) => (
@@ -118,14 +122,19 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
         <h3 className="text-lg font-medium text-gray-900">{category.label}</h3>
         <div className="space-y-2 pl-4">
           {category.items.map((item, itemIndex) => (
-            <Link key={itemIndex} href={item.href} className="block text-gray-600 hover:text-primary transition-colors duration-200" onClick={onClose}>
+            <Link 
+              key={itemIndex} 
+              href={item.href} 
+              className="block text-gray-600 hover:text-primary transition-colors duration-200" 
+              onClick={() => handleLinkClick(item.label)}
+            >
               {item.label}
             </Link>
           ))}
         </div>
       </div>
     ));
-  }, [onClose]);
+  }, [handleLinkClick]);
   
   return (
     <AnimatePresence>
@@ -134,7 +143,6 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
           initial={{ opacity: 0, x: "100%" }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: "100%" }}
- 
           transition={{ type: "tween", duration: prefersReducedMotion ? 0.1 : 0.15 }}
           className="fixed inset-0 bg-white z-50 overflow-y-auto"
         >
@@ -152,7 +160,7 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
               <Link
                 href="/"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
-                onClick={onClose}
+                onClick={() => handleLinkClick('Home')}
               >
                 Home
               </Link>
@@ -162,7 +170,7 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
               <Link
                 href="/about"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
-                onClick={onClose}
+                onClick={() => handleLinkClick('About')}
               >
                 About
               </Link>
@@ -170,14 +178,18 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
               <Link
                 href="/contact"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
-                onClick={onClose}
+                onClick={() => handleLinkClick('Contact')}
               >
                 Contact
               </Link>
 
               <div className="pt-6 border-t">
                 <Button size="lg" className="w-full" asChild>
-                  <a href="tel:416-300-1006" className="flex items-center justify-center space-x-2">
+                  <a 
+                    href="tel:416-300-1006" 
+                    className="flex items-center justify-center space-x-2"
+                    onClick={() => console.log('Phone button clicked')}
+                  >
                     <Phone className="w-5 h-5" />
                     <span>416-300-1006</span>
                   </a>
@@ -188,17 +200,16 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
         </motion.div>
       )}
     </AnimatePresence>
-  )
-}
-);
+  );
+});
 
 MobileMenu.displayName = 'MobileMenu';
 
 export default function NewMenu() {
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const lastToggleTime = useRef(0);
-  const [isScrolled, setIsScrolled] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const scrollThrottleTimeout = useRef<NodeJS.Timeout | null>(null);
   const prefersReducedMotion = useReducedMotion();
@@ -215,31 +226,41 @@ export default function NewMenu() {
         scrollThrottleTimeout.current = null;
       });
     }, 100); // Increased throttle time for better performance
-  }, [])
+  }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-;
+      window.removeEventListener("scroll", handleScroll);
       if (scrollThrottleTimeout.current) {
         clearTimeout(scrollThrottleTimeout.current);
       }
-    }
-  }, [handleScroll])
+    };
+  }, [handleScroll]);
 
   const toggleDropdown = (label: string) => {
     // Performance logging
     const startTime = performance.now();
     
-    setOpenDropdown(openDropdown === label ? null : label)
+    setOpenDropdown(openDropdown === label ? null : label);
     
     // Log performance after state update
     setTimeout(() => {
       const endTime = performance.now();
       console.log(`Dropdown toggle time for ${label}: ${(endTime - startTime).toFixed(2)}ms`);
     }, 10);
-  }
+  };
+  
+  // Handle mobile menu open/close with logging
+  const handleMobileMenuOpen = useCallback(() => {
+    console.log('Opening mobile menu');
+    setIsMobileMenuOpen(true);
+  }, []);
+
+  const handleMobileMenuClose = useCallback(() => {
+    console.log('Closing mobile menu');
+    setIsMobileMenuOpen(false);
+  }, []);
   
   // Memoize the navigation items to prevent re-renders
   const navigationItems = useMemo(() => {
@@ -308,14 +329,15 @@ export default function NewMenu() {
 
           <button
             className="md:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200"
-            onClick={() => setIsMobileMenuOpen(true)}
+            onClick={handleMobileMenuOpen}
+            aria-label="Open menu"
           >
             <MenuIcon className="w-6 h-6" />
           </button>
         </div>
       </div>
 
-      <MobileMenu isOpen={isMobileMenuOpen} onClose={() => setIsMobileMenuOpen(false)} />
+      <MobileMenu isOpen={isMobileMenuOpen} onClose={handleMobileMenuClose} />
     </header>
-  )
+  );
 }
