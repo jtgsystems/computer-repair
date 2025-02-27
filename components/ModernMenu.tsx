@@ -16,6 +16,7 @@ import { motion, useReducedMotion } from "framer-motion"
 import { Archive, Briefcase, Camera, Cloud, Globe, Mail, Menu as MenuIcon, Monitor, Phone, Server, Shield, ShoppingCart, PenTool, User, Users, X } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 import React, { useCallback, useEffect, useState, useRef } from "react"
 
 // Icon mapping for dynamic rendering
@@ -132,6 +133,7 @@ const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const prefersReducedMotion = useReducedMotion();
   const sheetContentRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
   
   // Handle sheet open/close
   const handleOpenChange = (open: boolean) => {
@@ -144,9 +146,16 @@ const MobileNavigation = () => {
       }, 100);
     }
   };
+
+  // Navigate using router.push for better performance
+  const handleNavClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsOpen(false);
+    router.push(href);
+  };
   
   return (
-    <Sheet onOpenChange={handleOpenChange}>
+    <Sheet onOpenChange={handleOpenChange} open={isOpen}>
       <SheetTrigger asChild>
         <Button 
           variant="ghost" 
@@ -185,14 +194,13 @@ const MobileNavigation = () => {
           </div>
           <div className="flex-1 overflow-auto py-6 px-4">
             <nav className="grid gap-6">
-              <SheetClose asChild>
-                <Link 
-                  href="/"
-                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-                >
-                  Home
-                </Link>
-              </SheetClose>
+              <a 
+                href="/"
+                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                onClick={handleNavClick("/")}
+              >
+                Home
+              </a>
               {serviceItems.map((category, index) => (
                 <motion.div
                   key={index}
@@ -207,36 +215,34 @@ const MobileNavigation = () => {
                   </h3>
                   <div className="grid gap-2 pl-3">
                     {category.items.map((item, itemIndex) => (
-                      <SheetClose key={itemIndex} asChild>
-                        <Link
-                          href={item.href}
-                          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-                          aria-current={false}
-                        >
-                          {item.icon && iconMap[item.icon] && React.createElement(iconMap[item.icon], { className: "h-4 w-4" })}
-                          {item.label}
-                        </Link>
-                      </SheetClose>
+                      <a
+                        key={itemIndex}
+                        href={item.href}
+                        className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                        aria-current={false}
+                        onClick={handleNavClick(item.href)}
+                      >
+                        {item.icon && iconMap[item.icon] && React.createElement(iconMap[item.icon], { className: "h-4 w-4" })}
+                        {item.label}
+                      </a>
                     ))}
                   </div>
                 </motion.div>
               ))}
-              <SheetClose asChild>
-                <Link 
-                  href="/about" 
-                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-                >
-                  About
-                </Link>
-              </SheetClose>
-              <SheetClose asChild>
-                <Link 
-                  href="/contact" 
-                  className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
-                >
-                  Contact
-                </Link>
-              </SheetClose>
+              <a 
+                href="/about" 
+                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                onClick={handleNavClick("/about")}
+              >
+                About
+              </a>
+              <a 
+                href="/contact" 
+                className="text-lg font-medium hover:text-gray-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md px-2 py-1"
+                onClick={handleNavClick("/contact")}
+              >
+                Contact
+              </a>
             </nav>
           </div>
           <div className="border-t border-gray-800 p-4">

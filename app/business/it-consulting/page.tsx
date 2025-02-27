@@ -75,27 +75,27 @@ export default function ITConsultingPage() {
       </section>
 
       <section id="features" className={`
-        bg-gradient-to-b from-gray-50 to-gray-100
+        bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white
         ${isMobile ? 'py-12' : 'py-20'}
         relative overflow-hidden
       `}>
         {/* Background decorative elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
-          <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-blue-500/20"></div>
-          <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-blue-700/20"></div>
-          <div className="absolute -bottom-32 left-1/4 w-80 h-80 rounded-full bg-blue-600/20"></div>
+          <div className="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-white/20"></div>
+          <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-white/20"></div>
+          <div className="absolute -bottom-32 left-1/4 w-80 h-80 rounded-full bg-white/20"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className={`
-              font-bold text-center relative inline-block
-              ${isMobile ? 'text-3xl mb-3' : 'text-4xl mb-4'}
+              font-extrabold text-center relative inline-block uppercase tracking-wide
+              ${isMobile ? 'text-3xl mb-3' : 'text-5xl mb-6'}
             `}>
               <span className="relative z-10">Our Consulting Services</span>
-              <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-100 -z-10 transform -rotate-1"></span>
+              <span className="absolute bottom-2 left-0 w-full h-4 bg-white/20 -z-10 transform -rotate-1"></span>
             </h2>
-            <p className={`text-gray-600 ${isMobile ? 'text-sm' : 'text-base'} max-w-2xl mx-auto`}>
+            <p className={`text-white/90 ${isMobile ? 'text-sm' : 'text-xl'} max-w-2xl mx-auto leading-relaxed`}>
               Comprehensive IT consulting solutions tailored to your business needs, delivered by our team of experienced professionals.
             </p>
           </div>
@@ -105,35 +105,35 @@ export default function ITConsultingPage() {
               <div
                 key={index}
                 className={`
-                  bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300
-                  hover:shadow-xl hover:-translate-y-1 border border-gray-100
-                  ${isMobile ? '' : 'hover:scale-[1.02]'}
+                  bg-white/10 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden transform transition-all duration-300
+                  hover:shadow-2xl hover:-translate-y-1 border border-white/20
+                  ${isMobile ? '' : 'hover:scale-[1.02] hover:bg-white/15'}
                 `}
               >
-                <div className="p-1 bg-gradient-to-r from-blue-500 to-blue-700"></div>
+                <div className="p-1.5 bg-gradient-to-r from-white/80 to-white/40"></div>
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="p-3 rounded-full bg-blue-50 mr-4">
+                    <div className="p-3 rounded-full bg-white/20 mr-4">
                       <feature.icon className={`
-                        text-blue-600
-                        ${isMobile ? 'h-6 w-6' : 'h-7 w-7'}
+                        text-white
+                        ${isMobile ? 'h-6 w-6' : 'h-8 w-8'}
                       `} aria-hidden="true" />
                     </div>
-                    <h3 className={`font-bold ${isMobile ? 'text-lg' : 'text-xl'}`}>
+                    <h3 className={`font-bold text-white ${isMobile ? 'text-lg' : 'text-2xl'}`}>
                       {feature.title}
                     </h3>
                   </div>
                   <p className={`
-                    text-gray-600 pl-[60px]
-                    ${isMobile ? 'text-sm' : 'text-base'}
+                    text-white/80 pl-[60px]
+                    ${isMobile ? 'text-sm' : 'text-lg'}
                   `}>{feature.description}</p>
                   <div className="mt-4 pl-[60px]">
                     <a
                       href="#"
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm"
+                      className="inline-flex items-center text-white hover:text-white/80 font-medium text-sm bg-white/20 px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/30"
                     >
                       Learn more
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                       </svg>
                     </a>
