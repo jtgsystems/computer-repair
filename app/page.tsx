@@ -252,22 +252,13 @@ export default function Home() {
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 w-full h-full">
-                  
-  <Image
-                      src={service.backgroundImage || `/images/service-bg-${index + 1}.jpg`}
-                      alt={service.title}
-                      fill
-                      className="object-cover"
-                    />
-                    {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/95 via-slate-800/90 to-indigo-900/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-[#1D4D84]/95 via-[#4B6E97]/90 to-[#1D4D84]/80"></div>
                   </div>
                   
                   <CardContent className="flex flex-col h-full p-8 relative z-10">
                     {/* Service icon */}
-
                     <div className="mb-6 flex items-center">
-                      <div className="p-3 rounded-full bg-indigo-600/20 backdrop-blur-sm">
+                      <div className="p-3 rounded-full bg-[#F0F4FF]/20 backdrop-blur-sm">
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
                       <h3 className="text-xl font-bold text-white ml-4 drop-shadow-md">
@@ -276,15 +267,15 @@ export default function Home() {
                     </div>
                     
                     {/* Description with frosted glass effect */}
-                    <div className="mb-8 p-4 bg-slate-800/30 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-[#F0F4FF]/10 backdrop-blur-md rounded-lg shadow-lg">
                       <p className="text-white text-shadow">{service.description}</p>
                     </div>
                     
                     {/* Feature list - unique to each service */}
-                    <div className="mb-8 p-4 bg-slate-800/30 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-[#F0F4FF]/10 backdrop-blur-md rounded-lg shadow-lg">
                       {service.features && service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mb-2">
-                          <CheckCircle className="h-4 w-4 text-indigo-300 mt-1 mr-2 flex-shrink-0" />
+                          <CheckCircle className="h-4 w-4 text-[#F0F4FF] mt-1 mr-2 flex-shrink-0" />
                           <span className="text-sm text-slate-100 text-shadow">{feature}</span>
                         </div>
                       ))}
@@ -292,7 +283,7 @@ export default function Home() {
                     
                     {/* Button with frosted glass effect */}
                     <Button
-                      className="w-full bg-indigo-900/40 backdrop-blur-md hover:bg-indigo-800/50 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-indigo-500/30"
+                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/30 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-[#F0F4FF]/30"
                       asChild
                     >
                       <Link href={`/business/${service.slug}`} className="flex items-center justify-center">
@@ -517,80 +508,80 @@ export default function Home() {
 const services = [
   {
     title: "Managed IT Services",
-    description: "Enterprise-grade IT management and support tailored to your business operations.",
+    description: "Comprehensive IT management solutions that provide 24/7 support and proactive maintenance for your business technology.",
     icon: Monitor,
     slug: "managed-it",
     backgroundImage: "/images/managed-it.jpg",
     features: [
-      "24/7 monitoring and support",
-      "Proactive maintenance and updates",
-      "Help desk and technical support",
-      "IT infrastructure management"
+      "Round-the-clock system monitoring",
+      "Preventative maintenance and updates",
+      "Dedicated technical support team",
+      "Strategic IT infrastructure planning"
     ]
   },
   {
     title: "Cybersecurity",
-    description: "Advanced protection systems to safeguard your critical business assets and data.",
+    description: "Robust protection systems that safeguard your business data, networks, and digital assets from evolving threats.",
     icon: Shield,
     slug: "cybersecurity",
     backgroundImage: "/images/cybersecurity.jpg",
     features: [
-      "Threat detection and prevention",
-      "Security audits and compliance",
-      "Data encryption solutions",
-      "Employee security training"
+      "Advanced threat detection systems",
+      "Comprehensive security audits",
+      "Multi-layered data encryption",
+      "Security awareness training"
     ]
   },
   {
     title: "Cloud Services",
-    description: "Scalable cloud infrastructure designed for performance, security, and business growth.",
+    description: "Flexible and scalable cloud solutions that enhance collaboration, data accessibility, and business continuity.",
     icon: Cloud,
     slug: "cloud-services",
     backgroundImage: "/images/cloud-services.jpg",
     features: [
-      "Cloud migration strategies",
-      "Hybrid cloud environments",
-      "Cloud security and compliance",
-      "Performance optimization"
+      "Seamless cloud migration",
+      "Custom hybrid cloud environments",
+      "Enhanced data security protocols",
+      "Performance and cost optimization"
     ]
   },
   {
     title: "Network Solutions",
-    description: "Enterprise networking architecture that ensures reliability, security, and performance.",
+    description: "Reliable and secure network infrastructure designed to optimize connectivity, performance, and business operations.",
     icon: Network,
-    slug: "networ- solutions",
+    slug: "network-solutions",
     backgroundImage: "/images/network-solutions.jpg",
     features: [
-      "Network design and implementation",
-      "Wireless infrastructure",
-      "VPN and remote access solutions",
-      "Network security and monitoring"
+      "Custom network architecture",
+      "High-performance wireless systems",
+      "Secure remote access solutions",
+      "Real-time network monitoring"
     ]
   },
   {
     title: "IT Consulting",
-    description: "Strategic technology planning aligned with your business objectives and growth targets.",
+    description: "Expert guidance and strategic planning to align your technology investments with your business goals and growth plans.",
     icon: LayoutGrid,
     slug: "it-consulting",
     backgroundImage: "/images/it-consulting.jpg",
     features: [
-      "IT strategy development",
-      "Technology roadmapping",
-      "Digital transformation planning",
-      "IT budget optimization"
+      "Technology needs assessment",
+      "Long-term IT roadmap development",
+      "Digital transformation guidance",
+      "IT budget and resource planning"
     ]
   },
   {
     title: "Security Systems",
-    description: "Comprehensive physical security systems integrated with your IT infrastructure.",
+    description: "Integrated physical and digital security solutions that protect your business premises, assets, and personnel.",
     icon: Video,
     slug: "security-systems",
     backgroundImage: "/images/security-systems.jpg",
     features: [
-      "CCTV and surveillance systems",
-      "Access control solutions",
-      "Alarm and monitoring services",
-      "Integrated security management"
+      "HD surveillance systems",
+      "Smart access control technology",
+      "24/7 monitoring services",
+      "Unified security management"
     ]
   },
 ]

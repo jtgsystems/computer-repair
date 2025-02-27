@@ -1,23 +1,23 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useMobile } from "@/hooks/useMobile"
+import { Button } from "@/components/ui/button";
+import { useMobile } from "@/hooks/useMobile";
 
 interface ServiceHeroProps {
-  title: string
-  description: string
+  title: string;
+  description: string;
   primaryCTA?: {
-    text: string
-    href: string
-  }
+    text: string;
+    href: string;
+  };
   secondaryCTA?: {
-    text: string
-    href: string
-  }
+    text: string;
+    href: string;
+  };
 }
 
 export default function ServiceHero({ title, description, primaryCTA, secondaryCTA }: ServiceHeroProps) {
-  const isMobile = useMobile()
+  const isMobile = useMobile();
 
   return (
     <section className={`
@@ -26,8 +26,8 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
       before:content-[''] before:absolute before:inset-0 before:bg-[url('https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?q=80')] before:bg-cover before:bg-center before:opacity-15 before:scale-105
       after:content-[''] after:absolute after:inset-0 after:bg-gradient-to-br after:from-[#1D4D84] after:to-[#4B6E97] after:opacity-95
     `}>
-      <div className="absolute inset-0 bg-black/20 z-[1]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/20 z-[2]" />
+      <div className="absolute inset-0 bg-black/20 z-[1]"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/5 to-black/20 z-[2]"></div>
       
       <div className="container mx-auto px-4 text-center relative z-10 text-white">
         <div className="relative pt-6 md:pt-8">
@@ -76,5 +76,5 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
         </div>
       </div>
     </section>
-  )
+  );
 }
