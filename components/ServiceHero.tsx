@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 import { useMobile } from "@/hooks/useMobile";
 
 interface ServiceHeroProps {
@@ -56,7 +57,12 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
                 `}
                 asChild
               >
-                <a href={primaryCTA.href}>{primaryCTA.text}</a>
+                <a href={primaryCTA.href} className="flex items-center justify-center gap-2">
+                  {primaryCTA.text.toLowerCase().includes("call") && (
+                    <Phone className="h-5 w-5 animate-jitter" />
+                  )}
+                  <span>{primaryCTA.text}</span>
+                </a>
               </Button>
             )}
             {secondaryCTA && (

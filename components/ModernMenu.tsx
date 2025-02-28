@@ -164,6 +164,26 @@ const MobileNavigation = () => {
     }, 10);
   };
   
+  // Add a resize event listener to handle switching between mobile and desktop views
+  useEffect(() => {
+    // Function to handle window resize
+    const handleResize = () => {
+      // If window width is greater than md breakpoint (768px), ensure scrolling is enabled
+      if (window.innerWidth >= 768) {
+        document.body.style.overflow = '';
+      }
+    };
+    
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    
+    // Cleanup function to ensure body overflow is reset when component unmounts
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
   return (
     <>
       {/* Fixed Call Button on Mobile */}

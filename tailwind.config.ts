@@ -108,11 +108,18 @@ const config: Config = {
           to: {
             height: '0'
           }
+        },
+        'jitter': {
+          '0%, 100%': { transform: 'rotate(0deg)' },
+          '25%': { transform: 'rotate(-5deg)' },
+          '75%': { transform: 'rotate(5deg)' }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+,
+        'jitter': 'jitter 0.3s infinite'
       }
     }
   },

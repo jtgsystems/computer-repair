@@ -163,6 +163,21 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Software Support Image Section */}
+        <section className="py-8 bg-white">
+          <div className="container mx-auto px-4 flex justify-center">
+            <div className="relative w-full max-w-4xl">
+              <Image
+                src="/SoftwareSupport.png"
+                alt="Software Support Services"
+                width={1200}
+                height={600}
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wide">
