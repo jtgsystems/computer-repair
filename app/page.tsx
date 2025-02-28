@@ -168,7 +168,7 @@ export default function Home() {
           <div className="container mx-auto px-4 flex justify-center">
             <div className="relative w-full max-w-4xl">
               <Image
-                src="/SoftwareSupport.png"
+                src="/images/SoftwareSupport.webp"
                 alt="Software Support Services"
                 width={1200}
                 height={600}
