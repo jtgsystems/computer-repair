@@ -72,10 +72,13 @@ export default function PageLayout({ children }: PageLayoutProps) {
       <div className="md:hidden bg-primary p-2 text-center">
         <Button
           size="sm"
-          className="w-full bg-white text-primary hover:bg-blue-100 text-sm transition-all duration-300 hover:shadow-md"
+          className="w-full bg-[#1D4D84] text-white hover:bg-[#4B6E97] text-sm transition-all duration-300 hover:shadow-md"
           asChild
         >
-          <a href="tel:416-300-1006">Call Now: 416-300-1006</a>
+          <a href="tel:416-300-1006" className="flex items-center justify-center gap-1">
+            <Phone className="h-4 w-4" />
+            <span>416-300-1006</span>
+          </a>
         </Button>
       </div>
       <header className="sticky top-0 z-50 bg-white shadow-lg">
@@ -200,10 +203,13 @@ export default function PageLayout({ children }: PageLayoutProps) {
               <div className="flex flex-col space-y-2 mt-4">
                 <Button
                   variant="outline"
-                  className="w-full text-white border-white hover:bg-white hover:text-blue-800 transition-all duration-300"
+                  className="w-full bg-[#1D4D84] text-white hover:bg-[#4B6E97] border-[#1D4D84] transition-all duration-300"
                   asChild
                 >
-                  <a href="tel:416-300-1006">Call Now</a>
+                  <a href="tel:416-300-1006" className="flex items-center justify-center gap-1">
+                    <Phone className="h-4 w-4" />
+                    <span>Call Now</span>
+                  </a>
                 </Button>
                 <Button className="w-full bg-yellow-500 text-blue-800 hover:bg-yellow-400 font-semibold transition-all duration-300 hover:shadow-md">
                   Get a Free Quote
@@ -316,7 +322,7 @@ export default function PageLayout({ children }: PageLayoutProps) {
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 flex justify-between items-center">
             <p className="text-sm">&copy; {new Date().getFullYear()} PC Mechanix. All rights reserved.</p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 -ml-24">
               <a
                 href="#"
                 className="text-white hover:text-blue-300 transition-colors duration-300"

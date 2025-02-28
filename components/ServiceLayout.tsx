@@ -78,7 +78,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
       <div className="md:hidden bg-primary p-3 text-center sticky top-0 z-[120]">
         <Button
           size="lg"
-          className="w-full bg-white text-primary hover:bg-blue-100 text-base sm:text-lg font-bold transition-all duration-300 hover:shadow-md py-3 sm:py-4 min-h-[44px]"
+          className="w-full bg-[#1D4D84] text-white hover:bg-[#4B6E97] text-base sm:text-lg font-bold transition-all duration-300 hover:shadow-md py-3 sm:py-4 min-h-[44px]"
           asChild
         >
           <a href="tel:416-300-1006" className="flex items-center justify-center gap-2">
@@ -209,7 +209,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
 
             <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
               <p className="text-xs sm:text-sm text-center sm:text-left">&copy; {new Date().getFullYear()} PC Mechanix. All rights reserved.</p>
-              <div className="flex space-x-6">
+              <div className="flex space-x-6 -ml-24">
                 <a
                   href="#"
                   className="text-white hover:text-blue-300 transition-colors duration-300"

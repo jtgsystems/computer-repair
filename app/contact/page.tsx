@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Phone, Mail } from "lucide-react"
+import { MapPin, Phone, Mail, Send } from "lucide-react"
 import ServiceLayout from "@/components/ServiceLayout"
 import ServiceHero from "@/components/ServiceHero"
 
@@ -44,7 +44,12 @@ export default function ContactPage() {
                 </label>
                 <Textarea id="message" name="message" rows={4} required />
               </div>
-              <Button type="submit">Send Message</Button>
+              <div className="flex justify-end">
+                <Button type="submit" className="flex items-center gap-2">
+                  Send Message
+                  <Send className="h-4 w-4" />
+                </Button>
+              </div>
             </form>
           </div>
           <div className="lg:w-1/2">
