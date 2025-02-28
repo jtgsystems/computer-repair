@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react"
 export const metadata: Metadata = {
   title: "Blog | PC Mechanix",
   description: "Stay updated with the latest technology trends, tips, and insights from PC Mechanix.",
+  keywords: "PC Mechanix blog, tech blog, IT tips, computer maintenance, cybersecurity tips, cloud computing, technology trends, IT support advice, business technology, computer tips, tech insights, Toronto IT blog",
 }
 
 const blogPosts = [

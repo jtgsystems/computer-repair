@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Home Network Setup Services Toronto | PC Mechanix",
   description:
     "Professional home network setup and configuration services in Toronto. Secure and efficient Wi-Fi solutions for your home.",
+  keywords: "home network setup, WiFi installation Toronto, wireless network configuration, home internet setup, network security, WiFi optimization, mesh network installation, router setup, home network design, PC Mechanix, residential networking, smart home network",
 }
 
 const features = [

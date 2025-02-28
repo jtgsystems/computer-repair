@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Virus Removal Services Toronto | PC Mechanix",
   description:
     "Professional virus and malware removal services in Toronto. Protect your devices and data with our expert technicians.",
+  keywords: "virus removal, malware removal, cybersecurity, computer security, data protection, PC Mechanix, Toronto, virus scan, malware protection, computer repair, system cleanup",
 }
 
 const features = [

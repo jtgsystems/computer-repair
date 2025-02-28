@@ -10,6 +10,7 @@ export const metadata: Metadata = {
   title: "About PC Mechanix | Toronto's Premier IT Solutions Provider",
   description:
     "Learn about PC Mechanix, our history, mission, and commitment to providing top-quality computer repair and IT services in Toronto.",
+  keywords: "PC Mechanix, about us, Toronto IT company, computer repair history, IT solutions provider, tech support Toronto, PC repair company, IT services mission, computer repair experts, Toronto tech support",
 }
 
 export default function AboutPage() {

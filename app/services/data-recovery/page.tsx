@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Data Recovery Services Toronto | PC Mechanix",
   description:
     "Professional data recovery services in Toronto. Recover lost or corrupted data from various storage devices with our expert recovery solutions.",
+  keywords: "data recovery, Toronto data recovery, hard drive recovery, SSD recovery, file recovery, lost data, corrupted data, data retrieval, PC Mechanix, emergency data recovery, deleted file recovery, professional data recovery",
 }
 
 const features = [

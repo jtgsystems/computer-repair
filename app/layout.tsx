@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 export const metadata: Metadata = {
   title: 'PC Mechanix - Toronto IT Services & Solutions',
   description: 'Expert IT services in Toronto and the GTA. Network solutions, managed IT, cybersecurity, cloud services, and more.',
+  keywords: 'IT services, Toronto, GTA, PC repair, computer repair, network solutions, managed IT, cybersecurity, cloud services, tech support, IT consulting, business IT solutions',
   generator: 'Next.js',
   viewport: {
     width: 'device-width',

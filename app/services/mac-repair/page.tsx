@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Mac Repair Services Toronto | PC Mechanix",
   description:
     "Expert Mac repair services in Toronto. Fast, reliable fixes for all Apple devices including MacBooks, iMacs, and Mac Pros.",
+  keywords: "Mac repair Toronto, MacBook repair, iMac repair, Mac Pro service, Apple computer repair, MacBook screen repair, Mac data recovery, Mac virus removal, Mac hardware upgrade, PC Mechanix, Toronto Mac service, Apple specialist",
 }
 
 const features = [

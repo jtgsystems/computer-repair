@@ -11,6 +11,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Desktop Repair Services Toronto | PC Mechanix",
   description: "Professional desktop computer repair services in Toronto. Fast, reliable fixes for all desktop issues.",
+  keywords: "desktop repair, computer repair Toronto, PC repair, desktop computer fix, hardware repair, computer upgrade, PC Mechanix, desktop troubleshooting, motherboard repair, power supply repair, Toronto computer service, desktop maintenance",
 }
 
 const features = [

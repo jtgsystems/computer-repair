@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Software Troubleshooting Services Toronto | PC Mechanix",
   description:
     "Expert software troubleshooting services in Toronto. Resolve application issues, system errors, and optimize your computer's performance.",
+  keywords: "software troubleshooting, computer repair, system errors, application issues, software optimization, PC Mechanix, Toronto, software issues, performance optimization, software conflicts, driver issues",
 }
 
 const features = [

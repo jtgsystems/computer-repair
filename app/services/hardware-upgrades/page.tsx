@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Hardware Upgrade Services Toronto | PC Mechanix",
   description:
     "Professional hardware upgrade services in Toronto. Boost your computer's performance with our expert technicians.",
+  keywords: "hardware upgrades, computer upgrades Toronto, RAM upgrade, CPU upgrade, SSD installation, graphics card upgrade, PC performance boost, computer parts installation, hardware installation Toronto, PC Mechanix, computer hardware upgrade",
 }
 
 const features = [

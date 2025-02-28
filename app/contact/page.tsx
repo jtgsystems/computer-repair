@@ -9,6 +9,7 @@ import ServiceHero from "@/components/ServiceHero"
 export const metadata: Metadata = {
   title: "Contact Us | PC Mechanix",
   description: "Get in touch with PC Mechanix for all your computer repair and IT service needs in Toronto.",
+  keywords: "contact PC Mechanix, Toronto IT support, computer repair contact, IT services Toronto, tech support contact, PC repair phone number, Toronto computer help, IT consultation, contact form, PC Mechanix location",
 }
 
 export default function ContactPage() {

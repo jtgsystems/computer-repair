@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Tablet & Smartphone Repair Services Toronto | PC Mechanix",
   description:
     "Professional repair services for tablets and smartphones in Toronto. Fast, reliable fixes for all major brands and models.",
+  keywords: "smartphone repair Toronto, tablet repair, iPhone repair, iPad repair, Samsung repair, screen replacement, battery replacement, mobile device fix, Android repair, phone screen fix, PC Mechanix, cell phone repair GTA",
 }
 
 const features = [

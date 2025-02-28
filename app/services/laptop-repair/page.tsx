@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Expert Laptop Repair Services Toronto | PC Mechanix",
   description:
     "Fast, reliable laptop repairs in Toronto. Same-day service for all brands including Dell, HP, Lenovo, ASUS, and more. On-site and in-shop repairs across the GTA.",
+  keywords: "laptop repair Toronto, laptop screen repair, laptop battery replacement, laptop data recovery, laptop virus removal, Dell laptop repair, HP laptop repair, Lenovo repair, ASUS repair, laptop hardware fix, PC Mechanix, GTA laptop repair",
 }
 
 const features = [

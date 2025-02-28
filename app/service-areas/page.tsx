@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Service Areas | PC Mechanix",
   description:
     "Discover the areas served by PC Mechanix for computer repair and IT services in Toronto and surrounding regions.",
+  keywords: "PC Mechanix service areas, Toronto computer repair, GTA IT services, Mississauga tech support, Brampton computer services, Markham IT support, Vaughan computer repair, Richmond Hill tech services, Oakville computer help, Burlington IT support",
 }
 
 const serviceAreas = [
