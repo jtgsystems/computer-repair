@@ -3,9 +3,15 @@
 import { Button } from "@/components/ui/button"
 import { ChevronDown, ChevronUp, Mail, MapPin, Phone, X } from "lucide-react"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import type { ReactNode } from "react"
 import { useCallback, useState } from "react"
-import NewMenu from "./NewMenu"
+
+// Use dynamic import to prevent circular dependencies
+const ModernMenu = dynamic(() => import("./ModernMenu"), {
+  ssr: false,
+  loading: () => <div className="h-16 bg-gray-900"></div>
+})
 
 const serviceItems = [
   {
@@ -77,7 +83,7 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
         >
           <a href="tel:416-300-1006" className="flex items-center justify-center gap-2">
             <Phone className="h-5 w-5" />
-            <span>Call Now: 416-300-1006</span>
+            <span>416-300-1006</span>
           </a>
         </Button>
       </div>
@@ -85,77 +91,12 @@ export default function ServiceLayout({ children, renderHeaderAndFooter = true }
       {renderHeaderAndFooter && (
         <>
           <header className="sticky top-0 z-[100] bg-white shadow-lg">
-            <NewMenu />
+            <ModernMenu variant="inline" className="bg-gray-900" />
           </header>
 
           {isMobileMenuOpen && (
             <div className="fixed inset-0 z-[110] overflow-y-auto bg-white">
               <div className="container mx-auto px-4 py-4">
-                <div className="flex justify-end mb-4">
-                  <button
-                    className="text-[#1D4D84] p-2 transition-transform duration-300 hover:scale-110"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    aria-label="Close menu"
-                  >
-                    <X className="h-6 w-6" />
-                  </button>
-                </div>
-                <nav className="flex flex-col space-y-3">
-                  <Link
-                    href="/"
-                    className="text-lg font-semibold text-[#1D4D84] hover:text-[#4B6E97] uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-gray-100 px-2 py-1 rounded"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Home
-                  </Link>
-                  {serviceItems.map((category, index) => (
-                    <details key={index} className="group">
-                      <summary className="text-lg font-semibold cursor-pointer list-none flex items-center justify-between text-[#1D4D84] hover:text-[#4B6E97] uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-gray-100 px-4 py-3 rounded min-h-[44px]">
-                        {category.label}{" "}
-                        <ChevronDown className="h-5 w-5 transition-transform duration-300 group-open:rotate-180" />
-                      </summary>
-                      <ul className="mt-2 space-y-2 pl-4">
-                        {category.items.map((item, itemIndex) => (
-                          <li key={itemIndex}>
-                            <Link
-                              href={item.href}
-                              className="text-[#1D4D84] hover:text-[#4B6E97] font-medium text-base transition-all duration-300 ease-in-out hover:bg-gray-100 px-3 py-2 rounded block min-h-[44px] flex items-center"
-                              onClick={() => setIsMobileMenuOpen(false)}
-                            >
-                              {item.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
-                  ))}
-                  <Link
-                    href="/about"
-                    className="text-lg font-semibold text-[#1D4D84] hover:text-[#4B6E97] uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-gray-100 px-2 py-1 rounded"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="text-lg font-semibold text-[#1D4D84] hover:text-[#4B6E97] uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-gray-100 px-2 py-1 rounded"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Contact
-                  </Link>
-                  <div className="flex flex-col space-y-2 mt-4">
-                    <Button
-                      variant="outline"
-                      className="w-full border-[#1D4D84] text-[#1D4D84] hover:bg-[#1D4D84] hover:text-white transition-all duration-300 text-lg font-bold py-4"
-                      asChild
-                    >
-                      <a href="tel:416-300-1006">Call Now: 416-300-1006</a>
-                    </Button>
-                    <Button className="w-full bg-[#1D4D84] text-white hover:bg-[#4B6E97] font-semibold transition-all duration-300 hover:shadow-md">
-                      Get a Free Quote
-                    </Button>
-                  </div>
-                </nav>
               </div>
             </div>
           )}
