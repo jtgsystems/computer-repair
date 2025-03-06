@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import ServiceLayout from "@/components/ServiceLayout"
 import ServiceHero from "@/components/ServiceHero"
@@ -41,9 +42,10 @@ export default function MarkhamServiceAreaPage() {
             <Card key={area.slug} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <CardTitle>
-                  <Link href={`/service-areas/markham/${area.slug}`} className="text-primary hover:underline">
+                  <span className="text-primary cursor-pointer hover:underline">
                     {area.name}
-                  </Link>
+                  </span>
+                  <Badge variant="outline" className="ml-2">Service Area</Badge>
                 </CardTitle>
               </CardHeader>
               <CardContent>
