@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/card"
 import { Button } from "@/components/ui/button"
 import ServiceLayout from "@/components/ServiceLayout"
 import ServiceHero from "@/components/ServiceHero"

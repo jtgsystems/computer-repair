@@ -41,7 +41,7 @@ export default function BurlingtonServiceAreaPage() {
             <Card key={area.slug} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <CardTitle>
-                  <Link href={`/service-areas/burlington/${area.slug}`} className="text-primary hover:underline">
+                  //{`/service-areas/burlington/${area.slug}`} className="text-primary hover:underline">
                     {area.name}
                   </Link>
                 </CardTitle>
@@ -105,7 +105,7 @@ export default function BurlingtonServiceAreaPage() {
             Experience the PC Mechanix difference. Our Burlington team is here to solve your tech challenges!
           </p>
           <Button size="lg" asChild>
-            <Link href="/contact">Schedule Your Burlington Tech Service Now</Link>
+            //"/contact">Schedule Your Burlington Tech Service Now</Link>
           </Button>
         </div>
 

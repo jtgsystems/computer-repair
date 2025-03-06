@@ -105,11 +105,7 @@ export default function VaughanServiceAreaPage() {
             <Link href="/contact">Book Your Vaughan Tech Service Now</Link>
           </Button>
         </div>
-      </div>
-    </ServiceLayout>
-  )
-        </div>
-
+        
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Testimonials from Vaughan Customers</h2>
           <div className="space-y-4">
@@ -142,6 +138,8 @@ export default function VaughanServiceAreaPage() {
             <li>Using high-quality parts and components</li>
           </ul>
         </div>
-
+      </div>
+    </ServiceLayout>
+  )
 }
 
