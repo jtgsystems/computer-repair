@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function CloudServicesPage() {
+export default function BusinessCloudServicesPage() {
   return (
     <>
       <ServiceHero

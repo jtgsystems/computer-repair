@@ -229,7 +229,9 @@ export default function ITConsultingPage() {
               `}
               asChild
             >
-              <a href="/contact">Schedule a Consultation</a>
+              <Link href="/contact">
+                Schedule a Consultation
+              </Link>
             </Button>
             <Button
               size={isMobile ? "default" : "lg"}
@@ -240,7 +242,9 @@ export default function ITConsultingPage() {
               `}
               asChild
             >
-              <a href="#features">Explore Our Services</a>
+              <Link href="#features">
+                Explore Our Services
+              </Link>
             </Button>
           </div>
         </div>

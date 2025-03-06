@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function EmailCollaborationPage() {
+export default function BusinessEmailCollaborationPage() {
   return (
     <>
       <ServiceHero

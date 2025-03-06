@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { useMobile } from "@/hooks/useMobile";
+import Link from "next/link";
 
 interface ServiceHeroProps {
   title: string;
@@ -57,12 +58,12 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
                 `}
                 asChild
               >
-                <a href={primaryCTA.href} className="flex items-center justify-center gap-2">
+                <Link href={primaryCTA.href} className="flex items-center justify-center gap-2">
                   {primaryCTA.text.toLowerCase().includes("call") && (
                     <Phone className="h-5 w-5 animate-jitter" />
                   )}
                   <span>{primaryCTA.text}</span>
-                </a>
+                </Link>
               </Button>
             )}
             {secondaryCTA && (
@@ -75,7 +76,7 @@ export default function ServiceHero({ title, description, primaryCTA, secondaryC
                 `}
                 asChild
               >
-                <a href={secondaryCTA.href}>{secondaryCTA.text}</a>
+                <Link href={secondaryCTA.href}>{secondaryCTA.text}</Link>
               </Button>
             )}
           </div>

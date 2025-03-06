@@ -81,7 +81,7 @@ export default function BlogPage() {
             <CardFooter>
               <Button asChild className="w-full">
                 <Link href={`/blog/${post.slug}`}>
-                  Read More <ArrowRight className="ml-2 h-4 w-4" />
+                  Read More
                 </Link>
               </Button>
             </CardFooter>
@@ -90,8 +90,9 @@ export default function BlogPage() {
       </div>
       <div className="mt-12 text-center">
         <Button size="lg" variant="outline" asChild>
-          <Link href="/blog">Load More Posts
-        </Link>
+          <Link href="/blog">
+            View All Posts
+          </Link>
         </Button>
       </div>
     </BlogLayout>

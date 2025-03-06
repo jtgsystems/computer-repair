@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function VDIPage() {
+export default function BusinessVdiPage() {
   return (
     <>
       <ServiceHero

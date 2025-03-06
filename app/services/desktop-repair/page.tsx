@@ -198,7 +198,9 @@ export default function DesktopRepairPage() {
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
               asChild
             >
-              <Link href="/contact">Schedule Repair</Link>
+              <Link href="/contact">
+                Schedule a Consultation
+              </Link>
             </Button>
             <Button
               size="lg"
@@ -206,7 +208,9 @@ export default function DesktopRepairPage() {
               className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
               asChild
             >
-              <Link href="#features">Learn More</Link>
+              <Link href="/services">
+                Explore More Services
+              </Link>
             </Button>
           </div>
         </div>

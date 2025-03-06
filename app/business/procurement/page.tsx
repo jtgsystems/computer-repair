@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function ProcurementPage() {
+export default function BusinessProcurementPage() {
   return (
     <>
       <ServiceHero

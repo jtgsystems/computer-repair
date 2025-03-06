@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function CybersecurityPage() {
+export default function BusinessCybersecurityPage() {
   return (
     <>
       <ServiceHero

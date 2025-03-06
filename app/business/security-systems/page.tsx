@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function SecuritySystemsPage() {
+export default function BusinessSecuritySystemsPage() {
   return (
     <>
       <ServiceHero

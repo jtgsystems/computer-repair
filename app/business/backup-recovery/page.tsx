@@ -45,7 +45,7 @@ const features = [
   },
 ]
 
-export default function BackupRecoveryPage() {
+export default function BusinessBackupRecoveryPage() {
   return (
     <>
       <ServiceHero
