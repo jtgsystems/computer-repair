@@ -30,19 +30,7 @@ export default function BramptonServiceAreaPage() {
       />
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <Card className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle>
-                  <Link href="/service-areas/brampton/downtown-brampton" className="text-primary hover:underline">
-                    Downtown Brampton
-                  </Link>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-600">Dedicated services for Downtown Brampton residents and businesses.</p>
-              </CardContent>
-            </Card>
-          </div>
+         </div>
       </div>
     </ServiceLayout>
   )

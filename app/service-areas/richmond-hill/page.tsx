@@ -105,11 +105,7 @@ export default function RichmondHillServiceAreaPage() {
             <Link href="/contact">Schedule Your Richmond Hill Tech Service Now</Link>
           </Button>
         </div>
-      </div>
-    </ServiceLayout>
-  )
-        </div>
-
+        
         <div className="mt-12">
           <h2 className="text-2xl font-bold mb-4">Testimonials from Richmond Hill Customers</h2>
           <div className="space-y-4">
@@ -143,6 +139,8 @@ export default function RichmondHillServiceAreaPage() {
             <li>Partnering with local businesses and organizations</li>
           </ul>
         </div>
-
+      </div>
+    </ServiceLayout>
+  )
 }
 
