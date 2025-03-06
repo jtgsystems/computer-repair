@@ -361,12 +361,11 @@ export default function Home() {
                     
                     {/* Button with frosted glass effect */}
                     <Button
-                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/30 text-white font-medium py-3 rounded-md transition-all duration-300 group-hover:shadow-md border border-[#F0F4FF]/30"
+                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/40 text-white transition-colors"
                       asChild
                     >
-                      <Link href={`/business/${service.slug}`} className="flex items-center justify-center">
+                      <Link href="/services">
                         Learn More
-                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 text-white" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -536,7 +535,9 @@ export default function Home() {
                 className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
                 asChild
               >
-                <Link href="/contact">Schedule a Consultation</Link>
+                <Link href="/contact">
+                  Schedule a Consultation
+                </Link>
               </Button>
               <Button
                 size="lg"
@@ -544,7 +545,9 @@ export default function Home() {
                 className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
                 asChild
               >
-                <Link href="#services">Explore Our Services</Link>
+                <Link href="/services">
+                  Explore Our Services
+                </Link>
               </Button>
             </div>
           </div>
