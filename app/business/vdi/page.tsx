@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Layout, Cloud, Shield, Users, Zap, Laptop } from "lucide-react"
+import Link from "next/link"
 import type { Metadata } from "next"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import ServiceHero from "@/components/ServiceHero"
@@ -139,15 +140,21 @@ export default function VDIPage() {
             <Button
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              asChild
             >
-              Schedule a Consultation
+              <Link href="/contact">
+                Schedule a Consultation
+              </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+              asChild
             >
-              Explore Our Services
+              <Link href="/business">
+                Explore Our Services
+              </Link>
             </Button>
           </div>
         </div>

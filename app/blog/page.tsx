@@ -89,8 +89,9 @@ export default function BlogPage() {
         ))}
       </div>
       <div className="mt-12 text-center">
-        <Button size="lg" variant="outline">
-          Load More Posts
+        <Button size="lg" variant="outline" asChild>
+          <Link href="/blog">Load More Posts
+        </Link>
         </Button>
       </div>
     </BlogLayout>

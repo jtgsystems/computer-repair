@@ -1,6 +1,7 @@
 "use client"
 
 import ServiceHero from "@/components/ServiceHero"
+import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { useMobile } from "@/hooks/useMobile"
@@ -129,7 +130,7 @@ export default function ITConsultingPage() {
                   `}>{feature.description}</p>
                   <div className="mt-4 pl-[60px]">
                     <a
-                      href="#"
+                      href="/contact"
                       className="inline-flex items-center text-white hover:text-white/80 font-medium text-sm bg-white/20 px-4 py-2 rounded-full transition-all duration-300 hover:bg-white/30"
                     >
                       Learn more

@@ -31,6 +31,69 @@ import ServiceLayout from "@/components/ServiceLayout"
 import Link from "next/link"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
+const canadianCities = [
+  {
+    name: "Ontario",
+    cities: [
+      "Toronto",
+      "Ottawa",
+      "Mississauga",
+      "Brampton",
+      "Hamilton",
+      "London",
+      "Windsor",
+      "Kitchener",
+      "Markham",
+      "Vaughan",
+    ],
+  },
+  {
+    name: "British Columbia",
+    cities: ["Vancouver", "Surrey", "Burnaby", "Richmond", "Abbotsford", "Coquitlam", "Kelowna", "Victoria", "Nanaimo"],
+  },
+  {
+    name: "Alberta",
+    cities: [
+      "Calgary",
+      "Edmonton",
+      "Red Deer",
+      "Lethbridge",
+      "St. Albert",
+      "Medicine Hat",
+      "Grande Prairie",
+      "Airdrie",
+    ],
+  },
+  {
+    name: "Manitoba",
+    cities: ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Selkirk", "Winkler", "Dauphin"],
+  },
+  {
+    name: "Saskatchewan",
+    cities: ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford"],
+  },
+  {
+    name: "Nova Scotia",
+    cities: ["Halifax", "Dartmouth", "Sydney", "Truro", "New Glasgow", "Glace Bay", "Kentville", "Bridgewater"],
+  },
+  {
+    name: "New Brunswick",
+    cities: ["Moncton", "Saint John", "Fredericton", "Dieppe", "Miramichi", "Edmundston", "Bathurst", "Campbellton"],
+  },
+  {
+    name: "Newfoundland and Labrador",
+    cities: ["St. John's", "Mount Pearl", "Corner Brook", "Conception Bay South", "Grand Falls-Windsor", "Paradise"],
+  },
+  {
+    name: "Prince Edward Island",
+    cities: ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Kensington", "Souris"],
+  },
+  {
+    name: "Territories",
+    cities: ["Whitehorse (Yukon)", "Yellowknife (Northwest Territories)", "Iqaluit (Nunavut)"],
+  },
+]
+
 const ScrollToTopButton = () => {
   const handleScrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -666,68 +729,5 @@ const industries = [
   {
     name: "Logistics",
     icon: Truck,
-  },
-]
-
-const canadianCities = [
-  {
-    name: "Ontario",
-    cities: [
-      "Toronto",
-      "Ottawa",
-      "Mississauga",
-      "Brampton",
-      "Hamilton",
-      "London",
-      "Windsor",
-      "Kitchener",
-      "Markham",
-      "Vaughan",
-    ],
-  },
-  {
-    name: "British Columbia",
-    cities: ["Vancouver", "Surrey", "Burnaby", "Richmond", "Abbotsford", "Coquitlam", "Kelowna", "Victoria", "Nanaimo"],
-  },
-  {
-    name: "Alberta",
-    cities: [
-      "Calgary",
-      "Edmonton",
-      "Red Deer",
-      "Lethbridge",
-      "St. Albert",
-      "Medicine Hat",
-      "Grande Prairie",
-      "Airdrie",
-    ],
-  },
-  {
-    name: "Manitoba",
-    cities: ["Winnipeg", "Brandon", "Steinbach", "Thompson", "Portage la Prairie", "Selkirk", "Winkler", "Dauphin"],
-  },
-  {
-    name: "Saskatchewan",
-    cities: ["Saskatoon", "Regina", "Prince Albert", "Moose Jaw", "Swift Current", "Yorkton", "North Battleford"],
-  },
-  {
-    name: "Nova Scotia",
-    cities: ["Halifax", "Dartmouth", "Sydney", "Truro", "New Glasgow", "Glace Bay", "Kentville", "Bridgewater"],
-  },
-  {
-    name: "New Brunswick",
-    cities: ["Moncton", "Saint John", "Fredericton", "Dieppe", "Miramichi", "Edmundston", "Bathurst", "Campbellton"],
-  },
-  {
-    name: "Newfoundland and Labrador",
-    cities: ["St. John's", "Mount Pearl", "Corner Brook", "Conception Bay South", "Grand Falls-Windsor", "Paradise"],
-  },
-  {
-    name: "Prince Edward Island",
-    cities: ["Charlottetown", "Summerside", "Stratford", "Cornwall", "Montague", "Kensington", "Souris"],
-  },
-  {
-    name: "Territories",
-    cities: ["Whitehorse (Yukon)", "Yellowknife (Northwest Territories)", "Iqaluit (Nunavut)"],
   },
 ]

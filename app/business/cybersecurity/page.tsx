@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Shield, Lock, Eye, AlertTriangle, FileCheck, Users } from "lucide-react"
 import type { Metadata } from "next"
@@ -138,15 +139,21 @@ export default function CybersecurityPage() {
             <Button
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              asChild
             >
-              Schedule a Consultation
+              <Link href="/contact">
+                Schedule a Consultation
+              </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
+              asChild
             >
-              Explore Our Services
+              <Link href="/business">
+                Explore Our Services
+              </Link>
             </Button>
           </div>
         </div>

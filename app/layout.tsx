@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -7,14 +7,6 @@ export const metadata: Metadata = {
   description: 'Expert IT services in Toronto and the GTA. Network solutions, managed IT, cybersecurity, cloud services, and more.',
   keywords: 'IT services, Toronto, GTA, PC repair, computer repair, network solutions, managed IT, cybersecurity, cloud services, tech support, IT consulting, business IT solutions',
   generator: 'Next.js',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 5,
-    minimumScale: 1,
-    userScalable: true,
-  },
-  themeColor: '#1D4D84',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -29,6 +21,16 @@ export const metadata: Metadata = {
     url: true,
   },
 }
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  minimumScale: 1,
+  userScalable: true,
+  themeColor: '#1D4D84',
+}
+
 
 export default function RootLayout({
   children,
