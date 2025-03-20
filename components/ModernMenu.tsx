@@ -224,7 +224,7 @@ const MobileNavigation = () => {
             <div className="p-4 border-b border-gray-200">
               <div className="flex justify-between items-center">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
+                  src="/images/logo.png"
                   alt="PC Mechanix"
                   width={120}
                   height={30}
@@ -404,7 +404,7 @@ export default function ModernMenu({
           <Link href="/" className="flex-shrink-0 z-10">
             <Image
               priority={true}
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
+              src="/images/logo.png"
               alt="PC Mechanix"
               width={180}
               height={45}

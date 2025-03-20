@@ -3,77 +3,76 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 212 64% 32%; /* Blumine #1D4D84 */
-    --primary-foreground: 210 40% 98%;
-    --secondary: 214 29% 44%; /* Kashmir Blue #4B6E97 */
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 220 14% 94%; /* Mystic #E4EDEF */
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 220 14% 94%; /* Mystic #E4EDEF */
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 212 64% 32%; /* Blumine #1D4D84 */
-    --radius: 0.5rem;
-  }
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 212 64% 32%; /* Blumine #1D4D84 */
+        --primary-foreground: 210 40% 98%;
+        --secondary: 214 29% 44%; /* Kashmir Blue #4B6E97 */
+        --secondary-foreground: 222.2 47.4% 11.2%;
+        --muted: 220 14% 94%; /* Mystic #E4EDEF */
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 220 14% 94%; /* Mystic #E4EDEF */
+        --accent-foreground: 222.2 47.4% 11.2%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 212 64% 32%; /* Blumine #1D4D84 */
+        --radius: 0.5rem;
+    }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 214 29% 44%; /* Kashmir Blue #4B6E97 */
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 212 64% 32%; /* Blumine #1D4D84 */
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 214 29% 44%; /* Kashmir Blue #4B6E97 */
-  }
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 214 29% 44%; /* Kashmir Blue #4B6E97 */
+        --primary-foreground: 222.2 47.4% 11.2%;
+        --secondary: 212 64% 32%; /* Blumine #1D4D84 */
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 214 29% 44%; /* Kashmir Blue #4B6E97 */
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 @layer components {
-  .wp-block-button__link {
-    @apply inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
-  }
+    .wp-block-button__link {
+        @apply inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50;
+    }
 
-  .aligncenter {
-    @apply mx-auto text-center;
-  }
+    .aligncenter {
+        @apply mx-auto text-center;
+    }
 
-  .has-text-align-center {
-    @apply text-center;
-  }
+    .has-text-align-center {
+        @apply text-center;
+    }
 
-  .has-text-align-left {
-    @apply text-left;
-  }
+    .has-text-align-left {
+        @apply text-left;
+    }
 
-  .has-text-align-right {
-    @apply text-right;
-  }
+    .has-text-align-right {
+        @apply text-right;
+    }
 }
-
