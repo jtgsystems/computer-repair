@@ -581,13 +581,14 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
               {industries.map((industry, index) => (
-                <div
+                <Link
                   key={index}
+                  href={`/industries/${industry.slug}`}
                   className="flex flex-col items-center p-6 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 cursor-pointer group"
                 >
                   <industry.icon className="w-16 h-16 mb-4 text-[#E4EDEF] group-hover:scale-110 transition-transform duration-300" />
                   <h3 className="text-xl font-semibold">{industry.name}</h3>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -727,21 +728,26 @@ const industries = [
   {
     name: "Retail",
     icon: Store,
+    slug: "retail",
   },
   {
     name: "Real Estate",
     icon: Building2,
+    slug: "real-estate",
   },
   {
     name: "Warehousing",
     icon: Package,
+    slug: "warehousing",
   },
   {
     name: "Healthcare",
     icon: Stethoscope,
+    slug: "healthcare",
   },
   {
     name: "Logistics",
     icon: Truck,
+    slug: "logistics",
   },
 ]
