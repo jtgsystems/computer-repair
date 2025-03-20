@@ -364,7 +364,18 @@ export default function Home() {
                       className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/40 text-white transition-colors"
                       asChild
                     >
-                      <Link href="/services">
+                      <Link
+                        href={
+                          service.slug === 'cybersecurity' ||
+                          service.slug === 'security-systems' ||
+                          service.slug === 'cloud-services' ||
+                          service.slug === 'managed-it' ||
+                          service.slug === 'network-solutions' ||
+                          service.slug === 'it-consulting'
+                            ? `/business/${service.slug}`
+                            : `/services/${service.slug}`
+                        }
+                      >
                         Learn More
                       </Link>
                     </Button>
