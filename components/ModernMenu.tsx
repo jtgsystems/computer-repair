@@ -226,11 +226,11 @@ const MobileNavigation = () => {
                 <Image
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
                   alt="PC Mechanix"
-                  width={160}
-                  height={40}
+                  width={120}
+                  height={30}
                   placeholder="blur"
                   blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
-                  className="h-10 w-auto object-contain"
+                  className="h-8 w-auto object-contain"
                 />
                 <SheetClose className="p-2 rounded-full hover:bg-blue-50 transition-colors">
                   <X className="h-5 w-5 text-blue-800" />
@@ -406,11 +406,11 @@ export default function ModernMenu({
               priority={true}
               src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
               alt="PC Mechanix"
-              width={240}
-              height={60}
+              width={180}
+              height={45}
               placeholder="blur"
               blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
-              className="h-14 w-auto object-contain filter brightness-0 invert"
+              className="h-10 w-auto object-contain filter brightness-0 invert"
             />
           </Link>
 
