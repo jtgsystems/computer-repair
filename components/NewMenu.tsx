@@ -165,15 +165,15 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
                 Home
               </Link>
 
-              {categoryItems}
-
-              <Link
+              {categoryItems}              <Link
                 href="/about"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
                 onClick={() => handleLinkClick('About')}
               >
                 About
-              </Link>              <Link
+              </Link>
+              
+              <Link
                 href="/contact"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
                 onClick={() => handleLinkClick('Contact')}
