@@ -18,15 +18,27 @@ function readLinkCheckerReport() {
   const issues = [];
   // Updated regex to better match the report format
   const issueRegex = /### Issue \d+:.*?\n- \*\*File\*\*: (.*?)\n- \*\*Element Type\*\*: (.*?)\n.*?\n- \*\*Element\*\*: `(.*?)`/gs;
-  
-  let match;
+    let match;
   while ((match = issueRegex.exec(content)) !== null) {
     const filePath = match[1];
     const elementType = match[2];
     const elementSnippet = match[3];
     
-    // Extract relative path - fix to handle Windows paths
-    const relativePath = filePath.split('computer-repair\\')[1].replace(/\\/g, '/');
+    // Extract relative path - handle different path formats safely
+    let relativePath;
+    try {
+      // Try the Windows-specific split first
+      if (filePath.includes('computer-repair\\')) {
+        relativePath = filePath.split('computer-repair\\')[1].replace(/\\/g, '/');
+      } 
+      // Fallback to just using the filename if the split doesn't work
+      else {
+        relativePath = filePath.split('\\').pop().replace(/\\/g, '/');
+      }
+    } catch (error) {
+      console.error('Error extracting relative path:', error);
+      relativePath = filePath.replace(/\\/g, '/'); // Just use the whole path if needed
+    }
     
     issues.push({
       filePath: relativePath,

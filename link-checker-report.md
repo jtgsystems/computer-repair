@@ -1,11 +1,11 @@
 # Universal Link Checker Report
-Generated on: 4/10/2025, 2:44:47 AM
+Generated on: 4/10/2025, 3:03:52 AM
 
 ## Summary
 - Total files analyzed: 122
 - Total components found: 475
-- Total clickable elements: 505
-- Links: 343
+- Total clickable elements: 521
+- Links: 359
 - Buttons: 228
 - Potential issues: 102
 
@@ -14,35 +14,32 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-          size="icon" 
-          className="h-12 w-12 rounded-full bg-blue-600 hover:bg-b...`
+- **Element**: `<Button size="icon" 
+          className="h-12 w-12 rounded-full bg-blue-600 hover:bg-blue-700 text...`
 
 ### Issue 2: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-            variant="ghost" 
+- **Element**: `<Button variant="ghost" 
             size="icon" 
-            className="md:hidden t...`
+            className="md:hidden text-white" 
+ ...`
 
 ### Issue 3: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-                size="lg" 
-                className="w-full h-14 bg-blue-600 hover:bg-bl...`
+- **Element**: `<Button size="lg" 
+                className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white ...`
 
 ### Issue 4: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-              variant="default" 
+- **Element**: `<Button variant="default" 
               size="lg" 
-              className="round...`
+              className="rounded-full bg-blue-...`
 
 ### Issue 5: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
@@ -66,27 +63,24 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceCTA.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-      size="lg" 
-      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
+- **Element**: `<Button size="lg" 
+      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 sm:py-4...`
 
 ### Issue 9: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceHero.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-                size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
                 className={`
-         ...`
+                  bg-[#1D4...`
 
 ### Issue 10: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceHero.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-                size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
                 variant="outline"
-    ...`
+                class...`
 
 ### Issue 11: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ui\pagination.tsx
@@ -125,18 +119,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tra...`
 
 ### Issue 17: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 18: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
@@ -150,18 +142,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tra...`
 
 ### Issue 20: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 21: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
@@ -175,18 +165,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 23: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 24: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
@@ -200,18 +188,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 26: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 27: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
@@ -225,18 +211,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 29: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 30: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
@@ -250,72 +234,64 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               className={`
-                ...`
+                bg-[#1D4D84] t...`
 
 ### Issue 32: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               variant="outline"
-           ...`
+              className={...`
 
 ### Issue 33: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\managed-it\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               className={`
-                ...`
+                bg-[#1D4D84] t...`
 
 ### Issue 34: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\managed-it\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               variant="outline"
-           ...`
+              className={...`
 
 ### Issue 35: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\network-solutions\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-            size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
             className={`
-              bg-wh...`
+              bg-white text-[#1D...`
 
 ### Issue 36: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button 
-            size="lg" 
+- **Element**: `<Button size="lg" 
             variant="secondary" 
-            className="bg-white tex...`
+            className="bg-white text-[#1D4D84] h...`
 
 ### Issue 37: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 38: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 39: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
@@ -329,18 +305,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 41: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 42: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
@@ -354,18 +328,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 44: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 45: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
@@ -385,18 +357,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 ### Issue 48: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 49: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
@@ -410,18 +380,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 ### Issue 51: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 52: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
@@ -441,9 +409,8 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-            size="lg"
-            className="bg-white text-primary hover:bg-gray-100 shado...`
+- **Element**: `<Button size="lg"
+            className="bg-white text-primary hover:bg-gray-100 shadow-lg transiti...`
 
 ### Issue 55: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
@@ -457,18 +424,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 ### Issue 57: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 58: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
@@ -482,18 +447,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 ### Issue 60: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 61: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
@@ -507,18 +470,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 ### Issue 63: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 ### Issue 64: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
@@ -532,25 +493,22 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]...`
+- **Element**: `<Button className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/40 text-white transiti...`
 
 ### Issue 66: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-                size="lg"
-                className="bg-[#1D4D84] text-white hover:bg-[#4B...`
+- **Element**: `<Button size="lg"
+                className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg t...`
 
 ### Issue 67: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-                size="lg"
+- **Element**: `<Button size="lg"
                 variant="outline"
-                className="bg...`
+                className="bg-transparent text...`
 
 ### Issue 68: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\bramalea\page.tsx
@@ -652,120 +610,106 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\data-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 85: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\data-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 86: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 87: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 88: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\hardware-upgrades\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 89: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\hardware-upgrades\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 90: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\laptop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 91: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\laptop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 92: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mac-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 93: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mac-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 94: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mobile-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 95: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mobile-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 96: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 97: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 98: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
@@ -780,75 +724,67 @@ Generated on: 4/10/2025, 2:44:47 AM
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\software-troubleshooting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 100: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\software-troubleshooting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ### Issue 101: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\virus-removal\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 ### Issue 102: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\virus-removal\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 ## All Clickable Elements
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ModernMenu.tsx
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-          size="icon" 
-          className="h-12 w-12 rounded-full bg-blue-600 hover:bg-b...`
+- **Element**: `<Button size="icon" 
+          className="h-12 w-12 rounded-full bg-blue-600 hover:bg-blue-700 text...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-            variant="ghost" 
+- **Element**: `<Button variant="ghost" 
             size="icon" 
-            className="md:hidden t...`
+            className="md:hidden text-white" 
+ ...`
 
 #### Element 3 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-                size="lg" 
-                className="w-full h-14 bg-blue-600 hover:bg-bl...`
+- **Element**: `<Button size="lg" 
+                className="w-full h-14 bg-blue-600 hover:bg-blue-700 text-white ...`
 
 #### Element 4 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-              variant="default" 
+- **Element**: `<Button variant="default" 
               size="lg" 
-              className="round...`
+              className="rounded-full bg-blue-...`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `<Link
           href={href}
-          className={cn(
-            "flex items-center gap-2 select-...`
+          className="flex items-center gap-2 select-none rounded-md px...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -1241,9 +1177,8 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-      size="lg" 
-      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
+- **Element**: `<Button size="lg" 
+      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 sm:py-4...`
 
 #### Element 2 (Link)
 - **Has Navigation**: Yes
@@ -1259,18 +1194,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-                size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
                 className={`
-         ...`
+                  bg-[#1D4...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-                size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
                 variant="outline"
-    ...`
+                class...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1585,17 +1518,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tra...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1610,9 +1541,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `ion-colors duration-300"
+- **Element**: `rs duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -1625,9 +1556,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -1644,17 +1575,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tra...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1669,9 +1598,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `ion-colors duration-300"
+- **Element**: `rs duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -1684,9 +1613,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -1703,17 +1632,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1728,9 +1655,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -1743,9 +1670,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -1762,17 +1689,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1787,9 +1712,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -1802,9 +1727,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -1821,17 +1746,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1846,9 +1769,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -1861,9 +1784,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -1880,18 +1803,16 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               className={`
-                ...`
+                bg-[#1D4D84] t...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               variant="outline"
-           ...`
+              className={...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1913,10 +1834,10 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `'text-lg'}
+- **Element**: `'}
               `}
               asChild
-            >
+             asChild>
               <Link href="#features"...`
 
 #### Element 7 (Unknown)
@@ -1930,11 +1851,11 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `'text-lg'}
+- **Element**: `g'}
               `}
               asChild
-            >
-              <Link href="/contact">...`
+             asChild>
+              <Link href="/contact"...`
 
 #### Element 9 (Link)
 - **Has Navigation**: Yes
@@ -1955,39 +1876,47 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               className={`
-                ...`
+                bg-[#1D4D84] t...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
               variant="outline"
-           ...`
+              className={...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href="/contact">`
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `: 'text-lg'}
-              `}
-              asChild
-            >
-              <a href="#features">...`
+- **Element**: `<a href="/contact">`
 
-#### Element 6 (Unknown)
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<a href="#features">`
+
+#### Element 7 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: ``}
+              asChild
+             asChild>
+<Link href="/services">
+ <a href="#features">Explore ...`
+
+#### Element 8 (Unknown)
 - **Has Navigation**: No
 - **Empty Navigation**: No
 - **Element**: `h2>
@@ -1995,21 +1924,31 @@ Generated on: 4/10/2025, 2:44:47 AM
             ${isMobile ? 'text-lg mb-6' : 'text-xl mb-8'}
           `}...`
 
-#### Element 7 (Link)
+#### Element 9 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `' : 'text-lg'}
-              `}
+- **Element**: ``}
               asChild
-            >
-              <a href="/contact"...`
+             asChild>
+<Link href="/contact">
+ <a href="/contact">Schedule a...`
 
-#### Element 8 (Link)
+#### Element 10 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
 
-#### Element 9 (Link)
+#### Element 11 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 12 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/services"`
+
+#### Element 13 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="#features"`
@@ -2018,26 +1957,36 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-            size={isMobile ? "default" : "lg"}
+- **Element**: `<Button size={isMobile ? "default" : "lg"}
             className={`
-              bg-wh...`
+              bg-white text-[#1D...`
 
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href="/contact">`
+- **Element**: `<Link href="/contact">`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `min-h-[44px] text-lg'}
-            `}
-            asChild
-          >
-            <a href="/contact"...`
+- **Element**: `<a href="/contact">`
 
 #### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `'}
+            `}
+            asChild
+           asChild>
+<Link href="/contact">
+ <a href="/contact"...`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2046,10 +1995,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button 
-            size="lg" 
+- **Element**: `<Button size="lg" 
             variant="secondary" 
-            className="bg-white tex...`
+            className="bg-white text-[#1D4D84] h...`
 
 #### Element 2 (Link)
 - **Has Navigation**: Yes
@@ -2064,17 +2012,28 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `] hover:bg-[#E4EDEF] min-h-[44px]"
-            asChild
-          >
-            <Link href="/contact"...`
+- **Element**: `<Link href="/contact">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href={`/business/${service.slug}`
+- **Element**: `min-h-[44px]"
+            asChild
+           asChild>
+<Link href="/contact">
+ <Link href="/contact">...`
 
 #### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href={`/business/${service.slug}`
+
+#### Element 7 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2083,17 +2042,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2108,9 +2065,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -2123,9 +2080,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -2142,17 +2099,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2167,9 +2122,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -2182,9 +2137,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -2201,17 +2156,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2226,9 +2179,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/business"...`
 
 #### Element 6 (Button)
@@ -2241,9 +2194,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -2273,17 +2226,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2298,17 +2249,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `n-colors duration-300"
+- **Element**: `duration-300"
               asChild
-            >
-              <Link href="/industries"...`
+             asChild>
+              <Link href="/industries">...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -2332,17 +2283,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2357,17 +2306,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `n-colors duration-300"
+- **Element**: `duration-300"
               asChild
-            >
-              <Link href="/industries"...`
+             asChild>
+              <Link href="/industries">...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -2396,9 +2345,8 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-            size="lg"
-            className="bg-white text-primary hover:bg-gray-100 shado...`
+- **Element**: `<Button size="lg"
+            className="bg-white text-primary hover:bg-gray-100 shadow-lg transiti...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2426,9 +2374,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `transition-colors duration-300"
+- **Element**: `on-colors duration-300"
             asChild
-          >
+           asChild>
             <Link href="/contact"...`
 
 #### Element 8 (Link)
@@ -2445,17 +2393,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2470,17 +2416,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `n-colors duration-300"
+- **Element**: `duration-300"
               asChild
-            >
-              <Link href="/industries"...`
+             asChild>
+              <Link href="/industries">...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -2504,17 +2450,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2529,17 +2473,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `n-colors duration-300"
+- **Element**: `duration-300"
               asChild
-            >
-              <Link href="/industries"...`
+             asChild>
+              <Link href="/industries">...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -2563,17 +2507,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 s...`
+- **Element**: `<Button size="lg"
+              className="bg-white text-primary hover:bg-gray-100 shadow-lg transi...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-trans...`
+              className="bg-transparent text-whi...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -2588,17 +2530,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `n-colors duration-300"
+- **Element**: `duration-300"
               asChild
-            >
-              <Link href="/industries"...`
+             asChild>
+              <Link href="/industries">...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tion-colors duration-300"
+- **Element**: `ors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -2627,23 +2569,20 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]...`
+- **Element**: `<Button className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/40 text-white transiti...`
 
 #### Element 3 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-                size="lg"
-                className="bg-[#1D4D84] text-white hover:bg-[#4B...`
+- **Element**: `<Button size="lg"
+                className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg t...`
 
 #### Element 4 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-                size="lg"
+- **Element**: `<Button size="lg"
                 variant="outline"
-                className="bg...`
+                className="bg-transparent text...`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2687,9 +2626,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 11 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `lors duration-300"
+- **Element**: `ation-300"
                 asChild
-              >
+               asChild>
                 <Link href="/services"...`
 
 #### Element 12 (Unknown)
@@ -2710,9 +2649,9 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 14 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `olors duration-300"
+- **Element**: `ration-300"
                 asChild
-              >
+               asChild>
                 <Link href="/contact"...`
 
 #### Element 15 (Link)
@@ -2867,12 +2806,23 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `ch challenges!
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/contact"...`
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `s!
+          </p>
+          <Button size="lg" asChild>
+<Link href="/contact">
+ <Link href="/contact"...`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2891,12 +2841,23 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `tact us today!
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/contact"...`
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `y!
+          </p>
+          <Button size="lg" asChild>
+<Link href="/contact">
+ <Link href="/contact"...`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2915,11 +2876,22 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `ga team is ready to help!</p>
-          <Button size="lg" asChild>
-            <Link href="/contact"...`
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `eady to help!</p>
+          <Button size="lg" asChild>
+<Link href="/contact">
+ <Link href="/contact"...`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2984,11 +2956,22 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `m is ready to assist you!</p>
-          <Button size="lg" asChild>
-            <Link href="/contact"...`
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `o assist you!</p>
+          <Button size="lg" asChild>
+<Link href="/contact">
+ <Link href="/contact"...`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -3158,17 +3141,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3183,17 +3164,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3210,17 +3191,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3235,17 +3214,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3262,17 +3241,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3287,17 +3264,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3314,17 +3291,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3339,17 +3314,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3366,17 +3341,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3391,17 +3364,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3418,17 +3391,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3443,17 +3414,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3470,17 +3441,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3495,17 +3464,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Button)
@@ -3530,17 +3499,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3555,17 +3522,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
@@ -3582,17 +3549,15 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 1 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+- **Element**: `<Button size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg tran...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button
-              size="lg"
+- **Element**: `<Button size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-transparent text-white...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -3607,17 +3572,17 @@ Generated on: 4/10/2025, 2:44:47 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `olors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `colors duration-300"
               asChild
-            >
+             asChild>
               <Link href="/contact"...`
 
 #### Element 7 (Link)
