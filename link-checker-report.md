@@ -1,13 +1,13 @@
 # Universal Link Checker Report
-Generated on: 3/6/2025, 12:49:17 AM
+Generated on: 4/10/2025, 2:44:47 AM
 
 ## Summary
-- Total files analyzed: 101
-- Total components found: 458
-- Total clickable elements: 422
-- Links: 286
-- Buttons: 184
-- Potential issues: 79
+- Total files analyzed: 122
+- Total components found: 475
+- Total clickable elements: 505
+- Links: 343
+- Buttons: 228
+- Potential issues: 102
 
 ## Potential Issues
 ### Issue 1: Missing navigation property
@@ -71,14 +71,6 @@ Generated on: 3/6/2025, 12:49:17 AM
       className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
 
 ### Issue 9: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceCTA.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button 
-      size="lg" 
-      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
-
-### Issue 10: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceHero.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -87,7 +79,7 @@ Generated on: 3/6/2025, 12:49:17 AM
                 className={`
          ...`
 
-### Issue 11: Missing navigation property
+### Issue 10: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceHero.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -96,39 +88,46 @@ Generated on: 3/6/2025, 12:49:17 AM
                 variant="outline"
     ...`
 
-### Issue 12: Missing navigation property
+### Issue 11: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ui\pagination.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<ButtonProps, "size">`
 
-### Issue 13: Missing navigation property
+### Issue 12: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ui\pagination.tsx
 - **Element Type**: Link
 - **Detection Reason**: a component
 - **Element**: `<a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
-      ...`
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          buttonVaria...`
 
-### Issue 14: Missing navigation property
+### Issue 13: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\blog\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button asChild className="w-full">`
 
-### Issue 15: Missing navigation property
+### Issue 14: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\blog\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
-- **Element**: `<Button size="lg" variant="outline">`
+- **Element**: `<Button size="lg" variant="outline" asChild>`
 
-### Issue 16: Missing navigation property
+### Issue 15: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\blog\[slug]\page.tsx
 - **Element Type**: Link
 - **Detection Reason**: a component
 - **Element**: `<article className="prose prose-lg dark:prose-invert max-w-3xl mx-auto p-4">`
+
+### Issue 16: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
 
 ### Issue 17: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
@@ -136,24 +135,24 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Detection Reason**: Button component
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+              variant="outline"
+              className="bg-trans...`
 
 ### Issue 18: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              variant="outline"
-              className="bg-transpar...`
-
-### Issue 19: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\backup-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
 - **Element**: `R WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
           </h2>
           <p className="text-xl mb-8"...`
+
+### Issue 19: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
 
 ### Issue 20: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
@@ -161,18 +160,10 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Detection Reason**: Button component
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+              variant="outline"
+              className="bg-trans...`
 
 ### Issue 21: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              variant="outline"
-              className="bg-transpar...`
-
-### Issue 22: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cloud-services\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
@@ -180,7 +171,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           </h2>
           <p className="text-xl mb-8"...`
 
-### Issue 23: Missing navigation property
+### Issue 22: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -188,7 +179,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 24: Missing navigation property
+### Issue 23: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -197,13 +188,21 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 25: Missing navigation property
+### Issue 24: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\cybersecurity\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
 - **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
           </h2>
           <p className="text-xl mb-8"...`
+
+### Issue 25: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
 ### Issue 26: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
@@ -211,24 +210,24 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Detection Reason**: Button component
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
-
-### Issue 27: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
               variant="outline"
               className="bg-transpar...`
 
-### Issue 28: Missing navigation property
+### Issue 27: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
 - **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
           </h2>
           <p className="text-xl mb-8"...`
+
+### Issue 28: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
 ### Issue 29: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
@@ -236,18 +235,10 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Detection Reason**: Button component
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
-
-### Issue 30: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
               variant="outline"
               className="bg-transpar...`
 
-### Issue 31: Missing navigation property
+### Issue 30: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\email-collaboration\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
@@ -255,39 +246,25 @@ Generated on: 3/6/2025, 12:49:17 AM
           </h2>
           <p className="text-xl mb-8"...`
 
+### Issue 31: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size={isMobile ? "default" : "lg"}
+              className={`
+                ...`
+
 ### Issue 32: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button
               size={isMobile ? "default" : "lg"}
-              className={`
-                ...`
+              variant="outline"
+           ...`
 
 ### Issue 33: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size={isMobile ? "default" : "lg"}
-              variant="outline"
-           ...`
-
-### Issue 34: Empty navigation target
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
-- **Element Type**: Link
-- **Detection Reason**: a component
-- **Element**: `<a
-                      href="#"
-                      className="inline-flex items-center text-whi...`
-
-### Issue 35: Empty navigation target
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\it-consulting\page.tsx
-- **Element Type**: Link
-- **Detection Reason**: href prop
-- **Element**: `href="#"`
-
-### Issue 36: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\managed-it\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -296,7 +273,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               className={`
                 ...`
 
-### Issue 37: Missing navigation property
+### Issue 34: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\managed-it\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -305,7 +282,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
            ...`
 
-### Issue 38: Missing navigation property
+### Issue 35: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\network-solutions\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -314,7 +291,7 @@ Generated on: 3/6/2025, 12:49:17 AM
             className={`
               bg-wh...`
 
-### Issue 39: Missing navigation property
+### Issue 36: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -323,7 +300,7 @@ Generated on: 3/6/2025, 12:49:17 AM
             variant="secondary" 
             className="bg-white tex...`
 
-### Issue 40: Missing navigation property
+### Issue 37: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -331,8 +308,33 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 41: Missing navigation property
+### Issue 38: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-transpar...`
+
+### Issue 39: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "discover"
+- **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
+          </h2>
+          <p className="text-xl mb-8"...`
+
+### Issue 40: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+
+### Issue 41: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button
@@ -341,7 +343,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               className="bg-transpar...`
 
 ### Issue 42: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\procurement\page.tsx
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
 - **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
@@ -349,7 +351,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           <p className="text-xl mb-8"...`
 
 ### Issue 43: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button
@@ -357,7 +359,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
 ### Issue 44: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button
@@ -366,7 +368,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               className="bg-transpar...`
 
 ### Issue 45: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\security-systems\page.tsx
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "discover"
 - **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
@@ -374,44 +376,166 @@ Generated on: 3/6/2025, 12:49:17 AM
           <p className="text-xl mb-8"...`
 
 ### Issue 46: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
-
-### Issue 47: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Button component
-- **Element**: `<Button
-              size="lg"
-              variant="outline"
-              className="bg-transpar...`
-
-### Issue 48: Missing navigation property
-- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\business\vdi\page.tsx
-- **Element Type**: Button
-- **Detection Reason**: Text "discover"
-- **Element**: `NER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
-          </h2>
-          <p className="text-xl mb-8"...`
-
-### Issue 49: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\contact\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button type="submit" className="flex items-center gap-2">`
 
+### Issue 47: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+### Issue 48: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+### Issue 49: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "contact"
+- **Element**: `E WITH ADVANCED TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
 ### Issue 50: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+### Issue 51: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+### Issue 52: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "contact"
+- **Element**: `OPERATIONS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+### Issue 53: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button className="w-full" asChild>`
+
+### Issue 54: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+            size="lg"
+            className="bg-white text-primary hover:bg-gray-100 shado...`
+
+### Issue 55: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "discover"
+- **Element**: `YOUR INDUSTRY OPERATIONS?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">...`
+
+### Issue 56: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+### Issue 57: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+### Issue 58: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "contact"
+- **Element**: `E BUSINESS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+### Issue 59: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+### Issue 60: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+### Issue 61: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "contact"
+- **Element**: `FORM YOUR RETAIL BUSINESS?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+### Issue 62: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+### Issue 63: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+### Issue 64: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Text "contact"
+- **Element**: `OPERATIONS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+### Issue 65: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button
                       className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]...`
 
-### Issue 51: Missing navigation property
+### Issue 66: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -419,7 +543,7 @@ Generated on: 3/6/2025, 12:49:17 AM
                 size="lg"
                 className="bg-[#1D4D84] text-white hover:bg-[#4B...`
 
-### Issue 52: Missing navigation property
+### Issue 67: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -428,55 +552,103 @@ Generated on: 3/6/2025, 12:49:17 AM
                 variant="outline"
                 className="bg...`
 
-### Issue 53: Missing navigation property
+### Issue 68: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\bramalea\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 69: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\castlemore\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 70: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 54: Missing navigation property
+### Issue 71: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\springdale\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 72: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\burlington\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 55: Missing navigation property
+### Issue 73: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\markham\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 56: Missing navigation property
+### Issue 74: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\mississauga\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 57: Missing navigation property
+### Issue 75: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\oakville\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 58: Missing navigation property
+### Issue 76: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\richmond-hill\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 59: Missing navigation property
+### Issue 77: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\downtown-toronto\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 78: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\east-york\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 79: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\etobicoke\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 80: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\north-york\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 60: Missing navigation property
+### Issue 81: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\scarborough\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 82: Missing navigation property
+- **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\york\page.tsx
+- **Element Type**: Button
+- **Detection Reason**: Button component
+- **Element**: `<Button size="lg" asChild>`
+
+### Issue 83: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\vaughan\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
 - **Element**: `<Button size="lg" asChild>`
 
-### Issue 61: Missing navigation property
+### Issue 84: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\data-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -484,7 +656,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 62: Missing navigation property
+### Issue 85: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\data-recovery\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -493,7 +665,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 63: Missing navigation property
+### Issue 86: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -501,7 +673,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 64: Missing navigation property
+### Issue 87: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\desktop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -510,7 +682,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 65: Missing navigation property
+### Issue 88: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\hardware-upgrades\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -518,7 +690,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 66: Missing navigation property
+### Issue 89: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\hardware-upgrades\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -527,7 +699,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 67: Missing navigation property
+### Issue 90: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\laptop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -535,7 +707,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 68: Missing navigation property
+### Issue 91: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\laptop-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -544,7 +716,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 69: Missing navigation property
+### Issue 92: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mac-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -552,7 +724,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 70: Missing navigation property
+### Issue 93: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mac-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -561,7 +733,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 71: Missing navigation property
+### Issue 94: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mobile-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -569,7 +741,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 72: Missing navigation property
+### Issue 95: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mobile-repair\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -578,7 +750,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 73: Missing navigation property
+### Issue 96: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -586,7 +758,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 74: Missing navigation property
+### Issue 97: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -595,7 +767,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 75: Missing navigation property
+### Issue 98: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Text "contact"
@@ -604,7 +776,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           </h2>
           <p className="text-xl mb-8"...`
 
-### Issue 76: Missing navigation property
+### Issue 99: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\software-troubleshooting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -612,7 +784,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 77: Missing navigation property
+### Issue 100: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\software-troubleshooting\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -621,7 +793,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               variant="outline"
               className="bg-transpar...`
 
-### Issue 78: Missing navigation property
+### Issue 101: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\virus-removal\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -629,7 +801,7 @@ Generated on: 3/6/2025, 12:49:17 AM
               size="lg"
               className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
 
-### Issue 79: Missing navigation property
+### Issue 102: Missing navigation property
 - **File**: C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\virus-removal\page.tsx
 - **Element Type**: Button
 - **Detection Reason**: Button component
@@ -1073,12 +1245,15 @@ Generated on: 3/6/2025, 12:49:17 AM
       size="lg" 
       className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
 
-#### Element 2 (Button)
-- **Has Navigation**: No
+#### Element 2 (Link)
+- **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Button 
-      size="lg" 
-      className="w-full md:w-auto text-base sm:text-lg font-semibold py-3 ...`
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ServiceHero.tsx
 #### Element 1 (Button)
@@ -1100,12 +1275,12 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href={primaryCTA.href} className="flex items-center justify-center gap-2">`
+- **Element**: `<Link href={primaryCTA.href} className="flex items-center justify-center gap-2">`
 
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href={secondaryCTA.href}>`
+- **Element**: `<Link href={secondaryCTA.href}>`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -1262,13 +1437,22 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `<ButtonProps, "size">`
 
 #### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href={href || "#"} passHref legacyBehavior>`
+
+#### Element 3 (Link)
 - **Has Navigation**: No
 - **Empty Navigation**: No
 - **Element**: `<a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
-      ...`
+        aria-current={isActive ? "page" : undefined}
+        className={cn(
+          buttonVaria...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href={href || "`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\components\ui\sidebar.tsx
 #### Element 1 (Button)
@@ -1312,7 +1496,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Button)
 - **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Button size="lg" variant="outline">`
+- **Element**: `<Button size="lg" variant="outline" asChild>`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1322,27 +1506,53 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
+- **Element**: `<Link href="/blog">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `t-12 text-center">
+        <Button size="lg" variant="outline" asChild>
+          <Link href="/blog"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Button asChild className="w-full">
+                <Link href={`/blog/${post.slug}`}>
+             ...`
+
+#### Element 7 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
 - **Element**: `href={`/blog/${post.slug}`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/blog"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\blog\[slug]\page.tsx
 #### Element 1 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="/blog" className="text-[#4B6E97] hover:text-[#1D4D84]">`
+- **Element**: `<Link
+                    href="/blog"
+                    className="text-[#4B6E97] hover:text-[#...`
 
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `<Link
-            href={`/blog/${post.previous.slug}`}
-            className="bg-[#1D4D84] text-wh...`
+                        href={`/blog/${post.previous.slug}`}
+                        classNa...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `<Link
-            href={`/blog/${post.next.slug}`}
-            className="bg-[#1D4D84] text-white ...`
+                        href={`/blog/${post.next.slug}`}
+                        className="...`
 
 #### Element 4 (Link)
 - **Has Navigation**: No
@@ -1352,8 +1562,9 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<div className="mt-8">
-        <Link href="/blog" className="text-[#4B6E97] hover:text-[#1D4D84]">...`
+- **Element**: `href="/blog"
+                    className="text-[#4B6E97] hover:text-[#1D4D84]"
+                >...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -1376,7 +1587,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Empty Navigation**: No
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
@@ -1384,7 +1595,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `<Button
               size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-trans...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1399,7 +1610,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `ion-colors duration-300"
               asChild
             >
               <Link href="/business"...`
@@ -1414,7 +1625,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `tion-colors duration-300"
               asChild
             >
               <Link href="/contact"...`
@@ -1435,7 +1646,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Empty Navigation**: No
 - **Element**: `<Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] ...`
+              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97...`
 
 #### Element 2 (Button)
 - **Has Navigation**: No
@@ -1443,7 +1654,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `<Button
               size="lg"
               variant="outline"
-              className="bg-transpar...`
+              className="bg-trans...`
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
@@ -1458,7 +1669,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `sition-colors duration-300"
+- **Element**: `ion-colors duration-300"
               asChild
             >
               <Link href="/business"...`
@@ -1473,7 +1684,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `nsition-colors duration-300"
+- **Element**: `tion-colors duration-300"
               asChild
             >
               <Link href="/contact"...`
@@ -1684,29 +1895,29 @@ Generated on: 3/6/2025, 12:49:17 AM
 
 #### Element 3 (Link)
 - **Has Navigation**: Yes
-- **Empty Navigation**: Yes
-- **Element**: `<a
-                      href="#"
-                      className="inline-flex items-center text-whi...`
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
 
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href="/contact">`
+- **Element**: `<Link href="#features">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<a href="#features">`
+- **Element**: `<a
+                      href="/contact"
+                      className="inline-flex items-center t...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `: 'text-lg'}
+- **Element**: `'text-lg'}
               `}
               asChild
             >
-              <a href="#features">...`
+              <Link href="#features"...`
 
 #### Element 7 (Unknown)
 - **Has Navigation**: No
@@ -1719,16 +1930,16 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `' : 'text-lg'}
+- **Element**: `'text-lg'}
               `}
               asChild
             >
-              <a href="/contact"...`
+              <Link href="/contact">...`
 
 #### Element 9 (Link)
 - **Has Navigation**: Yes
-- **Empty Navigation**: Yes
-- **Element**: `href="#"`
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
 
 #### Element 10 (Link)
 - **Has Navigation**: Yes
@@ -2058,6 +2269,355 @@ Generated on: 3/6/2025, 12:49:17 AM
           <div className="lg:w-1/2">
             <h2 className="text-2xl font-semibold mb-4">...`
 
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\healthcare\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/industries">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n-colors duration-300"
+              asChild
+            >
+              <Link href="/industries"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `tion-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
+
+#### Element 7 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `E WITH ADVANCED TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/industries"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\logistics\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/industries">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n-colors duration-300"
+              asChild
+            >
+              <Link href="/industries"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `tion-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
+
+#### Element 7 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `OPERATIONS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/industries"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button className="w-full" asChild>`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+            size="lg"
+            className="bg-white text-primary hover:bg-gray-100 shado...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href={`/industries/${industry.slug}`}>`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Button className="w-full" asChild>
+                    <Link href={`/industries/${industry.slug}`}...`
+
+#### Element 6 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `YOUR INDUSTRY OPERATIONS?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">...`
+
+#### Element 7 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `transition-colors duration-300"
+            asChild
+          >
+            <Link href="/contact"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href={`/industries/${industry.slug}`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\real-estate\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/industries">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n-colors duration-300"
+              asChild
+            >
+              <Link href="/industries"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `tion-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
+
+#### Element 7 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `E BUSINESS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/industries"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\retail\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/industries">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n-colors duration-300"
+              asChild
+            >
+              <Link href="/industries"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `tion-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
+
+#### Element 7 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `FORM YOUR RETAIL BUSINESS?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/industries"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\industries\warehousing\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              className="bg-white text-primary hover:bg-gray-100 s...`
+
+#### Element 2 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button
+              size="lg"
+              variant="outline"
+              className="bg-trans...`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/industries">`
+
+#### Element 5 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n-colors duration-300"
+              asChild
+            >
+              <Link href="/industries"...`
+
+#### Element 6 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `tion-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
+
+#### Element 7 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `OPERATIONS WITH TECHNOLOGY
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto"...`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/industries"`
+
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\page.tsx
 #### Element 1 (Button)
 - **Has Navigation**: Yes
@@ -2095,7 +2655,9 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/business/${service.slug}`} className="flex items-center justify-center">`
+- **Element**: `<Link
+                        href={
+                          service.slug === 'cybersecurity' ||...`
 
 #### Element 7 (Link)
 - **Has Navigation**: Yes
@@ -2105,31 +2667,47 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#services">`
+- **Element**: `<Link href="/services">`
 
-#### Element 9 (Button)
+#### Element 9 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link
+                  key={index}
+                  href={`/industries/${industry.slug}`}
+     ...`
+
+#### Element 10 (Button)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `<button
       onClick={handleScrollToTop}
       className="fixed bottom-4 right-4 bg-primary text-...`
 
-#### Element 10 (Link)
+#### Element 11 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `lors duration-300"
                 asChild
               >
-                <Link href="#services"...`
+                <Link href="/services"...`
 
-#### Element 11 (Unknown)
+#### Element 12 (Unknown)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `: `/services/${service.slug}`
+                        }
+                      >
+                 ...`
+
+#### Element 13 (Unknown)
 - **Has Navigation**: No
 - **Empty Navigation**: No
 - **Element**: `TH PC MECHANIX FOR YOUR BUSINESS SUCCESS
             </h2>
             <p className="text-xl mb-8"...`
 
-#### Element 12 (Link)
+#### Element 14 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `olors duration-300"
@@ -2137,45 +2715,97 @@ Generated on: 3/6/2025, 12:49:17 AM
               >
                 <Link href="/contact"...`
 
-#### Element 13 (Link)
+#### Element 15 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href={`/service-areas/${cityToSlug(city)}`
 
-#### Element 14 (Link)
+#### Element 16 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href={`/business/${service.slug}`
+- **Element**: `href={
+                          service.slug === '`
 
-#### Element 15 (Link)
+#### Element 17 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
 
-#### Element 16 (Link)
+#### Element 18 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#services"`
+- **Element**: `href="/services"`
 
-#### Element 17 (Button)
+#### Element 19 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `onClick={handleScrollToTop}`
-
-#### Element 18 (Button)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `onClick={() => setIsExpanded(!isExpanded)}`
-
-#### Element 19 (Button)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `onClick={() => toggleRegion(region.name)}`
+- **Element**: `href={`/industries/${industry.slug}`
 
 #### Element 20 (Button)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
+- **Element**: `onClick={handleScrollToTop}`
+
+#### Element 21 (Button)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `onClick={() => setIsExpanded(!isExpanded)}`
+
+#### Element 22 (Button)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `onClick={() => toggleRegion(region.name)}`
+
+#### Element 23 (Button)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
 - **Element**: `onClick={() => toggleBenefitDetails(index)}`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\bramalea\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `n team is here to help!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\castlemore\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `g your Castlemore home!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\page.tsx
 #### Element 1 (Button)
@@ -2186,26 +2816,39 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/brampton/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `ton team is here to help!</p>
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href={`/service-areas/brampton/${area.slug}`
+- **Element**: `href="/contact"`
 
-#### Element 6 (Link)
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\brampton\springdale\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `sist you in Springdale!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2219,14 +2862,9 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/burlington/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `ch challenges!
@@ -2234,12 +2872,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `href={`/service-areas/burlington/${area.slug}`
-
-#### Element 6 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2253,14 +2886,9 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/markham/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `tact us today!
@@ -2268,12 +2896,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `href={`/service-areas/markham/${area.slug}`
-
-#### Element 6 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2287,26 +2910,16 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/mississauga/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `ga team is ready to help!</p>
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `href={`/service-areas/mississauga/${area.slug}`
-
-#### Element 6 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2320,14 +2933,9 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/oakville/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `ch challenges!
@@ -2335,12 +2943,7 @@ Generated on: 3/6/2025, 12:49:17 AM
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `href={`/service-areas/oakville/${area.slug}`
-
-#### Element 6 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2376,26 +2979,85 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/richmond-hill/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `m is ready to assist you!</p>
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href={`/service-areas/richmond-hill/${area.slug}`
+- **Element**: `href="/contact"`
 
-#### Element 6 (Link)
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\downtown-toronto\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `ians are ready to help!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\east-york\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `ix is your best choice!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\etobicoke\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `ians are ready to help!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2423,16 +3085,51 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
 
-### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\page.tsx
-#### Element 1 (Link)
-- **Has Navigation**: Yes
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\scarborough\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/toronto/${neighborhood.slug}`} className="text-primary hover:underline">`
+- **Element**: `<Button size="lg" asChild>`
 
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href={`/service-areas/toronto/${neighborhood.slug}`
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `ians are ready to help!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
+
+### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\toronto\york\page.tsx
+#### Element 1 (Button)
+- **Has Navigation**: No
+- **Empty Navigation**: No
+- **Element**: `<Button size="lg" asChild>`
+
+#### Element 2 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `<Link href="/contact">`
+
+#### Element 3 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `rther than PC Mechanix!</p>
+          <Button size="lg" asChild>
+            <Link href="/contact"...`
+
+#### Element 4 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/contact"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\service-areas\vaughan\page.tsx
 #### Element 1 (Button)
@@ -2443,26 +3140,16 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 2 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href={`/service-areas/vaughan/${area.slug}`} className="text-primary hover:underline">`
-
-#### Element 3 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
 - **Element**: `<Link href="/contact">`
 
-#### Element 4 (Link)
+#### Element 3 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `m is ready to assist you!</p>
           <Button size="lg" asChild>
             <Link href="/contact"...`
 
-#### Element 5 (Link)
-- **Has Navigation**: Yes
-- **Empty Navigation**: No
-- **Element**: `href={`/service-areas/vaughan/${area.slug}`
-
-#### Element 6 (Link)
+#### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
 - **Element**: `href="/contact"`
@@ -2491,7 +3178,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2499,17 +3186,25 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="/contact"`
+- **Element**: `nsition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
 
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/contact"`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\desktop-repair\page.tsx
 #### Element 1 (Button)
@@ -2535,7 +3230,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2543,7 +3238,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2561,7 +3256,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\hardware-upgrades\page.tsx
 #### Element 1 (Button)
@@ -2587,7 +3282,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2595,7 +3290,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2613,7 +3308,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\laptop-repair\page.tsx
 #### Element 1 (Button)
@@ -2639,7 +3334,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2647,7 +3342,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2665,7 +3360,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mac-repair\page.tsx
 #### Element 1 (Button)
@@ -2691,7 +3386,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2699,7 +3394,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2717,7 +3412,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\mobile-repair\page.tsx
 #### Element 1 (Button)
@@ -2743,7 +3438,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2751,7 +3446,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2769,7 +3464,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 8 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\network-setup\page.tsx
 #### Element 1 (Button)
@@ -2795,7 +3490,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2803,7 +3498,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
@@ -2829,7 +3524,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 9 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\software-troubleshooting\page.tsx
 #### Element 1 (Button)
@@ -2855,7 +3550,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2863,17 +3558,25 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="/contact"`
+- **Element**: `nsition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
 
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/contact"`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\virus-removal\page.tsx
 #### Element 1 (Button)
@@ -2899,7 +3602,7 @@ Generated on: 3/6/2025, 12:49:17 AM
 #### Element 4 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `<Link href="#features">`
+- **Element**: `<Link href="/services">`
 
 #### Element 5 (Link)
 - **Has Navigation**: Yes
@@ -2907,17 +3610,25 @@ Generated on: 3/6/2025, 12:49:17 AM
 - **Element**: `sition-colors duration-300"
               asChild
             >
-              <Link href="#features"...`
+              <Link href="/services"...`
 
 #### Element 6 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="/contact"`
+- **Element**: `nsition-colors duration-300"
+              asChild
+            >
+              <Link href="/contact"...`
 
 #### Element 7 (Link)
 - **Has Navigation**: Yes
 - **Empty Navigation**: No
-- **Element**: `href="#features"`
+- **Element**: `href="/contact"`
+
+#### Element 8 (Link)
+- **Has Navigation**: Yes
+- **Empty Navigation**: No
+- **Element**: `href="/services"`
 
 ### C:\Users\Owner\Desktop\DEV Projects\Web_Projects\PC BOY\computer-repair\app\services\_\page.tsx
 #### Element 1 (Link)

@@ -89,17 +89,13 @@ const serviceItems = [
 
 // Desktop navigation menu item component
 const ListItem = ({ className, title, href, icon, isActive = false }: MenuItemProps) => {
-  const IconComponent = icon ? iconMap[icon] : null;
-  return (
+  const IconComponent = icon ? iconMap[icon] : null;  return (
     <li className="w-full">
       <NavigationMenuLink asChild>
         <Link
           href={href}
-          className={cn(
-            "flex items-center gap-2 select-none rounded-md px-3 py-2 text-sm leading-none text-blue-700 no-underline outline-none transition-all duration-200 hover:bg-blue-50 hover:text-blue-900 focus:bg-blue-50 focus:text-blue-900 focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer",
-            isActive && "bg-blue-50 text-blue-700",
-            className
-          )}>
+          className="flex items-center gap-2 select-none rounded-md px-3 py-2 text-sm leading-none text-blue-700 no-underline outline-none transition-all duration-200 hover:bg-blue-50 hover:text-blue-900 focus:bg-blue-50 focus:text-blue-900 focus-visible:ring-2 focus-visible:ring-blue-500 cursor-pointer"
+        >
           {IconComponent && <IconComponent className="h-4 w-4" />}
           <span>{title}</span>
           {isActive && <span className="sr-only">(current page)</span>}
@@ -198,14 +194,14 @@ const MobileNavigation = () => {
         </Button>
       </div>
     
-      <Sheet onOpenChange={handleOpenChange} open={isOpen}>
-        <SheetTrigger asChild>
+      <Sheet onOpenChange={handleOpenChange} open={isOpen}>        <SheetTrigger asChild>
           <Button 
             variant="ghost" 
             size="icon" 
             className="md:hidden text-white" 
             aria-label="Open menu"
             aria-expanded={isOpen}
+            type="button"
           >
             <MenuIcon className="h-6 w-6" />
             <span className="sr-only">Toggle menu</span>
