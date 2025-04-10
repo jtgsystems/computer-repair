@@ -185,8 +185,7 @@ const MobileNavigation = () => {
   }, []);
   
   return (
-    <>
-      {/* Fixed Call Button on Mobile */}
+    <>      {/* Fixed Call Button on Mobile */}
       <div className="md:hidden fixed bottom-5 right-5 z-[100]">
         <Button 
           size="icon" 

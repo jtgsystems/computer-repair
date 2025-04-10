@@ -173,16 +173,14 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
                 onClick={() => handleLinkClick('About')}
               >
                 About
-              </Link>
-
-              <Link
+              </Link>              <Link
                 href="/contact"
                 className="block text-xl font-medium text-gray-900 hover:text-primary transition-colors duration-200"
                 onClick={() => handleLinkClick('Contact')}
               >
                 Contact
               </Link>
-
+              
               <div className="pt-6 border-t">
                 <Button size="lg" className="w-full" asChild>
                   <a 
