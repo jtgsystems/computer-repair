@@ -13,24 +13,22 @@ const serviceItems = [
     items: [
       { label: "Network Solutions", href: "/business/network-solutions" },
       { label: "Managed IT Services", href: "/business/managed-it" },
-      { label: "Backup & Recovery", href: "/business/backup-recovery" },
+      { label: "Data Solutions", href: "/business/backup-recovery" },
       { label: "Cloud Services", href: "/business/cloud-services" },
       { label: "Virtual Desktop Infrastructure", href: "/business/vdi" },
       { label: "IT Consulting", href: "/business/it-consulting" },
       { label: "Hardware & Software Procurement", href: "/business/procurement" },
       { label: "Cybersecurity Solutions", href: "/business/cybersecurity" },
       { label: "Email & Collaboration", href: "/business/email-collaboration" },
-      { label: "CCTV & Alarm Systems", href: "/business/security-systems" },
-      { label: "Business Desktop Repair", href: "/services/desktop-repair" },
+      { label: "Loss Prevention & Asset Protection", href: "/business/security-systems" },
+      { label: "Business Repair Services", href: "/services/desktop-repair" },
     ],
   },
   {
     label: "Personal",
     items: [
-      { label: "Laptop Repair", href: "/services/laptop-repair" },
-      { label: "Desktop Repair", href: "/services/desktop-repair" },
-      { label: "Mac Repair", href: "/services/mac-repair" },
-      { label: "Tablet and Smartphone Repair", href: "/services/mobile-repair" },
+      { label: "Sales", href: "/services/sales" },
+      { label: "Computer Repair", href: "/services/desktop-repair" },
       { label: "Virus Removal", href: "/services/virus-removal" },
       { label: "Data Recovery", href: "/services/data-recovery" },
       { label: "Hardware Upgrades", href: "/services/hardware-upgrades" },
@@ -52,7 +50,7 @@ const DropdownMenu = memo(({ category, isOpen, onToggle }: { category: any; isOp
       <Link
         key={index}
         href={item.href}
-        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
+        className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-50 hover:text-primary transition-colors duration-200"
       >
         {item.label}
       </Link>
@@ -125,7 +123,7 @@ const MobileMenu = memo(({ isOpen, onClose }: { isOpen: boolean; onClose: () => 
             <Link 
               key={itemIndex} 
               href={item.href} 
-              className="block text-gray-600 hover:text-primary transition-colors duration-200" 
+              className="block text-gray-700 hover:text-primary transition-colors duration-200"
               onClick={() => handleLinkClick(item.label)}
             >
               {item.label}

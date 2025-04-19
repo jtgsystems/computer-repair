@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Camera, Shield, Bell, Eye, Lock, Smartphone } from "lucide-react"
+import { Video, Shield, Bell, Eye, Lock, Smartphone } from "lucide-react"
 import type { Metadata } from "next"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import ServiceHero from "@/components/ServiceHero"
 
 export const metadata: Metadata = {
-  title: "Security Systems Toronto | PC Mechanix",
+  title: "Security Systems | PC Mechanix",
   description:
-    "Professional CCTV and alarm system solutions in Toronto. Protect your business with advanced security technology and monitoring services.",
+    "Professional CCTV and alarm system solutions. Protect your business with advanced security technology and monitoring services.",
 }
 
 const features = [
   {
-    icon: Camera,
+    icon: Video,
     title: "CCTV Systems",
     description: "High-definition surveillance cameras with advanced monitoring capabilities",
   },
@@ -49,7 +49,7 @@ export default function BusinessSecuritySystemsPage() {
   return (
     <>
       <ServiceHero
-        title="CCTV & ALARM SYSTEMS"
+        title="LOSS PREVENTION & ASSET PROTECTION"
         description="Protect your business with advanced security solutions"
         primaryCTA={{ text: "Schedule a Consultation", href: "/contact" }}
         secondaryCTA={{ text: "Explore Solutions", href: "#features" }}
@@ -127,7 +127,7 @@ export default function BusinessSecuritySystemsPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+      <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
             PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
@@ -139,7 +139,7 @@ export default function BusinessSecuritySystemsPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+              className="bg-primary text-white hover:bg-white hover:text-primary shadow-lg transition-colors duration-300"
               asChild
             >
               <Link href="/contact">

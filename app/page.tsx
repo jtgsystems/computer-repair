@@ -201,7 +201,7 @@ export default function Home() {
   return (
     <ServiceLayout renderHeaderAndFooter={true}>
       <main className="flex-grow">
-        <section className="relative bg-gradient-to-r from-[#1D4D84] to-[#4B6E97] text-white pt-36 pb-24">
+        <section className="relative bg-gradient-to-r from-primary to-secondary text-white pt-36 pb-24">
           <Image
             src="/images/server-racks.jpeg"
             alt="PC Mechanix - Enterprise IT Solutions"
@@ -298,13 +298,13 @@ export default function Home() {
             </h2>
             <Carousel className="w-full max-w-5xl mx-auto">
               <CarouselContent className="-ml-1">
-                {Array.from({ length: 10 }).map((_, index) => (
+                {Array.from({ length: 5 }).map((_, index) => (
                   <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
                     <div className="p-1">
                       <div className="relative w-[200px] h-[100px]">
                         <Image
-                          src={`/placeholder.svg?text=Logo${index + 1}&width=200&height=100`}
-                          alt={`Customer Logo ${index + 1}`}
+                          src={`/placeholder.svg?text=Client${index + 1}&width=200&height=100`}
+                          alt={`Client Logo ${index + 1}`}
                           fill
                           className="object-contain"
                         />
@@ -319,9 +319,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97]">
+        <section className="py-16 bg-accent">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white uppercase tracking-wide">OUR SERVICES</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">OUR SERVICES</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map((service, index) => (
                 <Card
@@ -330,7 +330,7 @@ export default function Home() {
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 w-full h-full">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-[#1D4D84]/95 via-[#4B6E97]/90 to-[#1D4D84]/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/95 via-secondary/90 to-primary/80"></div>
                   </div>
                   
                   <CardContent className="flex flex-col h-full p-8 relative z-10">
@@ -339,14 +339,14 @@ export default function Home() {
                       <div className="p-3 rounded-full bg-[#F0F4FF]/20 backdrop-blur-sm">
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-xl font-bold text-white ml-4 drop-shadow-md">
+                      <h3 className="text-xl font-extrabold text-white ml-4" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
                         {service.title}
                       </h3>
                     </div>
                     
                     {/* Description with frosted glass effect */}
                     <div className="mb-8 p-4 bg-[#F0F4FF]/10 backdrop-blur-md rounded-lg shadow-lg">
-                      <p className="text-white text-shadow">{service.description}</p>
+                      <p className="text-white font-medium" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>{service.description}</p>
                     </div>
                     
                     {/* Feature list - unique to each service */}
@@ -354,7 +354,7 @@ export default function Home() {
                       {service.features && service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mb-2">
                           <CheckCircle className="h-4 w-4 text-[#F0F4FF] mt-1 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-slate-100 text-shadow">{feature}</span>
+                          <span className="text-sm text-white font-medium" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -531,7 +531,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <section className="py-16 bg-primary text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
               PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
@@ -543,7 +543,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 size="lg"
-                className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
+                className="bg-primary text-white hover:bg-white hover:text-primary shadow-lg transition-colors duration-300"
                 asChild
               >
                 <Link href="/contact">
@@ -570,7 +570,35 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
+        <section className="py-16 bg-primary text-white">
+          <div className="container mx-auto px-4">
+            <h2 className="text-4xl font-bold text-center mb-12 uppercase tracking-wide">
+              PARTNER WITH PC MECHANIX
+            </h2>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-1">
+                {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
+                    <div className="p-1">
+                      <div className="relative w-[200px] h-[100px]">
+                        <Image
+                          src={`/placeholder.svg?text=Partner${index + 1}&width=200&height=100`}
+                          alt={`Partner Logo ${index + 1}`}
+                          fill
+                          className="object-contain"
+                        />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </section>
+
+        <section className="py-16 bg-primary text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
