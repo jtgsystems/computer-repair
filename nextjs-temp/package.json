@@ -1,0 +1,8 @@
+{
+  "name": "nextjs-temp",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "next": "^13.4.19"
+  }
+}
