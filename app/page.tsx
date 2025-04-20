@@ -330,38 +330,38 @@ export default function Home() {
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 w-full h-full">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/95 via-secondary/90 to-primary/80"></div>
+                    <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary/95 to-primary/90"></div>
                   </div>
                   
                   <CardContent className="flex flex-col h-full p-8 relative z-10">
                     {/* Service icon */}
                     <div className="mb-6 flex items-center">
-                      <div className="p-3 rounded-full bg-[#F0F4FF]/20 backdrop-blur-sm">
+                      <div className="p-3 rounded-full bg-[#F0F4FF]/30 backdrop-blur-sm">
                         <service.icon className="h-8 w-8 text-white" />
                       </div>
-                      <h3 className="text-xl font-extrabold text-white ml-4" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>
+                      <h3 className="text-xl font-extrabold text-white ml-4" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>
                         {service.title}
                       </h3>
                     </div>
                     
                     {/* Description with frosted glass effect */}
-                    <div className="mb-8 p-4 bg-[#F0F4FF]/10 backdrop-blur-md rounded-lg shadow-lg">
-                      <p className="text-white font-medium" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>{service.description}</p>
+                    <div className="mb-8 p-4 bg-[#F0F4FF]/25 backdrop-blur-md rounded-lg shadow-lg">
+                      <p className="text-white font-medium" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>{service.description}</p>
                     </div>
                     
                     {/* Feature list - unique to each service */}
-                    <div className="mb-8 p-4 bg-[#F0F4FF]/10 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-[#F0F4FF]/25 backdrop-blur-md rounded-lg shadow-lg">
                       {service.features && service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mb-2">
-                          <CheckCircle className="h-4 w-4 text-[#F0F4FF] mt-1 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-white font-medium" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.8)" }}>{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-white mt-1 mr-2 flex-shrink-0" />
+                          <span className="text-sm text-white font-medium" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>{feature}</span>
                         </div>
                       ))}
                     </div>
                     
                     {/* Button with frosted glass effect */}
                     <Button
-                      className="w-full bg-[#F0F4FF]/20 backdrop-blur-md hover:bg-[#F0F4FF]/40 text-white transition-colors"
+                      className="w-full bg-[#F0F4FF]/35 backdrop-blur-md hover:bg-[#F0F4FF]/50 text-white transition-colors"
                       asChild
                     >
                       <Link
