@@ -139,7 +139,7 @@ export default function BusinessSecuritySystemsPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               size="lg"
-              className="bg-primary text-white hover:bg-white hover:text-primary shadow-lg transition-colors duration-300"
+              className="shadow-lg transition-colors duration-300"
               asChild
             >
               <Link href="/contact">

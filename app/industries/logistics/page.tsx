@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Truck, CheckCircle, Map, BarChart, Wifi, Smartphone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import IndustryCTA from "@/components/IndustryCTA";
 
 export default function LogisticsIndustryPage() {
   return (
@@ -75,7 +76,7 @@ export default function LogisticsIndustryPage() {
 
       <section className="py-16 bg-gray-100">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">
+          <h2 className="text-4xl font-bold text-center mb-12 text-blue-500 uppercase tracking-wide">
             OUR LOGISTICS IT SOLUTIONS
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,7 +235,7 @@ export default function LogisticsIndustryPage() {
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">
+          <h2 className="text-4xl font-bold text-center mb-12 text-blue-500 uppercase tracking-wide">
             WHY TORONTO LOGISTICS COMPANIES CHOOSE PC MECHANIX
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -278,37 +279,10 @@ export default function LogisticsIndustryPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
-            OPTIMIZE YOUR LOGISTICS OPERATIONS WITH TECHNOLOGY
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Contact PC Mechanix today to discover how our specialized IT solutions can help your logistics business achieve greater efficiency and customer satisfaction.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-white text-primary hover:bg-gray-100 shadow-lg transition-colors duration-300"
-              asChild
-            >
-              <Link href="/contact">
-                Schedule a Consultation
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
-              asChild
-            >
-              <Link href="/industries">
-                Explore Other Industries
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <IndustryCTA
+        heading="OPTIMIZE YOUR LOGISTICS OPERATIONS WITH TECHNOLOGY"
+        description="Contact PC Mechanix today to discover how our specialized IT solutions can help your logistics business achieve greater efficiency and customer satisfaction."
+      />
     </>
   );
 }

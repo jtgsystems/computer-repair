@@ -33,7 +33,7 @@ export default function MarkhamServiceAreaPage() {
         }}
         secondaryCTA={{
           text: "View All Services",
-          href: "/services"
+          href: "/"
         }}
       />
       <div className="container mx-auto px-4 py-16">

@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Store, Building2, Package, Stethoscope, Truck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import IndustryCTA from "@/components/IndustryCTA";
 
 const industries = [
   {
@@ -122,25 +123,10 @@ export default function IndustriesPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
-            READY TO TRANSFORM YOUR INDUSTRY OPERATIONS?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Discover how PC Mechanix can help your business leverage industry-specific IT solutions to drive growth, efficiency, and innovation.
-          </p>
-          <Button
-            size="lg"
-            className="bg-white text-primary hover:bg-gray-100 shadow-lg transition-colors duration-300"
-            asChild
-          >
-            <Link href="/contact">
-              Schedule a Consultation
-            </Link>
-          </Button>
-        </div>
-      </section>
+      <IndustryCTA
+        heading="READY TO TRANSFORM YOUR INDUSTRY OPERATIONS?"
+        description="Discover how PC Mechanix can help your business leverage industry-specific IT solutions to drive growth, efficiency, and innovation."
+      />
     </>
   );
 }

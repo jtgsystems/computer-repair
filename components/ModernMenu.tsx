@@ -218,15 +218,10 @@ const MobileNavigation = () => {
           <div className="flex flex-col h-full">
             <div className="p-4 border-b border-gray-200">
               <div className="flex justify-between items-center">
-                <Image
-                  src="/images/logo.png"
-                  alt="PC Mechanix"
-                  width={120}
-                  height={30}
-                  placeholder="blur"
-                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
-                  className="h-8 w-auto object-contain"
-                />
+                <div className="flex flex-col items-center">
+                  <div className="text-primary text-xl font-bold">PCMECHANIX</div>
+                  <div className="text-gray-600 text-xs">Your Exclusive IT Service Provider!</div>
+                </div>
                 <SheetClose className="p-2 rounded-full hover:bg-blue-50 transition-colors">
                   <X className="h-5 w-5 text-blue-800" />
                   <span className="sr-only">Close menu</span>
@@ -397,21 +392,15 @@ export default function ModernMenu({
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 z-10">
-            <Image
-              priority={true}
-              src="/images/logo.png"
-              alt="PC Mechanix"
-              width={180}
-              height={45}
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFeAJ5cZXg4QAAAABJRU5ErkJggg=="
-              className="h-10 w-auto object-contain filter brightness-0 invert"
-            />
+            <div className="flex flex-col items-center">
+              <div className="text-white text-xl font-bold">PCMECHANIX</div>
+              <div className="text-gray-300 text-xs">Your Exclusive IT Service Provider!</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <NavigationMenu className="hidden md:flex z-20 max-w-full">
-            <NavigationMenuList className="gap-1">
+          <NavigationMenu className="hidden md:flex z-20 max-w-full justify-center">
+            <NavigationMenuList className="gap-1 justify-center">
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink 

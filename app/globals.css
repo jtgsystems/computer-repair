@@ -11,7 +11,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
     --primary: 210 65% 55%; /* Lighter blue #4A90E2 */
-    --primary-foreground: 210 40% 98%;
+    --primary-foreground: 210 10% 15%; /* Dark text for better contrast */
     --secondary: 214 29% 60%; /* Medium blue #6B8EB7 */
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 220 14% 94%; /* Light gray #E4EDEF */

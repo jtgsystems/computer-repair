@@ -5,6 +5,7 @@ import type { Metadata } from "next"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import ServiceHero from "@/components/ServiceHero"
 import ServiceLayout from "@/components/ServiceLayout"
+import ServiceCTA from "@/components/ServiceCTA"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -184,37 +185,10 @@ export default function DesktopRepairPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
-            Ready to Fix Your Desktop?
-          </h2>
-          <p className="text-xl mb-8">
-            Don't let computer issues slow you down. Contact us now for fast, professional desktop repair services.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              size="lg"
-              className="bg-[#1D4D84] text-white hover:bg-[#4B6E97] shadow-lg transition-colors duration-300"
-              asChild
-            >
-              <Link href="/contact">
-                Schedule a Consultation
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="bg-transparent text-white hover:bg-white hover:text-primary border-white shadow-lg transition-colors duration-300"
-              asChild
-            >
-              <Link href="/services">
-                Explore More Services
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <ServiceCTA
+        heading="Ready to Fix Your Desktop?"
+        description="Don't let computer issues slow you down. Contact us now for fast, professional desktop repair services."
+      />
     </ServiceLayout>
   )
 }

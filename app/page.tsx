@@ -102,7 +102,7 @@ const ScrollToTopButton = () => {
   return (
     <button
       onClick={handleScrollToTop}
-      className="fixed bottom-4 right-4 bg-primary text-white p-2 rounded-full shadow-lg hover:bg-primary-dark transition-colors"
+      className="fixed bottom-4 right-4 bg-primary text-primary-foreground p-2 rounded-full shadow-lg hover:bg-primary/90 transition-colors"
       aria-label="Back to top"
     >
       <ChevronUp className="h-6 w-6" />
@@ -138,7 +138,7 @@ const CollapsibleAreas = () => {
 
   return (
     <>
-      <h2 className="text-4xl font-bold text-center mb-4 text-primary uppercase tracking-wide">AREAS WE SERVE</h2>
+      <h2 className="text-4xl font-bold text-center mb-4 text-blue-500 uppercase tracking-wide">AREAS WE SERVE</h2>
       <Button onClick={() => setIsExpanded(!isExpanded)} variant="outline" className="mx-auto mb-4 flex items-center">
         {isExpanded ? "Hide Areas" : "Show Areas"}
         {isExpanded ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
@@ -154,8 +154,8 @@ const CollapsibleAreas = () => {
                 className="flex justify-between items-center cursor-pointer" 
                 onClick={() => toggleRegion(region.name)}
               >
-                <h3 className="text-lg font-semibold text-primary">{region.name}</h3>
-                <div className="text-primary">
+                <h3 className="text-lg font-semibold text-blue-500">{region.name}</h3>
+                <div className="text-blue-500">
                   {expandedRegions[region.name] ? (
                     <ChevronUp className="h-4 w-4" />
                   ) : (
@@ -171,7 +171,7 @@ const CollapsibleAreas = () => {
                       {hasCityPage(city) ? (
                         <Link 
                           href={`/service-areas/${cityToSlug(city)}`}
-                          className="text-gray-600 hover:text-primary hover:underline transition-colors duration-200"
+                          className="text-gray-600 hover:text-blue-500 hover:underline transition-colors duration-200"
                           aria-label={`Computer repair services in ${city}`}
                         >
                           {city}
@@ -201,7 +201,7 @@ export default function Home() {
   return (
     <ServiceLayout renderHeaderAndFooter={true}>
       <main className="flex-grow">
-        <section className="relative bg-gradient-to-r from-primary to-secondary text-white pt-36 pb-24">
+        <section className="relative bg-gradient-to-r from-blue-300 to-blue-400 text-white pt-36 pb-24">
           <Image
             src="/images/server-racks.jpeg"
             alt="PC Mechanix - Enterprise IT Solutions"
@@ -209,7 +209,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-700/40 to-transparent" />
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h1
@@ -226,24 +226,9 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Software Support Image Section */}
-        <section className="py-8 bg-white">
-          <div className="container mx-auto px-4 flex justify-center">
-            <div className="relative w-full max-w-4xl">
-              <Image
-                src="/images/SoftwareSupport.webp"
-                alt="Software Support Services"
-                width={1200}
-                height={600}
-                className="rounded-lg shadow-lg"
-              />
-            </div>
-          </div>
-        </section>
-
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wide">
+            <h2 className="text-4xl font-bold text-center mb-8 text-blue-500 uppercase tracking-wide">
               EXCELLENCE IN BUSINESS IT SOLUTIONS
             </h2>
             <p className="text-lg text-center mb-8 text-gray-700">
@@ -256,8 +241,8 @@ export default function Home() {
               <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <Briefcase className="h-8 w-8 text-primary mr-3" />
-                    <h3 className="text-xl font-semibold text-primary">Business-First Approach</h3>
+                    <Briefcase className="h-8 w-8 text-blue-500 mr-3" />
+                    <h3 className="text-xl font-semibold text-blue-500">Business-First Approach</h3>
                   </div>
                   <p className="text-gray-700">
                     We understand your business before recommending technical solutions, ensuring tailored strategies
@@ -268,8 +253,8 @@ export default function Home() {
               <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <Clock className="h-8 w-8 text-primary mr-3" />
-                    <h3 className="text-xl font-semibold text-primary">24/7 Support</h3>
+                    <Clock className="h-8 w-8 text-blue-500 mr-3" />
+                    <h3 className="text-xl font-semibold text-blue-500">24/7 Support</h3>
                   </div>
                   <p className="text-gray-700">
                     Round-the-clock monitoring and support services ensure we're always there when you need us.
@@ -279,8 +264,8 @@ export default function Home() {
               <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <TrendingUp className="h-8 w-8 text-primary mr-3" />
-                    <h3 className="text-xl font-semibold text-primary">Future-Ready Solutions</h3>
+                    <TrendingUp className="h-8 w-8 text-blue-500 mr-3" />
+                    <h3 className="text-xl font-semibold text-blue-500">Future-Ready Solutions</h3>
                   </div>
                   <p className="text-gray-700">
                     We keep your business ahead of the curve with innovative, scalable technology solutions.
@@ -291,77 +276,50 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">
-              CUSTOMERS WE SERVICE
-            </h2>
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent className="-ml-1">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
-                    <div className="p-1">
-                      <div className="relative w-[200px] h-[100px]">
-                        <Image
-                          src={`/placeholder.svg?text=Client${index + 1}&width=200&height=100`}
-                          alt={`Client Logo ${index + 1}`}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </section>
 
-        <section className="py-16 bg-accent">
+        <section className="py-16 bg-gray-100">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">OUR SERVICES</h2>
+            <h2 className="text-4xl font-bold text-center mb-12 text-blue-500 uppercase tracking-wide">OUR SERVICES</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="group relative overflow-hidden border-none rounded-lg shadow-lg hover:shadow-2xl transition-all duration-500"
+                  className="group relative overflow-hidden border-none rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
                 >
                   {/* Background Image */}
                   <div className="absolute inset-0 w-full h-full">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-primary via-secondary/95 to-primary/90"></div>
+                    <div className="absolute inset-0 bg-white"></div>
                   </div>
                   
                   <CardContent className="flex flex-col h-full p-8 relative z-10">
                     {/* Service icon */}
                     <div className="mb-6 flex items-center">
-                      <div className="p-3 rounded-full bg-[#F0F4FF]/30 backdrop-blur-sm">
-                        <service.icon className="h-8 w-8 text-white" />
+                      <div className="p-3 rounded-full bg-blue-400/10">
+                        <service.icon className="h-8 w-8 text-blue-500" />
                       </div>
-                      <h3 className="text-xl font-extrabold text-white ml-4" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>
+                      <h3 className="text-xl font-bold text-blue-500 ml-4">
                         {service.title}
                       </h3>
                     </div>
                     
-                    {/* Description with frosted glass effect */}
-                    <div className="mb-8 p-4 bg-[#F0F4FF]/25 backdrop-blur-md rounded-lg shadow-lg">
-                      <p className="text-white font-medium" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>{service.description}</p>
+                    {/* Description */}
+                    <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-100">
+                      <p className="text-gray-700 font-medium">{service.description}</p>
                     </div>
                     
                     {/* Feature list - unique to each service */}
-                    <div className="mb-8 p-4 bg-[#F0F4FF]/25 backdrop-blur-md rounded-lg shadow-lg">
+                    <div className="mb-8 p-4 bg-gray-50 rounded-lg border border-gray-100">
                       {service.features && service.features.map((feature, i) => (
                         <div key={i} className="flex items-start mb-2">
-                          <CheckCircle className="h-4 w-4 text-white mt-1 mr-2 flex-shrink-0" />
-                          <span className="text-sm text-white font-medium" style={{ textShadow: "0 2px 5px rgba(0,0,0,0.9)" }}>{feature}</span>
+                          <CheckCircle className="h-4 w-4 text-blue-500 mt-1 mr-2 flex-shrink-0" />
+                          <span className="text-sm text-gray-700 font-medium">{feature}</span>
                         </div>
                       ))}
                     </div>
                     
-                    {/* Button with frosted glass effect */}
+                    {/* Button */}
                     <Button
-                      className="w-full bg-[#F0F4FF]/35 backdrop-blur-md hover:bg-[#F0F4FF]/50 text-white transition-colors"
+                      className="w-full transition-colors"
                       asChild
                     >
                       <Link
@@ -388,7 +346,7 @@ export default function Home() {
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-8 text-primary uppercase tracking-wide">
+            <h2 className="text-4xl font-bold text-center mb-8 text-blue-500 uppercase tracking-wide">
               SOFTWARE SOLUTIONS
             </h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -416,28 +374,28 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4">
-                    <LayoutGrid className="h-8 w-8 text-primary mb-2" />
+                    <LayoutGrid className="h-8 w-8 text-blue-500 mb-2" />
                     <h3 className="font-semibold mb-2">Collaboration</h3>
                     <p className="text-sm text-gray-600">Enhance team communication and productivity</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4">
-                    <FileCheck className="h-8 w-8 text-primary mb-2" />
+                    <FileCheck className="h-8 w-8 text-blue-500 mb-2" />
                     <h3 className="font-semibold mb-2">Document Management</h3>
                     <p className="text-sm text-gray-600">Efficient file organization and sharing</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4">
-                    <Mail className="h-8 w-8 text-primary mb-2" />
+                    <Mail className="h-8 w-8 text-blue-500 mb-2" />
                     <h3 className="font-semibold mb-2">Email Solutions</h3>
                     <p className="text-sm text-gray-600">Enterprise-grade email and calendar management</p>
                   </CardContent>
                 </Card>
                 <Card className="bg-gray-50 border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
                   <CardContent className="p-4">
-                    <Shield className="h-8 w-8 text-primary mb-2" />
+                    <Shield className="h-8 w-8 text-blue-500 mb-2" />
                     <h3 className="font-semibold mb-2">Security</h3>
                     <p className="text-sm text-gray-600">Robust security policies and configurations</p>
                   </CardContent>
@@ -449,12 +407,12 @@ export default function Home() {
 
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 text-primary uppercase tracking-wide">
+            <h2 className="text-4xl font-bold text-center mb-12 text-blue-500 uppercase tracking-wide">
               WHY CHOOSE PC MECHANIX
             </h2>
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Always Available, Always Responsive</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-blue-500">Always Available, Always Responsive</h3>
                 <p className="text-gray-700 mb-4">
                   In the fast-paced business world, system downtime isn't just an inconvenience – it's a direct threat
                   to your bottom line. That's why PC Mechanix has established a robust support system that ensures we're
@@ -462,24 +420,24 @@ export default function Home() {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <span>24/7 Support Availability</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <span>Rapid Response Protocol</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <CheckCircle className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <span>Proactive Maintenance</span>
                   </li>
                 </ul>
               </div>
               <div className="bg-gray-100 p-8 rounded-lg">
-                <h3 className="text-2xl font-semibold mb-4 text-primary">Value-Driven Solutions</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-blue-500">Value-Driven Solutions</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <DollarSign className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <DollarSign className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold">Cost Optimization</h4>
                       <p className="text-sm text-gray-600">
@@ -488,14 +446,14 @@ export default function Home() {
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <Zap className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <Zap className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold">Productivity Enhancement</h4>
                       <p className="text-sm text-gray-600">Streamlined workflows and user-friendly systems</p>
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <Shield className="h-6 w-6 text-primary mr-2 flex-shrink-0 mt-1" />
+                    <Shield className="h-6 w-6 text-blue-500 mr-2 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold">Business Continuity</h4>
                       <p className="text-sm text-gray-600">Robust backup solutions and disaster recovery planning</p>
@@ -512,8 +470,8 @@ export default function Home() {
                   onClick={() => toggleBenefitDetails(index)}
                 >
                   <div className="flex items-center mb-4">
-                    <benefit.icon className="h-8 w-8 text-primary mr-3" />
-                    <h3 className="text-xl font-semibold text-primary group-hover:text-blue-700 transition-colors duration-300">
+                    <benefit.icon className="h-8 w-8 text-blue-500 mr-3" />
+                    <h3 className="text-xl font-semibold text-blue-500 group-hover:text-blue-700 transition-colors duration-300">
                       {benefit.title}
                     </h3>
                   </div>
@@ -521,7 +479,7 @@ export default function Home() {
                     {benefit.description}
                   </p>
                   {benefitDetails[index] && (
-                    <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+                    <div className="mt-4 p-4 bg-gray-50 rounded-lg">
                       <p className="text-sm text-blue-800">{benefit.details}</p>
                     </div>
                   )}
@@ -531,7 +489,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-white">
+        <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6 uppercase tracking-tight">
               PARTNER WITH PC MECHANIX FOR YOUR BUSINESS SUCCESS
@@ -543,7 +501,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button
                 size="lg"
-                className="bg-primary text-white hover:bg-white hover:text-primary shadow-lg transition-colors duration-300"
+                className="bg-white text-primary hover:bg-gray-100 shadow-lg transition-colors duration-300"
                 asChild
               >
                 <Link href="/contact">
@@ -570,35 +528,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-16 bg-primary text-white">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center mb-12 uppercase tracking-wide">
-              PARTNER WITH PC MECHANIX
-            </h2>
-            <Carousel className="w-full max-w-5xl mx-auto">
-              <CarouselContent className="-ml-1">
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index} className="pl-1 md:basis-1/3 lg:basis-1/4">
-                    <div className="p-1">
-                      <div className="relative w-[200px] h-[100px]">
-                        <Image
-                          src={`/placeholder.svg?text=Partner${index + 1}&width=200&height=100`}
-                          alt={`Partner Logo ${index + 1}`}
-                          fill
-                          className="object-contain"
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </section>
 
-        <section className="py-16 bg-primary text-white">
+        <section className="py-16 bg-primary text-primary-foreground">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>

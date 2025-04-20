@@ -61,9 +61,9 @@ const DropdownMenu = memo(({ category, isOpen, onToggle }: { category: any; isOp
     <div className="relative group">
       <button
         onClick={onToggle}
-        className="flex items-center space-x-1 text-gray-700 hover:text-primary transition-colors duration-200"
+        className="flex items-center justify-center space-x-1 text-gray-700 hover:text-primary transition-colors duration-200"
       >
-        <span className="font-medium">{category.label}</span>
+        <span className="font-medium text-center">{category.label}</span>
         <ChevronDown
           className={`w-4 h-4 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
         />
@@ -279,20 +279,16 @@ export default function NewMenu() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex-shrink-0">
-            <Image
-              priority={true}
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
-              alt="PC Mechanix"
-              width={180}
-              height={45}
-              className="h-12 w-auto object-contain"
-            />
+            <div className="flex flex-col items-center">
+              <div className="text-primary text-xl font-bold">PCMECHANIX</div>
+              <div className="text-gray-600 text-xs">Your Exclusive IT Service Provider!</div>
+            </div>
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center justify-center space-x-8">
             <Link
               href="/"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-center"
             >
               Home
             </Link>
@@ -301,14 +297,14 @@ export default function NewMenu() {
 
             <Link
               href="/about"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-center"
             >
               About
             </Link>
 
             <Link
               href="/contact"
-              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium"
+              className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium text-center"
             >
               Contact
             </Link>

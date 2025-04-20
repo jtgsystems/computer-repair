@@ -55,13 +55,8 @@ export default function ServiceAreasPage() {
                 {area.neighborhoods && (
                   <ul className="list-disc list-inside">
                     {area.neighborhoods.map((neighborhood) => (
-                      <li key={neighborhood}>
-                        <Link
-                          href={`/service-areas/${area.slug}/${neighborhood.toLowerCase().replace(" ", "-")}`}
-                          className="text-gray-600 hover:text-primary"
-                        >
-                          {neighborhood}
-                        </Link>
+                      <li key={neighborhood} className="text-gray-600">
+                        {neighborhood}
                       </li>
                     ))}
                   </ul>

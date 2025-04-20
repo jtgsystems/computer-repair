@@ -85,25 +85,21 @@ export default function PageLayout({ children }: PageLayoutProps) {
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-between py-2 relative z-50">
             <Link href="/" className="flex items-center pl-16 transition-transform duration-300 hover:scale-105">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Email-FsOiS0VHhSaGbkk2xFdAqUX2RxxvUG.png"
-                alt="PC Mechanix - Your Exclusive IT Service"
-                width={200}
-                height={50}
-                className="object-contain"
-                priority
-              />
+              <div className="flex flex-col items-center">
+                <div className="text-primary text-xl font-bold">PCMECHANIX</div>
+                <div className="text-gray-600 text-xs">Your Exclusive IT Service Provider!</div>
+              </div>
             </Link>
-            <div className="hidden md:flex items-center space-x-4 lg:space-x-6 bg-[#E4EDEF] px-4 py-2 rounded-lg">
+            <div className="hidden md:flex items-center justify-center space-x-4 lg:space-x-6 bg-[#E4EDEF] px-4 py-2 rounded-lg">
               <Link
                 href="/"
-                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded bg-[#1D4D84] text-white"
+                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded bg-[#1D4D84] text-white text-center"
               >
                 Home
               </Link>
               {serviceItems.map((category, index) => (
                 <DropdownMenu key={index}>
-                  <DropdownMenuTrigger className="flex items-center text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-200">
+                  <DropdownMenuTrigger className="flex items-center justify-center text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-200 text-center">
                     {category.label}{" "}
                     <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                   </DropdownMenuTrigger>
@@ -126,13 +122,13 @@ export default function PageLayout({ children }: PageLayoutProps) {
               ))}
               <Link
                 href="/about"
-                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded"
+                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded text-center"
               >
                 About
               </Link>
               <Link
                 href="/contact"
-                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded"
+                className="text-[#1D4D84] hover:text-[#4B6E97] font-semibold text-sm uppercase tracking-wide transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded text-center"
               >
                 Contact
               </Link>

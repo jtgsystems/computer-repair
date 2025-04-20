@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-interface ServiceCTAProps {
+interface IndustryCTAProps {
   heading: string;
   description: string;
   primaryCTA?: {
@@ -14,12 +14,12 @@ interface ServiceCTAProps {
   };
 }
 
-export default function ServiceCTA({
+export default function IndustryCTA({
   heading,
   description,
   primaryCTA = { text: "Schedule a Consultation", href: "/contact" },
-  secondaryCTA = { text: "Explore More Services", href: "/services" },
-}: ServiceCTAProps) {
+  secondaryCTA = { text: "Explore Other Industries", href: "/industries" },
+}: IndustryCTAProps) {
   return (
     <section className="py-16 bg-gradient-to-br from-[#1D4D84] to-[#4B6E97] text-white">
       <div className="container mx-auto px-4 text-center">
