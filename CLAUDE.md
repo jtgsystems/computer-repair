@@ -2,6 +2,17 @@
 
 ## Project Overview
 
+## Framework & Dependency Versions
+
+*Last updated: 2025-10-26*
+
+- **React**: `^19.2.0`
+- **Next.js**: `^16.0.0`
+- **Tailwind CSS**: `^4.1.16`
+- **TypeScript**: `^5.9.3`
+
+
+
 **PC Mechanix** is a comprehensive IT services and computer repair website built with Next.js 13+, serving Toronto and the Greater Toronto Area (GTA). The site provides business IT solutions, residential computer repair services, and industry-specific technology solutions.
 
 **Repository**: https://github.com/jtgsystems/computer-repair
