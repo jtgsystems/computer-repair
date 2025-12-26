@@ -16,7 +16,7 @@
 **PC Mechanix** is a comprehensive IT services and computer repair website built with Next.js 13+, serving Toronto and the Greater Toronto Area (GTA). The site provides business IT solutions, residential computer repair services, and industry-specific technology solutions.
 
 **Repository**: https://github.com/jtgsystems/computer-repair
-**Framework**: Next.js 13.4.19 (App Router)
+**Framework**: Next.js 16.1.1 (App Router)
 **Language**: TypeScript
 **Styling**: Tailwind CSS + shadcn/ui components
 **Theme**: Light mode only (forced)
@@ -43,13 +43,13 @@
 ## Tech Stack
 
 ### Core Framework
-- **Next.js**: 13.4.19 (App Router with experimental appDir)
-- **React**: 18.2.0
-- **TypeScript**: 5.8.3
+- **Next.js**: 16.1.1 (App Router)
+- **React**: 19.2.3
+- **TypeScript**: 5.9.3
 - **Node.js**: 22.14.1
 
 ### UI & Styling
-- **Tailwind CSS**: 3.x with custom configuration
+- **Tailwind CSS**: 4.1.18 with custom configuration
 - **shadcn/ui**: 50+ pre-built accessible components
 - **Radix UI**: Headless UI primitives
 - **Framer Motion**: 12.7.4 (animations)
